@@ -1,0 +1,18 @@
+git 命令
+
+cd                  进入下一级目录
+cd ..               返回上一级目录
+ls                  显示当前本目录内容
+ls -ah              显示当前本目录所有内容（包括隐藏）
+pwd                 显示当前目录地址
+mkdir               创建文件夹
+git init            把当前目录变成git仓库
+git add <file>      把文件添加到仓库
+git add .           把多个文件添加到仓库
+git commit -m ""    把文件提交到仓库
+git status          查看仓库当前状态
+
+例子
+$ git add file1.txt
+$ git add file2.txt file3.txt
+$ git commit -m "add 3 files."
