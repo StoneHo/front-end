@@ -11,6 +11,7 @@ git add <file>      把文件添加到仓库
 git add .           把多个文件添加到仓库
 git commit -m ""    把文件提交到仓库
 git status          查看仓库当前状态
+git push            提交到远程仓库
 
 例子
 $ git add file1.txt
