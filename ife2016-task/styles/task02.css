@@ -1,0 +1,218 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: rgb(222,222,222);
+	font: 15px arial;
+	width: 1280px;
+
+}
+div.wrapper{
+	width: 100%;
+}
+h2{
+	font-weight: bold;
+	line-height: 35px;
+}
+h3{
+
+	line-height: 35px;
+}
+div.nav {
+	background: rgb(51,51,51);
+	width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  float: left;
+  padding:0;
+}
+div.footer{
+	float: left;
+	clear: left;
+	width: 100%;
+	padding:27px 0;
+	margin: 10px 0 0px 0;
+	color: white;
+	background-color: rgb(51,51,51);
+}
+div.footer p{
+	width: 80px;
+	font-size: 9px;
+	margin: auto;
+}
+div.nav p{
+	float: left;
+	margin-left: 2.65%;
+	margin-top: 0.62%;
+}
+div.article p{
+	text-indent: 30px;
+	font-weight: 500;
+}
+div.article img{
+	display: inline-block;
+	margin:10px 0;
+}
+div.article ul{
+	margin: 0 20px;
+  list-style: none;
+}
+div.article p.zz{
+	text-indent: 0;
+  line-height: 35px;
+  font-size: 13px;
+  color: rgb(164,158,172);
+}
+div.article dl dd{
+	margin: 0 20px;
+}
+div.article dl dd div.pic{
+  margin: 12px 20px 0;
+	width: 100px;
+	height: 120px;
+	padding: 0 10px;
+  border: 1px solid rgb(203,203,203);
+  font-size: 12px;
+}
+div.article dl dd div.pic p{
+	margin: 4px -5px;
+	padding: 0;
+}
+div.article dl dd div.pic img{
+	width: 100px;
+	height: 80px;
+	margin: 0;
+
+}
+div.nav ul{
+	float: right;
+  font: 9px arial;
+	list-style: none;
+	margin-top: 1.56%;
+  margin-right: 0;
+}
+div.nav ul li{
+	float: left;
+	margin-right: 20px;
+}
+div.nav ul li a{
+	color: white;
+	text-decoration: none;
+}
+div.nav ul li a:hover{
+	color: rgb(164,158,172);
+}
+div.article{
+	float: left;
+	width: 93.6%;
+	padding:32px 20px;
+	margin: 10px 1.56% 10px;
+	background-color: white;
+	border: 1px solid rgb(203,203,203);
+	box-shadow: 2px 1px 1px rgb(132,132,132);
+	line-height: 25px;
+}
+div.article ol{
+	margin: 0 40px;
+}
+div.aside{
+	float: left;
+	width: 92%;
+	padding:32px 20px 0 20px;
+	margin: 30px 1.56% 10px;
+	background-color: white;
+	border: 1px solid rgb(203,203,203);
+	box-shadow: 2px 1px 1px rgb(163,163,163);
+	position: relative;
+	overflow: hidden;
+}
+table{
+	font: 13px bold;
+	margin-top: 20px;
+  border-collapse: collapse;
+  width: 1200px;
+  height: 148px;
+  border: 1px solid rgb(204,204,204);
+}
+th{
+	background: black;
+	color: white;
+}
+tr:last-child{
+	background: rgb(204,204,204);
+}
+form{
+	width: 900px;
+	margin: 20px 0px 20px 245px;
+	font: 13px bold;
+	padding: 0;
+}
+form p{
+	color: rgb(164,158,172);
+	margin: 0 0 20px 110px;
+}
+label{
+	margin-right: 10px;
+	display: block;
+	margin-bottom: 10px;
+}
+input {
+	display: inline-block;
+	margin: 0 10px;
+}
+label[for='email'] input{
+	width: 130px;
+}
+label[for='password']{
+	margin-left: 25px;
+}
+label[for='password'] input{
+	width: 130px;
+}
+label[for='password2']{
+	margin-left: -2px;
+}
+label[for='password2'] input{
+	width: 130px;
+}
+label[for='sex']{
+	margin-left: 65px;
+}
+label[for='city']{
+	margin-left: 65px;
+}
+label[for='aihao']{
+	margin-left: 65px;
+}
+label[for='note']{
+	position: relative;
+	margin-left: 37px;
+	display: inline-block
+
+}
+label span{
+	position: absolute;
+
+}
+textarea{
+	position: relative;
+	display: inline;
+	width: 768px;
+	height: 100px;
+	margin-left: 70px;
+}
+select{
+	margin-left: 10px;
+}
+label button{
+	position: relative;
+	font-size: 17px;
+	width: 1180px;
+	height: 40px;
+	color: white;
+	border-radius: 10px;
+	background-color: rgb(51,85,208);
+    left: -245px;
+	border: none;
+}
