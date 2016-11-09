@@ -2,24 +2,53 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>task01</title>
+  <title>task05</title>
+  <link href='D:/front-end/ife2016-task/styles/task02.css' rel='stylesheet'>
 </head>
 <body>
-
+<div class='wrapper'>
 <div class='nav'>
-  <h1>网站一级标题</h1>
+  <p><a href='#'><img src='D:/front-end/ife2016-task/images/bdlogo.png' alt='logo' /></a></p>
     <ul>
       <li><a href='#'>导航链接一</a></li>
       <li><a href='#'>导航链接二</a></li>
       <li><a href='#'>导航链接三</a></li>
-      <li><a href='#'>导航链接三</a></li>
+      <li><a href='#'>导航链接四</a></li>
     </ul>
 </div>
-
-<div class='article'>
+<div class='aside'>
+<h4>这里以后是一个侧栏，这是侧栏的标题</h4>
+<form action='#' method='get/post'>
+  <label for='email'>请输入邮箱地址
+  <input type='text' value='这是一个文本输入框' /></label>
+  <p>邮箱地址请按要求格式输入</p>
+  <label for='password'>请输入密码
+  <input type='password' value='这是一个文本输入框' /></label>
+  <label for='password2'>请重复输入密码
+  <input type='password' value='这是一个文本输入框' /></label>
+  <p>密码请为6-16位英文数字</p>
+  <label for='sex'>性别
+  <input type='radio' checked='checked' />男
+  <input type='radio' />女</label>
+  <label for='city'>城市
+  <select>
+    <option selected='selected'>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+  </select></label>
+  <label for='aihao'>爱好
+  <input type='checkbox' name='sport' />运动
+  <input type='checkbox' name='art' />艺术
+  <input type='checkbox' name='science' />科学</label>
+  <label for='note'><span>个人描述</span>
+  <textarea name='comment' cols='22' rows='2'>这是一个多行输入框，输入您的个人描述</textarea></label>
+  <label for='submit'><button type='submit'>确认提交</button></label>
+</form>
+</div>
+<div class='article' id='first'>
   <h2>文章一级标题</h2>
-  <h2>文章二级标题</h2>
-  <p>文章作者 文章发表时间</p>
+  <h3>文章二级标题</h3>
+  <p class='zz'>文章作者 文章发表时间</p>
   <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br />这是一个很长很长的段落，这是一个很长很长的段落，<a href='http://www.baidu.com'>这里有一个链接接到http://www.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
   <img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'>
   <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，<a href='http://www.baidu.com' target='_blank'>这里有一个链接接点击后打开新窗口链接到http://www.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，</p>
@@ -27,8 +56,8 @@
 
 <div class='article'>
   <h2>另一篇文章一级标题</h2>
-  <h2>文章二级标题</h2>
-  <p>文章作者 文章发表时间</p>
+  <h3>文章二级标题</h3>
+  <p class='zz'>文章作者 文章发表时间</p>
   <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br />这是一个很长很长的段落，这是一个很长很长的段落，<a href='http://www.baidu.com'>这里有一个链接接到http://www.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
   <img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'>
   <ul>
@@ -36,35 +65,34 @@
     <li>列表项目二</li>
     <li>列表项目三</li>
   </ul>
+  </div>
+
+  <div class='article'>
   <dl>
     <dt><h2>图片</h2></dt>
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd><br />
-      <dd>好看的图片<br /><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
+      <dd><div class='pic'><p>好看的图片</p><img src='D:/front-end/ife2016-task/images/sky.jpg' alt='sky'></div></dd>
   </dl>
 </div>
 
 <div class='article'>
 <h2>最后一篇文章一级标题</h2>
-<h2>文章二级标题</h2>
-<p>文章作者 文章发表时间</p>
+<h3>文章二级标题</h3>
+<p class='zz'>文章作者 文章发表时间</p>
 <ol>
   <li>排名1</li>
   <li>排名2</li>
   <li>排名3</li>
 </ol>
-</div>
-
-<div class='table'>
-下面是一个表格，给表格加了一个border="1"好让你看出是一个表格
-<table border='1'>
+<table cellspacing="0" border='1'>
 <tr>
   <th>表头</th>
   <th>表头</th>
@@ -97,42 +125,12 @@
 </table>
 </div>
 
-<div class='aside'>
-<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-<h2>侧栏注册窗口标题</h2>
-<form action='#' method='get/post'>
-  <label for='email'>请输入邮箱地址：</label>
-  <input type='text' value='这是一个文本输入框' />
-  <p>邮箱地址请按要求格式输入</p>
-  <label for='password'>请输入密码：</label>
-  <input type='text' value='这是一个文本输入框' />
-  <label for='password2'>请重复输入密码：</label>
-  <input type='text' value='这是一个文本输入框' />
-  <p>密码请为6-16位英文数字</p>
-  <label for='sex'>性别：</label>
-  男
-  <input type='radio' checked='checked' />
-  女
-  <input type='radio' />
-  <label for='city'>城市：</label>
-  <select>
-    <option selected='selected'>北京</option>
-    <option>上海</option>
-    <option>广州</option>
-  </select>
-  <label for='aihao'>爱好：</label>
-  <input type='checkbox' name='sport' />运动
-  <input type='checkbox' name='art' />艺术
-  <input type='checkbox' name='science' />科学
-  <label for='note'>个人描述：</label>
-  <textarea name='comment' cols='22' rows='2'>这是一个多行输入框，输入您的个人描述</textarea>
-  <input type='submit' value='确认提交'>
-</form>
-</div>
+
 
 <div class='footer'>
-<p>版权所有©</p>
+<p>StoneHo 版权所有©</p>
 </div>
-
+</div>
 </body>
 </html>
+
