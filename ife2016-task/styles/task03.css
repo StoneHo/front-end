@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 20px;
+  font-size: 15px;
+}
+p {
+  margin: 0;
+}
+.wrapper {
+	margin: 0 auto;
+  min-width: 600px;
+	padding: 20px;
+	background: #eee;
+  border: 1px solid #999;
+  overflow: auto;
+
+}
+.teamlogo {
+	width: 160px;
+	float: left;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #999;
+  margin-right: 20px;
+}
+
+.teamlogo p img {
+	float: left;
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  float: right;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0px 0 0 ;
+}
+
+.introduce {
+
+  padding: 20px;
+  margin-left: 220px;
+  margin-right: 140px;
+  background: #fff;
+  border: 1px solid #999;
+
+}
+.teammate {
+  width: 120px;
+  float: right;
+  background: #fff;
+  border: 1px solid #999;
+
+
+}
+.teammate img {
+  background: #fff;
+  display: block;
+  margin: 20px;
+  border: 1px solid #999;
+  height: 80px;
+  width: 80px;
+}
