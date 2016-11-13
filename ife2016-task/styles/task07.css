@@ -1,0 +1,759 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#sy #nav li:first-child a{
+  border-bottom: 3px solid #e74f4d;
+  padding-bottom: 25px;
+  color: #e74f4d;
+  width: 50px;
+  text-align: center;
+  margin-right: -23px;
+}
+.wrapper {
+	width: 100%;
+	background: white;
+  margin: 0 auto;
+	overflow: hidden;
+
+}
+#nav {
+	width: 100%;
+	height: 57px;
+	float: left;
+	overflow: hidden;
+	min-width: 800px;
+}
+#nav a:first-child {
+	position: relative;
+	float: left;
+	margin: 10px 0 10px 60px;
+	font-family: '黑体';
+	font-size: 21px;
+	color: #393a3a;
+	text-decoration: none;
+}
+#nav a:first-child span {
+  position: absolute;
+  width: 150px;
+  top: 6px;
+  left: 45px;
+}
+#nav a:nth-child(2) {
+	position: relative;
+	float: right;
+  color: #e74f4d;
+  margin: 10px 67px 0 0;
+ 	font-family: '微软雅黑';
+	font-size: 14px; 
+  text-align: right;
+	text-decoration: none;
+}
+#nav a:nth-child(2) span {
+	position: relative;
+	top: -3px;
+	left: 2px;
+}
+
+#nav ul {
+	list-style: none;
+	float: right;
+	overflow: hidden;
+  margin-right: 10px;
+}
+#nav ul li {
+	display: inline;
+	margin-left: 5px;
+}
+#sy #nav ul li a {
+	text-decoration: none;
+  color: #393a3a;
+ 	font-family: '微软雅黑';
+	font-size: 14px;
+	margin-right: -13px; 	
+}
+#sy #nav ul li a:hover {
+  color: #e74f4d;	
+}
+#sy #container {
+	width: 1280px;
+	min-width: 1280px;
+
+	overflow: hidden;
+	margin: 0 auto;
+}
+#sy #container .c1 {
+	width: 1280px;
+	height: 692px;
+	position: relative;
+	float:left;
+	background: url(D:/html/front-end/ife2016-task/images/tp1.png),no-repeat;
+	overflow: hidden;
+}
+#sy #container .c1 p:first-child {
+	position: absolute;
+  left: 118px;
+  top: 235px;
+  color: white;
+ 	font-family: '微软雅黑';
+	font-size: 60px; 
+}
+#sy #container .c1 p:nth-child(2) {
+	position: absolute;
+  left: 126px;
+  top: 315px;
+  color: white;
+ 	font-family: '微软雅黑';
+	font-size: 21px; 
+}
+ #sy #container .c1 p:nth-child(3) {
+	position: absolute;
+  left: 126px;
+  top: 345px;
+  color: white;
+ 	font-family: '微软雅黑';
+	font-size: 21px; 
+}
+#sy #container .c1 form button {
+	position: absolute;
+	width: 330px;
+	height: 64px;
+	background: #e74f4d;
+  left: 126px;
+  top: 445px;
+  color: white;
+ 	font-family: '微软雅黑';
+	font-size: 30px; 
+	border: none;
+
+}
+#sy #container .c1 form button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+#container .c2 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp2.png),no-repeat;
+	width: 1280px;
+	height: 250px;
+	overflow: hidden;
+}
+#container .c2 p {
+	font-size: 14px;
+	font-family: '黑体';
+	color: #767777;
+  text-align: center;
+}
+#container .c2 div {
+	width: 160px;
+	height: 40px;
+	position: absolute;
+	top: 133px;
+}
+#container .c2 .p1 {
+	left: 89px;
+}
+#container .c2 .p2 {
+	left: 418px;
+}
+#container .c2 .p3 {
+	left: 730px;
+}
+#container .c2 .p4 {
+	left: 1048px;
+}
+#container .c2 p:hover {
+  color: #e74f4d;
+}
+#container .c3 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp3.png),no-repeat;
+	width: 1280px;
+	height: 360px;
+	overflow: hidden;
+}
+#container .c3 p{
+	font-size: 53.39px;
+	font-family: '黑体';
+	color: #a1a1a1;
+	position: absolute;
+	top: 230px;
+	left: 220px;
+}
+#container .c4 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp4.png),no-repeat;
+	width: 1280px;
+	height: 340px;
+
+}
+#container .c4 p:nth-child(1) {
+	font-size: 21px;
+	font-family: '微软雅黑';
+	color: white;
+	position: absolute;
+	top: 47px;
+	left: 501px;
+}
+#container .c4 p:nth-child(2) {
+	font-size: 12px;
+	font-family: '微软雅黑';
+	color: #f4eeed;
+	position: absolute;
+	top: 105px;
+	left: 448px;
+}
+#container .c4 form {
+	position: absolute;
+	top: 173px;
+	left: 127px;
+}
+#container .c4 form select {
+  width: 235px;
+  height: 35px;
+  background: url(D:/html/front-end/ife2016-task/images/xl.png),no-repeat;
+ 	-webkit-appearance:none;
+  border: none;
+	font-size: 12px;
+	font-family: '微软雅黑';
+	color: rgba(0,0,0,0);
+	padding: 10px;
+}
+#container .c4 form label[for='diqu'] select {
+  width: 235px;
+  height: 35px;
+  background: url(D:/html/front-end/ife2016-task/images/xl2.png),no-repeat;
+}
+#container .c4 form label[for='shengshi'] select {
+  width: 235px;
+  height: 35px;
+  background: url(D:/html/front-end/ife2016-task/images/xl4.png),no-repeat;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #e74f4d;
+}
+#container .c4 form label[for='shengshi'] .xl0 {
+	position: absolute;
+  width: 235px;
+  height: 171px;
+  background: #e3e2e4;
+  top: 35px;
+  left: 242px;
+  overflow: hidden;
+  border: 1px solid #e74f4d;;
+  border-top: none;
+  z-index: 1;
+}
+#container .c4 form label[for='shengshi'] span ul{
+  list-style: none;
+}
+
+#container .c4 form label[for='shengshi'] span ul li a{
+  width: 235px;
+  height: 25px;
+	font-size: 12px;
+	font-family: '微软雅黑';
+	color: #323333;
+	text-decoration: none;
+}
+#container .c4 form label[for='shengshi'] span ul span{
+	display: inline-block;
+  width: 215px;
+  height: 25px;
+  padding-left: 30px;
+  padding-top: 5px;
+}
+#container .c4 form label[for='shengshi'] span ul li a span:hover{
+  width: 235px;
+  height: 25px;
+  background: url(D:/html/front-end/ife2016-task/images/xl1.png),no-repeat;
+	color: white;
+}
+#container .c4 form label[for='chengshi'] select {
+  width: 235px;
+  height: 35px;
+  background: url(D:/html/front-end/ife2016-task/images/xl3.png),no-repeat;
+
+}
+#container .c4 form select:hover {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #e74f4d;
+}
+#container .c4 form select option{
+  background: #e3e2e4;
+	font-size: 12px;
+	font-family: '微软雅黑';
+	color: #a0a1a1;   
+}
+
+#container .c4 form button{
+	width: 235px;
+	height: 35px;
+	background: #e74f4d;
+  color: white;
+ 	font-family: '微软雅黑';
+	font-size: 14px; 
+	border: none;
+}
+#container .c4 form button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+#container .c5 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp5.png),no-repeat;
+	width: 1280px;
+	height: 630px;
+	overflow: hidden;
+}
+#container .c5 .c5t{
+	font-size: 13px;
+	font-family: '微软雅黑';
+	color: #323333;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+#container .c5 .c5b{
+	font-size: 12px;
+	font-family: '微软雅黑';
+	color: #898a8a;
+  text-align: center;
+}
+#container .c5 #c51{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  left: 208px;
+  top: 475px;
+}
+#container .c5 #c52{
+  width: 300px;
+  height: 46px;
+  position: absolute;
+  left: 360px;
+  top: 120px;
+}
+#container .c5 #c53{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  left: 717px;
+  top: 475px;
+}
+#container .c5 #c54{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  left: 970px;
+  top: 475px;
+}
+#container .c5 #c52 span{
+  font-size: 20px;
+  letter-spacing:36px;
+  text-align: center;
+  margin-left: 45px;
+  font-weight: 500;
+}
+#container .c6 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp6.png),no-repeat;
+	width: 1280px;
+	height: 567px;
+	overflow: hidden;
+}
+#container .c6 #c6l {
+	float: left;
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	left: 236px;
+	top: 125px;
+}
+
+#container .c6 #c6l p {
+	position: absolute;
+	font-family: '微软雅黑';
+	color: #FFFFFF;
+  text-align: center;
+}
+#container .c6 #c6l p:nth-child(1) {
+	font-size: 49.47px;
+	left: 120px;
+	top: -10px;
+}
+#container .c6 #c6l p:nth-child(2) {
+	font-size: 157.79px;
+	top: 20px;
+}
+#container .c6 #c6l p:nth-child(3) {
+	font-size: 21.91px;
+	left: 120px;
+	top: 220px;
+}
+#container .c6 #c6l p:nth-child(4) {
+	font-size: 21.91px;
+	left: 120px;
+	top: 265px;
+}
+#container .c6 #c6r {
+	float: right;
+  position: relative;
+	width: 300px;
+	height: 240px;
+	overflow: hidden;
+	margin-right: 70px;
+	margin-top: 160px;
+}
+#container .c6 #c6r p:first-child {
+	position: absolute;
+	font-family: '微软雅黑';
+	color: black;
+  text-align: center;
+  font-size: 20px;
+  left: 100px;
+}
+#container .c6 #c6r p:first-child span{
+	color: #e25c60;
+  font-weight: bold;
+}
+#container .c6 #c6r p:nth-child(2) {
+	position: absolute;
+	font-family: '宋体';
+	color: #aaaaaa;
+  font-size: 12px;
+  top: 50px;
+  line-height: 30px;
+}
+#container .c6 #c6r form button {
+	width: 106px;
+	height: 33px;
+	background: white;
+	position: absolute;
+	font-family: '微软雅黑';
+	color: #e25c60;
+  text-align: center;
+  font-size: 12px;
+  border: solid 1px #e25c60;
+  left: 100px;
+  top: 205px;
+}
+#container .c7 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp7.png),no-repeat;
+	width: 1280px;
+	height: 521px;
+	overflow: hidden;
+}
+#container .c7 p:nth-child(1){
+	position: absolute;
+	font-family: '黑体';
+	color: white;
+  text-align: center;
+  font-size: 21px;
+  left: 182px;
+  top: 173px;
+}
+#container .c7 p:nth-child(2){
+	position: absolute;
+	font-family: '黑体';
+	color: white;
+  text-align: center;
+  font-size: 21px;
+  left: 131px;
+  top: 203px;
+}
+#container .c7 p:nth-child(3){
+	position: absolute;
+	font-family: '黑体';
+	color: black;
+  text-align: center;
+  font-size: 21px;
+  left: 607px;
+  top: 173px;
+}
+#container .c7 p:nth-child(4){
+	position: absolute;
+	font-family: '黑体';
+	color: black;
+  text-align: center;
+  font-size: 21px;
+  left: 556px;
+  top: 203px;
+}
+#container .c7 form label button:nth-child(1){
+	width: 169px;
+	height: 43px;
+	background: #e74f4d;
+	position: absolute;
+	font-family: '黑体';
+	color: white;
+  text-align: center;
+  font-size: 21px;
+  border: solid 1px white;
+  top: 275px;
+  left: 129px;
+}
+#container .c7 form label button:nth-child(2){
+	width: 169px;
+	height: 43px;
+	background: white;
+	position: absolute;
+	font-family: '黑体';
+	color: #e74f4d;
+  text-align: center;
+  font-size: 21px;
+  border: solid 1px #e74f4d;
+  top: 275px;
+  left: 554px;
+}
+#container .c8 {
+	float: left;
+	position: relative;
+	background: url(D:/html/front-end/ife2016-task/images/tp8.png),no-repeat;
+	width: 1280px;
+	height: 737px;
+	overflow: hidden;
+}
+#container .c8 p:first-child {
+	position: absolute;
+	font-family: '黑体';
+	color: #323333;
+  text-align: center;
+  font-size: 21px;
+  left: 556px;
+  top: 118px;
+}
+#container .c8 p:nth-child(2) {
+	position: absolute;
+	font-family: '微软雅黑';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 12px;
+  left: 429px;
+  top: 165px;
+}
+#container .c8 p:nth-child(3) {
+	position: absolute;
+	font-family: '微软雅黑';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 12px;
+  left: 486px;
+  top: 183px;
+}
+#container .c8 p:nth-child(4) {
+	position: absolute;
+	font-family: '黑体';
+	color: #231815;
+  text-align: center;
+  font-size: 14px;
+  left: 56px;
+  top: 305px;
+}
+#container .c8 p:nth-child(5) {
+	position: absolute;
+	font-family: '黑体';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 14px;
+  left: 56px;
+  top: 346px;
+}
+#container .c8 p:nth-child(6) {
+	position: absolute;
+	font-family: '宋体';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 12px;
+  left: 56px;
+  top: 367px;
+}
+#container .c8 p:nth-child(7) {
+	position: absolute;
+	font-family: '黑体';
+	color: #231815;
+  text-align: center;
+  font-size: 14px;
+  left: 56px;
+  top: 436px;
+}
+#container .c8 p:nth-child(8) {
+	position: absolute;
+	font-family: '宋体';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 12px;
+  left: 56px;
+  top: 476px;
+}
+#container .c8 p:nth-child(9) {
+	position: absolute;
+	font-family: '宋体';
+	color: #aaaaaa;
+  text-align: center;
+  font-size: 12px;
+  left: 56px;
+  top: 497px;
+}
+#container .c8 p:nth-child(10) {
+	position: absolute;
+	font-family: '黑体';
+	color: #231815;
+  text-align: center;
+  font-size: 14px;
+  left: 56px;
+  top: 546px;
+}
+#container .c8 p a {
+	position: absolute;
+  left: 246px;
+  top: 29px;
+}
+#container .c8 .form {
+	position: absolute;
+  width: 644px;
+  height: 246px;
+  left: 500px;
+  top: 302px;
+}
+#container .c8 .form input{
+  background: #ececee;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 41px;
+  border: none;
+	font-family: '宋体';
+	color: #231815;
+  font-size: 12px;
+  padding-top: 0;
+}
+#container .c8 .form .a{
+margin-right: 10px;
+}
+#container .c8 .form label[for='comment'] input{
+  width: 618px;
+  height: 121px;
+
+}
+#container .c8 .form label[for='comment'] span{
+  position: absolute;
+  left: 10px;
+  top: 110px;
+	font-family: '宋体';
+	color: #aaaaaa;
+  font-size: 12px;
+
+}
+#container .c8 .form button{
+  width: 619px;
+  height: 41px;
+  color: #323333;
+	font-family: '黑体';
+  font-size: 14px;
+  border: none;
+  background: #ececee;
+}
+
+input::-webkit-input-placeholder {
+    text-align: justify;
+    text-indent: 10px;
+
+}
+#container .c9 {
+	float: left;
+	position: relative;
+	background: #32353e;
+	width: 1280px;
+	height: 416px;
+	overflow: hidden;
+}
+#container .c9 p:nth-child(1) {
+  position: absolute;
+  left: 598px;
+  top: 91px;
+	font-family: '黑体';
+	color: white;
+  font-size: 21px;
+}
+#container .c9 p:nth-child(2) {
+  position: absolute;
+  left: 407px;
+  top: 122px;
+	font-family: '宋体';
+	color: white;
+  font-size: 12px;
+}
+#container .c9 p:nth-child(3) {
+  position: absolute;
+  left: 538px;
+  top: 140px;
+	font-family: '宋体';
+	color: white;
+  font-size: 12px;
+}
+#container .c9 form input {
+  position: absolute;
+  left: 385px;
+  top: 183px;
+  width: 434px;
+  height: 42px;
+	font-family: '微软雅黑';
+	color: #aaaaaa;
+  font-size: 14px;
+  background: white;
+  border: none;
+}
+#container .c9 form button {
+  position: absolute;
+  left: 819.5px;
+  top: 183px;
+  width: 81px;
+  height: 43px;
+	font-family: '微软雅黑';
+	color: white;
+  font-size: 15px;
+  background: #6f7178;
+  border: none;
+}
+#container .c9 ul {
+  list-style: none;
+  position: absolute;
+  left: 550px;
+  top: 260px;
+}
+#container .c9 ul li{
+  display: inline;
+  margin-right: 10px;
+}
+#footer {
+  margin: 0 auto;
+	position: relative;
+	background: #303039;
+  width: 1280px;
+	height: 58px;
+	overflow: hidden;
+}
+#footer p:first-child {
+	font-style: '宋体';
+	font-size: 12px;
+	color: white;
+	position: absolute;
+	left: 98px;
+	top: 32px;
+}
+#footer p:last-child a{
+	font-style: '宋体';
+	font-size: 12px;
+	color: white;
+	position: absolute;
+	left: 1174px;
+	top: 33px;
+}
