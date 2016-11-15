@@ -638,19 +638,18 @@
 #container .c8 .form .a{
 margin-right: 10px;
 }
-#container .c8 .form label[for='comment'] input{
+#container .c8 .form label[for='comment'] textarea{
   width: 618px;
   height: 121px;
-
-}
-#container .c8 .form label[for='comment'] span{
-  position: absolute;
-  left: 10px;
-  top: 110px;
+  border: none;
 	font-family: '宋体';
-	color: #aaaaaa;
+	color: #231815;
   font-size: 12px;
-
+  padding-top: 0;
+  background: #ececee;
+  margin-bottom: 10px;
+  resize:none;
+  box-sizing: border-box;
 }
 #container .c8 .form button{
   width: 619px;
@@ -663,7 +662,6 @@ margin-right: 10px;
 }
 
 input::-webkit-input-placeholder {
-    text-align: justify;
     text-indent: 10px;
 
 }
