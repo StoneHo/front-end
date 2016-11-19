@@ -57,7 +57,7 @@ body {
 	overflow: hidden;
 	width: 642px;
 	height: 301px;
-	background: url(D:/front-end/ife2016-task/images/mu.jpg) no-repeat ;
+	background: url(../images/mu.jpg) no-repeat ;
 }
 .about #pic1{
 	float: left;
@@ -317,7 +317,7 @@ text-indent: 25px;
 	width: 458px;
 	height: 275px;
 	float: left;
-	background: url('D:/front-end/ife2016-task/images/jm.jpg') no-repeat ;
+	background: url('../images/jm.jpg') no-repeat ;
 }
 .tech #right #rb {
 	width: 458px;
@@ -357,7 +357,7 @@ text-indent: 25px;
 }
 .tech #right .rightb ul{
 	margin: 20px 0 0 55px;
-  list-style-image: url('D:/front-end/ife2016-task/images/sjx.png');
+  list-style-image: url('../images/sjx.png');
 }
 .tech #right .rightb ul li{
 	font-size: 16px;

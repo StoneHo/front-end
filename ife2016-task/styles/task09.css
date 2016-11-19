@@ -62,7 +62,7 @@ header input {
 header label span {
   width: 20px;
   height: 20px;
-  background: url(D:/html/front-end/ife2016-task/images/fdj.png),no-repeat;
+  background: url(../images/fdj.png),no-repeat;
   position: absolute;
   left: 10px;
   top: 5px;
@@ -87,7 +87,7 @@ nav #nav-top {
 	position: relative;
 	float: left;
   color: #6e8096;
-  background: url(D:/html/front-end/ife2016-task/images/nav-top.png),no-repeat;
+  background: url(../images/nav-top.png),no-repeat;
 }
 nav #nav-top a{
 	font-family: '黑体';
@@ -187,14 +187,14 @@ nav #nav-bottom ul li:nth-child(1):first-child{
   width: 263px;
   display: inline-block;
   height: 15px;
-  background: url(D:/html/front-end/ife2016-task/images/wdnn.png),no-repeat;
+  background: url(../images/wdnn.png),no-repeat;
   background-position: 6px 0;
 }
 nav #nav-bottom ul li:nth-child(1):hover {
   box-shadow: 0px -22px #383d4e;
   border-bottom: 18px solid #383d4e;
   background-color: #383d4e;
-  background: url(D:/html/front-end/ife2016-task/images/wdn.png),no-repeat;
+  background: url(../images/wdn.png),no-repeat;
   background-position: 6px 0;
 }
 nav #nav-bottom ul  input{
@@ -229,7 +229,7 @@ nav #nav-bottom #grbb0  span{
   display: none;
 }
 nav #nav-bottom #grbb0 label:nth-child(1) {
-  background: url(D:/html/front-end/ife2016-task/images/wj1n.png);
+  background: url(../images/wj1n.png);
   background-repeat: no-repeat;
   background-position: 45px 0;
   margin-left: 30px;
@@ -247,7 +247,7 @@ nav #nav-bottom #grbb0 label:nth-child(1) input:checked + span img{
   margin-top: -40px;
 }
 nav #nav-bottom #grbb0 label:nth-child(2) {
-  background: url(D:/html/front-end/ife2016-task/images/wj1n.png);
+  background: url(../images/wj1n.png);
   background-repeat: no-repeat;
   background-position: 45px 0;
   margin-left: 30px;
@@ -259,13 +259,13 @@ nav #nav-bottom #grbb0 label:nth-child(2) input:checked + span a{
   margin-left: 77px;
   margin-top: 10px;
   border: red solid red;
-  background: url(D:/html/front-end/ife2016-task/images/wd.png);
+  background: url(../images/wd.png);
   background-repeat: no-repeat;
   background-position: 0px 0px;
   text-indent: 15px;
 }
 nav #nav-bottom #grbb0 label:nth-child(2) input:checked + span a:hover{
-  background: url(D:/html/front-end/ife2016-task/images/wd1.png);
+  background: url(../images/wd1.png);
   background-repeat: no-repeat;
 }
 nav #wj2{
@@ -273,13 +273,13 @@ nav #wj2{
   display: block;
   margin-left: 77px;
   margin-top: 10px;
-  background: url(D:/html/front-end/ife2016-task/images/wd.png);
+  background: url(../images/wd.png);
   background-repeat: no-repeat;
   background-position: 0px 0px;
   text-indent: 15px;
 }
 nav #wj2:hover{
-  background: url(D:/html/front-end/ife2016-task/images/wd1.png);
+  background: url(../images/wd1.png);
   background-repeat: no-repeat;
 }
 nav #nav-bottom #grbb0 label:nth-child(2) input:checked + span img{
@@ -293,7 +293,7 @@ nav #nav-bottom #grbb0:nth-child(2) input:checked ~ span{
 
 }
 nav #nav-bottom #grbb0 label:nth-child(3) {
-  background: url(D:/html/front-end/ife2016-task/images/wj1n.png);
+  background: url(../images/wj1n.png);
   background-repeat: no-repeat;
   background-position: 45px 0;
   margin-left: 30px;
@@ -326,13 +326,13 @@ nav #nav-bottom ul li:nth-child(2) input:checked ~ span {
   display: block;
 }
 nav #nav-bottom ul li:nth-child(2) {
-  background: url(D:/html/front-end/ife2016-task/images/xx.png);
+  background: url(../images/xx.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
 }
 nav #nav-bottom ul li:nth-child(2):hover {
   background-color: #383d4e;
-  background-image: url(D:/html/front-end/ife2016-task/images/xxw.png);
+  background-image: url(../images/xxw.png);
   background-repeat: no-repeat;
   background-position: 50px 10px;
   padding: 10px 0;
@@ -347,13 +347,13 @@ nav #nav-bottom ul li:nth-child(3) input:checked ~ span {
   position: relative;
   display: block;
 }nav #nav-bottom ul li:nth-child(3) {
-  background: url(D:/html/front-end/ife2016-task/images/wdfx1.png);
+  background: url(../images/wdfx1.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
 }
 nav #nav-bottom ul li:nth-child(3):hover {
   background-color: #383d4e;
-  background-image: url(D:/html/front-end/ife2016-task/images/wdfx.png);
+  background-image: url(../images/wdfx.png);
   background-repeat: no-repeat;
   background-position: 50px 10px;
   padding: 10px 0;
@@ -369,13 +369,13 @@ nav #nav-bottom ul li:nth-child(4) input:checked ~ span {
   display: block;
 }
 nav #nav-bottom ul li:nth-child(4) {
-  background: url(D:/html/front-end/ife2016-task/images/xx.png);
+  background: url(../images/xx.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
 }
 nav #nav-bottom ul li:nth-child(4):hover {
   background-color: #383d4e;
-  background-image: url(D:/html/front-end/ife2016-task/images/xxw.png);
+  background-image: url(../images/xxw.png);
   background-repeat: no-repeat;
   background-position: 50px 10px;
   padding: 10px 0;
@@ -391,13 +391,13 @@ nav #nav-bottom ul li:nth-child(5) input:checked ~ span {
   display: block;
 }
 nav #nav-bottom ul li:nth-child(5) {
-  background: url(D:/html/front-end/ife2016-task/images/xx.png);
+  background: url(../images/xx.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
 }
 nav #nav-bottom ul li:nth-child(5):hover {
   background-color: #383d4e;
-  background-image: url(D:/html/front-end/ife2016-task/images/xxw.png);
+  background-image: url(../images/xxw.png);
   background-repeat: no-repeat;
   background-position: 50px 10px;
   padding: 10px 0;
@@ -413,13 +413,13 @@ nav #nav-bottom ul li:nth-child(6) input:checked ~ span {
   display: block;
 }
 nav #nav-bottom ul li:nth-child(6) {
-  background: url(D:/html/front-end/ife2016-task/images/zhxx1.png);
+  background: url(../images/zhxx1.png);
   background-repeat: no-repeat;
   background-position: 5px 0;
 }
 nav #nav-bottom ul li:nth-child(6):hover {
   background-color: #383d4e;
-  background-image: url(D:/html/front-end/ife2016-task/images/zhxx.png);
+  background-image: url(../images/zhxx.png);
   background-repeat: no-repeat;
   background-position: 50px 10px;
   padding: 10px 0;
@@ -479,7 +479,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
   color: black; 
   -webkit-appearance:none;
   text-indent: 5px;
-  background-image: url(D:/html/front-end/ife2016-task/images/xlbz.png);
+  background-image: url(../images/xlbz.png);
   background-repeat: no-repeat;
   background-position: 101px 9px;
   margin-left: 10px;
@@ -520,7 +520,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 #part1 label:nth-child(4) button{
   width: 30px;
   height: 37px;
-  background: url(D:/html/front-end/ife2016-task/images/huan.png);
+  background: url(../images/huan.png);
   border: none;	
  }
 #part1 label:nth-child(5) {
@@ -590,7 +590,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 	position: absolute;
 	width: 30px;
 	height: 64px;
-	background: url(D:/html/front-end/ife2016-task/images/left.png);
+	background: url(../images/left.png);
 
 }
 #part2 #right {
@@ -598,7 +598,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 	width: 40px;
 	height: 65px;
 	left: 725px;
-	background: url(D:/html/front-end/ife2016-task/images/rightn.png);
+	background: url(../images/rightn.png);
   z-index: 1;
 }
 #part2 form #hdl {
@@ -625,7 +625,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
   height: 63px;
   display: inline-block;
   margin: 0 -1.5px 0 -1.5px;
-  background: url(D:/html/front-end/ife2016-task/images/money.png);
+  background: url(../images/money.png);
   font-family: '微软雅黑';
   font-size: 12px;
   color: #323333;
@@ -666,7 +666,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
   font-family: '微软雅黑';
   font-size: 12px;
   color: #535353;
-  background: url(D:/html/front-end/ife2016-task/images/cxls.png);
+  background: url(../images/cxls.png);
   width: 129px;
   height: 63px;
   border: none;
@@ -778,7 +778,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 	position: relative;
 	float: left;
 	padding: 15px 20px;
-	background: url(D:/html/front-end/ife2016-task/images/s7b.png) repeat-x;
+	background: url(../images/s7b.png) repeat-x;
 	margin-left: 60px;
 	margin-top: 6px;
   border: 1px solid #cacbcb;
@@ -1066,7 +1066,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 	color: #c3c2c2;
 	overflow: hidden;
 	margin: 5px 0 0 8px;
-	background: url(D:/html/front-end/ife2016-task/images/bg6.png);
+	background: url(../images/bg6.png);
 }
 #part5 p {
 	text-indent: 20px;
@@ -1136,7 +1136,7 @@ nav #nav-bottom ul li:nth-child(6):hover {
 	color: black;
 	overflow: hidden;
 	margin: 5px 0 0 60px;
-	background: url(D:/html/front-end/ife2016-task/images/bg7.png);	
+	background: url(../images/bg7.png);	
 }
 #part6 p {
 	color: #aaaaaa;
@@ -1225,7 +1225,7 @@ box-shadow: 1px 1px 1px  #f8d564 inset,-1px -1px 1px #f8d564 inset;
 	font-size: 12px;
 	overflow: hidden;
 	margin: 5px 0 0 8px;
-	background: url(D:/html/front-end/ife2016-task/images/bg8.png);	
+	background: url(../images/bg8.png);	
 }
 #part7 p {
 	color: #aaaaaa;
@@ -1274,61 +1274,61 @@ box-shadow: 1px 1px 1px  #f8d564 inset,-1px -1px 1px #f8d564 inset;
 	text-indent: 20px;
 }
 #part7 table tr:nth-child(2) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs1.png);
+  background-image: url(../images/zs1.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(3) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs2.png);
+  background-image: url(../images/zs2.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(4) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs3.png);
+  background-image: url(../images/zs3.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(5) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs4.png);
+  background-image: url(../images/zs4.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(6) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs5.png);
+  background-image: url(../images/zs5.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(7) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs6.png);
+  background-image: url(../images/zs6.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(8) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs7.png);
+  background-image: url(../images/zs7.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(9) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs8.png);
+  background-image: url(../images/zs8.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(10) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs9.png);
+  background-image: url(../images/zs9.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
 }
 #part7 table tr:nth-child(11) td:nth-child(3) {
-  background-image: url(D:/html/front-end/ife2016-task/images/zs10.png);
+  background-image: url(../images/zs10.png);
   background-repeat: no-repeat;
   background-position: 104px 12px;
   text-indent: 25px;
