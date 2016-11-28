@@ -20,7 +20,6 @@ ul{
 }
 header {
 	display: flex;
-	display: -webkit-box;
 	width: 100%;
 	color: white;
 	padding: 2.5% 0;
@@ -48,7 +47,6 @@ nav {
 }
 nav ul {
   display: flex;
-  display: -webkit-box;
   padding: 4.5% 0;
   margin: 0;
 
@@ -90,7 +88,7 @@ nav ul li a{
 }
 #mark ul {
 	display: flex;
-  display: -webkit-box;
+
 	margin: 0;
 	padding: 5.6% 0;
 }
@@ -106,7 +104,7 @@ nav ul li a{
 }
 #mark ul li a img{
 	width: 100%;
-
+	height: 100%;
 	margin-bottom: 20px;
 }
 #row1 {
@@ -121,7 +119,6 @@ nav ul li a{
 	width: 90%;
 	border-top: 2px solid #dedede;
 	display: flex;
-	display: -webkit-box;
 	padding: 7% 0;
 }
 #row1 ul li{
@@ -194,11 +191,8 @@ nav ul li a{
   height: 100%;
   float: left;
  	display: flex;
- 	display: -webkit-box;
 	flex-flow: row nowrap;
-	flex-flow: -webkit-row -webkit-nowrap;
 	align-content: stretch;
-	align-content: -webkit-stretch;
 
 }
 #row2 img,#row3 img{
@@ -210,13 +204,9 @@ nav ul li a{
 #row2 ul,#row3 ul  {
   float: right;
 	display: flex;
-	display: -webkit-box;
 	flex-flow: row wrap;
-	flex-flow: -webkit-row -webkit-nowrap;
 	align-content: space-between;
-	align-content: -webkit-space-between;
 	justify-content: space-between;
-	justify-content: -webkit-space-between;
 	width: 71.61%;
 	height: 100%;
 	margin: 0 auto ;
@@ -346,7 +336,7 @@ article {
 
 }
 nav span {
-  top: 93%;
+  top: 9%;
   height: 8%;
 }
 }
