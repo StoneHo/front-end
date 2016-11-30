@@ -1,0 +1,102 @@
+#s1 {
+	margin: 25px 0 0 25px;
+}
+#s1 table th,td {
+	border: 1px white solid;
+	color: black;
+	font-weight: bold;
+}
+#s1 table tr:nth-child(1) {
+	background: black;
+	color: white;
+}
+#s1 table tr:nth-child(1) th{
+	color: white;
+	text-align: left;
+}
+#s1 tr:nth-child(2n-1) {
+  background: #cdcdcd;
+}
+#s1 tr:nth-child(2) td,
+#s1 tr:nth-child(3) td,
+#s1 tr:nth-child(4) td{
+  color: #cd0400;
+}
+#s2 {
+	margin: 50px 0 0 25px;
+}
+#s2 input {
+	width: 100px;
+	height: 20px;
+	transition: width 0.5s ease-in-out;
+}
+#s2 input:focus {
+	width: 200px;
+}
+#s3 input {
+	opacity: 0.5;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: black;
+	-webkit-appearance:none;
+    margin-top: 115px;
+    margin-right: -10px;
+    position: relative;
+    z-index: 1;
+    outline: none;
+}
+#s3 input:nth-child(1) {
+    margin-left: 200px;
+}
+#s3 input:nth-child(1):checked ~ #a1{
+	left: 0px;
+}
+#s3 input:nth-child(2):checked ~ #a1{
+	left: 0px;
+}
+#s3 input:nth-child(3):checked ~ #a1{
+	left: -300px;
+}
+#s3 {
+	margin: 50px 0 0 10px;
+	width: 300px;
+	height: 150px;
+	position: relative;
+	background: red;
+  overflow: hidden;
+}
+#s3 #a1 {
+  display: block;
+  width: 900px;
+  height: 150px;
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  z-index: 0;
+  transition: left 1s ease-in-out;
+}
+#s3 #a1 span{
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+  margin:0;
+  padding:0;
+}
+#s3 #a1 span:nth-child(1){
+  background: blue;
+}
+#s3 #a1 span:nth-child(2){
+  background: green;
+}
+#s3 #a1 span:nth-child(3){
+  background: green;
+}
+#s3 em {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  top: 120px;
+  margin-left: -10px;
+  font-style: normal;
+}
