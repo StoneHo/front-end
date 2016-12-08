@@ -2,7 +2,6 @@
 var nowData = []
 var data = ''
 var bu = 0
-var count = 0
 var countr = 0
 
 //获取输入数据
