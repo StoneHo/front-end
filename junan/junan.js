@@ -43,7 +43,7 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 }
 changeScroll(asideLeft);
 changeScroll(asideRight);
-
+/*
 var y;
 var n = 0;
 var pageStop = true;
@@ -91,7 +91,7 @@ var nextPage = function(event) {
 
 }
 EventUtil.addHandler(down,"click",nextPage);
-/*
+
 var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
