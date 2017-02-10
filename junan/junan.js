@@ -74,7 +74,7 @@ var nextPage = function(event) {
             window.scrollTo(0,i)
             if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
             	y = i
-                
+               
                 clearInterval(flag)
                 pageStop = true
             }
@@ -90,7 +90,11 @@ var nextPage = function(event) {
     
 
 }
+<<<<<<< HEAD
 EventUtil.addHandler(down,"click",nextPage);
+=======
+EventUtil.addHandler(down,"touch",nextPage);
+>>>>>>> b1ddf1be5799827114088069a08601e7a49ef8c4
 /*
 var prePosBox = [];
 var prePos;
