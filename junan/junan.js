@@ -111,9 +111,4 @@ var bodyScroll = function( event ) {
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
 
-var pic = document.querySelectorAll(".pic"),
-    link = document.querySelectorAll("#map a"),
-    map = document.getElementById('map'),
-    mapBg = document.getElementById('mapBg'),
-    exit = document.getElementById('exit');
-moveImg(mapBg,map,link);
+
