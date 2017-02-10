@@ -25,7 +25,7 @@ var windowChange = function( event ) {
 };
 EventUtil.addHandler(window,"resize",windowChange);
 
-var changeScroll = function(ele) {
+/*var changeScroll = function(ele) {
     var mouseOut = function(event) {
 	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event);
@@ -93,7 +93,7 @@ var nextPage = function(event) {
 }
 EventUtil.addHandler(down,"click",nextPage);
 
-/*var prePosBox = [];
+var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
     //alert(document.documentElement.scrollHeight)
@@ -110,5 +110,5 @@ var bodyScroll = function( event ) {
     }
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
-*/
+
 
