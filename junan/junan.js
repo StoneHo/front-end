@@ -1,5 +1,4 @@
 var body = document.getElementsByTagName('body')[0];
-
 var culturMenu = document.getElementById('culture-menu');
 var asideLeft = document.querySelectorAll('#aside-left')[0];
 var asideRight = document.querySelectorAll('#aside-right')[0];
@@ -52,7 +51,7 @@ var nextPage = function(event) {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
     EventUtil.preventDefault(event);
-    
+
     if (n == 0) {
     	var i = 0;
     }
@@ -92,7 +91,7 @@ var nextPage = function(event) {
 
 }
 EventUtil.addHandler(down,"click",nextPage);
-/*
+
 var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
@@ -111,4 +110,10 @@ var bodyScroll = function( event ) {
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
 
-
+/*var pic = document.querySelectorAll(".pic"),
+    link = document.querySelectorAll("#map a"),
+    map = document.getElementById('map'),
+    mapBg = document.getElementById('mapBg'),
+    exit = document.getElementById('exit');
+moveImg(mapBg,map,link);
+*/
