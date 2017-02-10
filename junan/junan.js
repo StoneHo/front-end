@@ -43,7 +43,7 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 }
 changeScroll(asideLeft);
 changeScroll(asideRight);
-
+/*
 var y;
 var n = 0;
 var pageStop = true;
@@ -109,7 +109,7 @@ var bodyScroll = function( event ) {
     }
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
-/*
+
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
