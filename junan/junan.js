@@ -91,7 +91,7 @@ var nextPage = function(event) {
 
 }
 EventUtil.addHandler(down,"click",nextPage);
-
+/*
 var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
@@ -110,7 +110,7 @@ var bodyScroll = function( event ) {
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
 
-/*var pic = document.querySelectorAll(".pic"),
+var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
