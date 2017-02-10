@@ -43,6 +43,7 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 }
 changeScroll(asideLeft);
 changeScroll(asideRight);
+alert('gg')
 /*
 var y;
 var n = 0;
