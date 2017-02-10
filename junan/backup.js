@@ -156,6 +156,7 @@ if (zoom == undefined || zoom == true) {
 var mapButton = function( event ) {
     event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
+    alert('vv')
     if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
