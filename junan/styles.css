@@ -513,6 +513,9 @@ video{
     body {
 	height: 800px;
     }
+    .footer {
+      	display: block;
+    }
 }
 @media (max-width: 959px) {
 	.main {
@@ -537,7 +540,7 @@ video{
 	margin-bottom: 0;
     }
     .footer {
-      	opacity: 0;
+      	display: none;
     }
     .culture, .sight, .food, .map {
     height: calc(100% - 63px);
