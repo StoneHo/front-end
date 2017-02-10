@@ -1,0 +1,688 @@
+body {
+	margin: 0;
+	padding: 70px 80px 80px;
+	height: 100%;
+	overflow-y: ;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 600;
+	font-family: '宋体';
+}
+
+/* nav-mobile */
+.mobile {
+	width: calc(100% - 160px);
+	position: fixed;
+    overflow: hidden;
+    padding: 26px 0;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+.mobile a {
+    font-size: 1.25rem;
+    color: black;
+    font-weight: 700;
+}
+.mobile a:first-child {
+    float: left;
+    margin-left: 45px;
+}
+.mobile a:last-child {
+    float: right;
+    margin-right: 45px;
+}
+
+/* nav-main */
+.main {
+	width: calc(100% - 160px);
+	position: fixed;
+    padding: 24px 0 0px;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+.nav-left {
+    display: inline-block;
+    width: 25%;
+    overflow: hidden;
+
+}
+.logo {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    margin-left: -8px;
+
+}
+.logo a {
+	display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 46%;
+    color: black;
+    font-weight: 700;
+    border-bottom: 25px solid transparent;
+    position: relative;
+    z-index: 2;
+
+}
+.logo a:hover {
+    opacity: 0.6;
+}
+.nav-right {
+    display: inline-block;
+    width: 25%;
+    overflow: hidden;
+    margin-left: -8px;
+    
+}
+.nav-sub-left {
+	float: left;
+	color: black;
+    border-bottom: 25px solid transparent;
+    position: relative;
+    z-index: 2;
+}
+.nav-sub-left:hover {
+	color: #127c85;
+}
+.nav-sub-right {
+	float: right;
+	color: black;
+	border-bottom: 25px solid transparent;
+	position: relative;
+    z-index: 2;
+}
+.nav-sub-right:hover {
+	color: #127c85;
+}
+/* aside-left */
+#aside-left {
+	position: fixed;
+	top: 45%;
+	width: 16px;
+	margin-left: -50px;
+}
+.aside-left-content{
+	width: 0%;
+	height: 100%;
+	background: #b6e0d8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	transition:width 0.5s;
+
+}
+.aside-left-content div{
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	left: -600px;
+	top: 100px;
+	transition:left 0.5s;
+}
+#aside-left a:hover + div div{
+	left: 15%;
+}
+#aside-left div:hover div{
+	left: 15%;
+	width: 80%;
+}
+#aside-left div:hover div div{
+	width: 80%;
+}
+
+#aside-left a:hover + div, #aside-right a:hover + div{
+	width: 50%;
+
+}
+
+#aside-left a, #aside-right a{
+	color: black;
+	z-index: 2;
+	position: relative;
+	
+}
+#aside-left a:hover, #aside-right a:hover{
+	color: #127c85;
+}
+#aside-left div:hover, #aside-right div:hover{
+	width: 50%;
+}
+#login, #message-submit, #more {
+	border: 1px solid #127c85;
+	width: 80%;
+	height: 50px;
+	color: #127c85;
+	background: #b6e0d8;
+	cursor: pointer;
+	font-size: 1em;
+    margin-bottom: 20px;
+	font-weight: 700;
+	position: relative;
+	left: 10%;
+}
+#login{
+	top: 50px;
+}
+#more{
+	top: 50px;
+	width: 70%;
+	left: 15%;
+}
+
+#login:hover, #message-submit:hover, #more:hover {
+	color: #b6e0d8;
+	background: #127c85;
+}
+textarea {
+	position: relative;
+	border: 1px solid #127c85;
+	background: #b6e0d8;
+	width: 90%;
+	height: 300px;
+	resize: none;
+	color: #127c85;
+	left: 5%;
+	margin-bottom: 10px;
+	top: 30px;
+}
+ textarea::-webkit-input-placeholder { 
+color: #127c85; 
+} 
+#aside-left h3 {
+	left: 5%;
+	position: relative;
+	width: 200px;
+	top: 30px;
+	color: #127c85;	
+}
+.aside-left-content a{
+	position: relative;
+	left: 35%;
+    top: 30px;
+}
+.aside-left-content a img{
+	width: 30%;
+}
+#message-submit {
+    width: 20%;
+    left: 65%;
+    height: 30px;
+    top: 30px;
+}
+
+/* aside-right */
+#aside-right {
+	position: fixed;
+	top: 45%;
+	right: 0;
+	width: 16px;
+	margin-right: 30px;
+    
+}
+
+#aside-right:hover, #aside-left:hover {
+	color: #127c85;
+}
+.aside-right-content{
+	width: 0%;
+	height: 100%;
+	background: #b6e0d8;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+	transition:width 0.5s;
+
+}
+.aside-right-content div{
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	right: -600px;
+	top: 100px;
+	transition:right 0.5s;
+
+}
+#aside-right a:hover + div div{
+	right: 15%;
+}
+#aside-right div:hover div{
+	right: 15%;
+	width: 80%;
+}
+#aside-right div:hover div div{
+	width: 80%;
+}
+#aside-right h3 {
+	left: 10%;
+	position: relative;
+	width: 200px;
+	top: 20px;
+	color: #127c85;	
+}
+.aside-right-content table {
+	border-collapse: collapse;
+	width: 80%;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	border-bottom: 1px solid #127c85;
+	color: #127c85;
+	position: relative;
+	left: 10%;
+}
+.aside-right-content table tr td{
+	height: 50px;
+	text-align: left;
+    color: black;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.aside-right-content table tr td a{
+	height: 50px;
+	text-align: left;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.aside-right-content div:hover{
+    width: 80%;
+}
+.aside-right-content table:hover {
+    width: 80%;
+}
+/* middle-wrapper */
+.middle-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+}
+
+.nav-culture-sub, .nav-sight-sub, .nav-food-sub{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+	width: 100%;
+	height: 0px;
+	background: #b6e0d8;
+	position: absolute;
+	z-index: 2;
+	top: 76px;
+    left: 0;
+    transition:height 0.2s;
+    transition-delay: 0.1s;
+}
+.nav-culture-sub a, .nav-sight-sub a, .nav-food-sub a{
+    font-size: 0rem;
+    color: black;
+    transition:font-size 0s;
+    transition-delay: 0.2s;
+}
+.nav-culture-sub a:hover, .nav-sight-sub a:hover, .nav-food-sub a:hover{
+    color: #127c85;
+}
+.culture-menu:hover + div, .sight-menu:hover + div, .food-menu:hover + div{
+    height: 80px;
+    top: 76px;
+}
+.culture-menu:hover + div a, .sight-menu:hover + div a, .food-menu:hover + div a{
+    font-size: 1rem;
+}
+.nav-culture-sub:hover, .nav-sight-sub:hover, .nav-food-sub:hover{
+    height: 80px;
+    top: 76px;
+}
+.nav-culture-sub:hover a, .nav-sight-sub:hover a, .nav-food-sub:hover a{
+    font-size: 1rem;
+}
+video{
+	margin: auto;
+    width: calc(100%);
+    margin-bottom: -3px;
+    height: calc(100%);
+    object-fit: fill;
+    position: absolute;
+    z-index: -2;
+
+    
+}
+.land-vedio {
+	margin: auto;
+    width: 100%;
+    height: calc(100% - 160px);
+    position: relative;
+
+}
+.info {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+    top: 20%;
+}
+.info h1 {
+	width: 100%;
+	color: white;
+	font-weight: 700;
+	font-size: 3em;
+	position: relative;
+	text-align: center;
+}
+.info hr {
+	border: 1px solid white;
+	width: 100px;
+    left: 0;
+	position: relative;
+	top: 0px;
+
+}
+.info p {
+	width: 100%;
+	text-align: center;
+	color: white;
+    font-weight: 700;
+    position: relative;
+    margin-top: 50px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+}
+.info button {
+	width: 20%;
+	height: 60px;
+	background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    left: 40%;
+    margin-top: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.culture .info .watchVideo, .sight .info .watchVideo{
+	width: 120px;
+	height: 120px;
+	background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    font-size: 1em;
+    cursor: pointer;
+}
+.info button:hover {
+	background: white;
+	color: black;
+}
+.info .watchVideo:hover {
+	background: white;
+	color: black;
+}
+.culture .info, .sight .info, .food .info {
+    top: 15%;
+
+}
+.culture .info p, .sight .info p, .food .info p {
+	width: 23%;
+	left: 15%;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 50px;
+}
+.culture .info h1, .sight .info h1, .food .info h1 {
+    width: 25%;
+	left: 15%;
+	margin-bottom: 35px;
+	text-align: left;
+
+}
+
+.culture .info hr, .sight .info hr, .food .info hr {
+    width: 80px;
+    left: 15%;
+    top: 100px;
+    position: absolute;
+}
+.culture .info button, .sight .info button, .food .info button {
+    left: 15.5%;
+
+}
+.culture, .sight, .food, .map {
+	margin: auto;
+    width: 100%;
+    max-width: 1280px;
+    height: calc(100% - 160px);
+    margin-bottom: 0px;
+    background-image: url('333.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+.wrapper-background {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+    
+}
+
+
+.last-wrapper {
+	margin-bottom: 80px;
+}
+/* footer */
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: calc(100% - 160px);
+	padding: 33px 0;
+    background: white;
+
+}
+.footer button {
+	color: black;
+	margin-left: 49.4%;
+	position: relative;
+    z-index: 2;
+    background: transparent;
+    border: none;
+
+}
+.footer button:hover {
+	opacity: 0.6;
+}
+
+@media (min-width: 960px) {
+	.mobile {
+	    display: none;
+    }
+    body {
+	height: 800px;
+    }
+}
+@media (max-width: 959px) {
+	.main {
+	    display: none;
+    }
+    .mobile {
+	    width: 100%;
+	    padding: 20px 0;
+        left: 0;
+    }
+    body {
+	    padding: 65px 0 0;
+	    height: 667px;
+    }
+    .aside-left {
+	    display: none;
+    }
+    .aside-right {
+	    display: none;
+    }
+    .last-wrapper {
+	margin-bottom: 0;
+    }
+    .footer {
+      	opacity: 0;
+    }
+    .culture, .sight, .food, .map {
+    height: calc(100% - 63px);
+    }
+    video{
+    width: 100%;
+
+    }
+    .land-vedio {
+    height: calc(100% - 65px);
+    }
+    .culture .info, .sight .info, .food .info {
+	left: -5%;
+    top: 10%;
+    }
+    .info h1 {
+	font-size: 2em;
+    }
+    .culture .info p, .sight .info p, .food .info p {
+	width: 35%;
+}
+    .info hr {
+	width: 60px;
+	top: 10px;
+    }
+    .culture .info hr, .sight .info hr, .food .info hr {
+    top: 75px;
+}
+    .info button,  .culture .info .watchVideo, .sight .info .watchVideo{
+    font-size: 0.9em;
+
+    }
+    .info button{
+    width: 35%;
+    left: 33%;
+    }
+
+}
+@media (max-height: 500px) {
+    .culture, .sight, .food, .map {
+    height: calc(100%);
+    }
+	.land-vedio .info,.culture .info, .sight .info, .food .info {
+    top: 0%;
+    }
+    .culture .info p, .sight .info p, .food .info p {
+	width: 40%;
+	line-height: 20px;
+   }
+    .info button{
+    height: 40px;
+
+    }
+}
+@media (max-width: 538px) {
+
+    .land-vedio .info, .culture .info, .sight .info, .food .info {
+    top: 10%;
+    }
+    .culture .info h1, .sight .info h1, .food .info h1 {
+	font-size: 1.7em;
+    width: 50%;
+    text-align: center;
+	left: 33%;
+    }
+    .culture .info p, .sight .info p, .food .info p {
+	width: 50%;
+	text-align: center;
+	left: 33%;
+	line-height: 20px;
+}
+
+    .culture .info hr, .sight .info hr, .food .info hr {
+    top: 10px;
+    width: 100px;
+    left: 8%;
+    position: relative;
+}
+    .culture .info button, .sight .info button, .food .info button {
+    font-size: 0.9em;
+    width: 40%;
+    height: 40px;
+    left: 38%;
+    }
+    
+    .culture .info .watchVideo, .sight .info .watchVideo{
+    font-size: 0.9em;
+    width: 40%;
+    height: 40px;
+    left: -3.8%;
+    top: 50px;
+    position: relative;
+    }
+
+}
+
+
+      #map {
+      	display: none;
+      	position: absolute;
+      	width: 95%;
+      	height: 95%;
+      	left: 2.5%;
+      	top: 2.5%;
+      	opacity: 0;
+      	z-index: 2;
+      	border: 1px solid black;
+      	animation: myfirst .3s forwards;
+      	overflow: hidden;
+      	z-index: 20;
+      }
+      @keyframes myfirst {
+      	0% {opacity: 0;}
+      	100%{opacity: 1;}
+      }
+      #exit {
+      	position: absolute;
+      	right: 0;
+      	top: 0;
+      	z-index: 2;
+      }
+
+      #mapBg {
+      	width: 100%;
+      	height: 100%;
+      	position: absolute;
+
+      }
+      #draggable3 {
+           position: absolute;  
+           left: 10%;
+           top: 25%;   
+
+      }
+      #draggable4 {
+           position: absolute;     
+           left:20%;
+           top: 50%;
+      }
+      #draggable5 {
+           position: absolute;     
+           left:35%;
+           top: 75%;
+      }
+      .pic {
+        max-width: 100%;
+
+      }

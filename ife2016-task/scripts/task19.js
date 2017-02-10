@@ -32,7 +32,7 @@ function createImages(opt,a) {
     }
   } 
   if (bu == 1 && countr == 1) {
-    setTimeout(function(){document.getElementsByTagName('button')[5].click()},1000)
+    setTimeout(function(){document.getElementsByTagName('button')[5].click()},10)
     countr = 0
   }  
 }

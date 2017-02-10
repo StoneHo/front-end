@@ -1,98 +1,78 @@
-//贮存数据，创建变量
-var loveData = []
-var tagData = []
-var data = ''
-var tag = ''
-var love = ''
-var div = document.getElementsByTagName('div');
+var data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
-//获取输入数据
-function getData(x,op) {
-  var text = document.getElementsByTagName(x)[0];
-  var value = text.value
-  value = value.replace(/[\s]+/g,",")
-  value = value.replace(/[\r\s\,\，\、]/g,",")
-  value = value.split(",")
-  for (var i = 0; i < value.length; i++) {
-    if (value[i] == '') {
-      value.splice(i,1)
-    }
-  }
-  op = value
-  data = op;
+function Node(text) {
+  this.text = text;
+  this.left = null;
+  this.right = null;
 }
+function createNodes(nodes,i) {
+  var leftChild = i*2 + 1
+  var rightChild = i*2 + 2
+  if (leftChild < data.length) {
+    var node = new Node(data[leftChild])
+    nodes.left = node
+    createNodes(node,leftChild)
+  }
+  if (rightChild < data.length) {
+    var node = new Node(data[rightChild])
+    nodes.right = node
+    createNodes(node,rightChild)
+  }
+}
+var node = new Node(data[0])
+createNodes(node,0)
 
-//对相应操作绘制图标
-function createImages(x,nowData) {
-  var nowData = nowData.concat(data)
-  var cop = [];
-  for (var i = 0;i< nowData.length; i++) {
-    if (cop.indexOf(nowData[i]) == -1) {
-      cop.push(nowData[i])
-    }
+//前序
+var x = []
+function BF(nd) {
+  if (nd != null) {
+    alert(nd.text)
   }
-  nowData = cop
-  if (nowData.length > 10) {
-    nowData.splice(0,nowData.length - 10)
-  }
-  if (div[x].children[0] != undefined) {
-    div[x].innerHTML = ''
-  }
-  for (var i = 0; i < nowData.length; i++) {
-    if (nowData[i] == undefined) {
-      continue
+  while (nd.left != null) {
+    if (nd.right != null) {
+      x.push(nd.right)
     }
-    if (nowData[i] == '') {
-      continue
-    }
-    var span = document.createElement('span');
-    span.innerHTML = nowData[i]
-    div[x].appendChild(span)
-    span.onclick = function() {
-      div[x].removeChild(this)
-      clickDel(x)
-    }
-  } 
-  if (x == 0) {
-    tagData = nowData
-  } else if (x == 1) {
-    loveData = nowData
+    BF(nd.left)
   }
+  while (nd.right != null) {
+    BF(nd.right)
+  }
+  BF(x.pop())
 }
 
-//点击删除相应队列
-function clickDel(x) {
-  var span = div[x].getElementsByTagName('span');
-  var newData = []
-  for (var i = 0; i < span.length; i++) {
-    newData.push(span[i].innerHTML);
+
+//中序
+var y = []
+function MF(nd) {
+  
+  while (nd.left != null) {
+    y.push(nd)
+    MF(nd.left)
   }
-  if (x == 0) {
-    tagData = newData
-  } else if (x == 1) {
-    loveData = newData
+  while (nd.right != null) {
+    MF(nd.right)
   }
+  if (nd != null) {
+    alert(nd.text)
+  }
+  alert((y[y.length-1]).text)
+  MF((y.pop()).right)
 }
 
-function inputData(e) {           
-    var keynum;
-    keynum = window.event ? e.keyCode : e.which;
-    if (keynum == 32 || keynum == 13 || keynum == 188) {
-      getData('input',tag)
-      createImages(0,tagData)
-    }
-}
 
-//绑定触发事件
-function click() {
-  var bt = document.getElementsByTagName('button')[0];
-  bt.onclick = function() {
-    getData('textarea',love)
-    createImages(1,loveData)
-}
-}
+//后序
+var z = []
+var z1 = []
+function LF(nd) {
 
-function init() {
-  click()
+  while (nd.left != null) {
+    z.push(nd)
+    z.push(nd.right)
+    LF(nd.left)
+  }
+  while (nd.right != null) {
+    LF(nd.right)
+  }
+
 }
-init()
+LF(node)

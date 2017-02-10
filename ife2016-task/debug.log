@@ -1,2 +1,4 @@
 [1118/043031:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)
 [1207/135015:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)
+[1214/010011:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)
+[1214/010034:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: 操作超时  (0x2EE2)
