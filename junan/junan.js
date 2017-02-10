@@ -43,7 +43,7 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 }
 changeScroll(asideLeft);
 changeScroll(asideRight);
-/*
+
 var y;
 var n = 0;
 var pageStop = true;
@@ -71,7 +71,7 @@ var nextPage = function(event) {
     var picPos_4 = (picPos) * 4; 
         return function(){
         	i = i + 4
-            window.scrollTo(0,i)
+            //window.scrollTo(0,i)
             if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
             	y = i
                 
@@ -91,7 +91,7 @@ var nextPage = function(event) {
 
 }
 EventUtil.addHandler(down,"click",nextPage);
-
+/*
 var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
