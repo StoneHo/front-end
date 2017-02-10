@@ -52,11 +52,45 @@ var nextPage = function(event) {
     var target = EventUtil.getTarget(event)
     EventUtil.preventDefault(event);
 
+    if (n == 0) {
+    	var i = 0;
+    }
+    if (n >= 1) {
+    	var i = y
+    }
+    n = n + 1
+    pageStop = false;
+    //alert(event.pageY)
+    //alert(window.outerHeight - 160)
+    
+    var x = (function(){
+    var remainder =  picPos % 4 
+    var picPos_1 = picPos - remainder * 1;
+    var picPos_2 = (picPos - remainder) * 2;
+    var picPos_3 = (picPos - remainder) * 3;
+    var picPos_4 = (picPos) * 4; 
+        return function(){
+        	i = i + 4
+            window.scrollTo(0,i)
+            if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
+            	y = i
+                
+                clearInterval(flag)
+                pageStop = true
+            }
+            if (i > picPos_4) {
+            	clearInterval(flag)
+            	pageStop = true
+            	n = 0
+            }
 
+        }
+    })
+    var flag = setInterval(x(), 0);
     
 
 }
-EventUtil.addHandler(down,"click",nextPage);
+EventUtil.addHandler(down,"tap",nextPage);
 /*
 var prePosBox = [];
 var prePos;
