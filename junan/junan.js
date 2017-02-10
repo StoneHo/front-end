@@ -93,7 +93,7 @@ var nextPage = function(event) {
 }
 EventUtil.addHandler(down,"click",nextPage);
 
-var prePosBox = [];
+/*var prePosBox = [];
 var prePos;
 var bodyScroll = function( event ) {
     //alert(document.documentElement.scrollHeight)
@@ -110,5 +110,5 @@ var bodyScroll = function( event ) {
     }
 };
 EventUtil.addHandler(window,"scroll",bodyScroll);
-
+*/
 
