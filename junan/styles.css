@@ -598,7 +598,7 @@ video{
 @media (max-width: 538px) {
 
     .land-vedio .info, .culture .info, .sight .info, .food .info {
-    top: 5%;
+    top: 10%;
     }
     .culture .info h1, .sight .info h1, .food .info h1 {
 	font-size: 1.7em;
@@ -608,8 +608,8 @@ video{
     }
     .culture .info p, .sight .info p, .food .info p {
 	width: 60%;
-	text-align: left;
-	left: 33%;
+	text-align: center;
+	left: 29%;
 	line-height: 20px;
 	top: -5%;
 }
