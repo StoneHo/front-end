@@ -10,7 +10,8 @@ var main = document.querySelectorAll('.main')[0];
 var landVideo = document.querySelectorAll('.land-vedio')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
 var mobile = document.querySelectorAll('.mobile')[0];
-var picPos;
+var picPos,
+    bodyWidth;
 
 if (window.outerHeight) {
     body.style.height = window.outerHeight + 'px'
@@ -20,11 +21,13 @@ if (window.outerHeight) {
 
 if (window.outerHeight != 0) {
     picPos = window.outerHeight - 160;
+    bodyWidth = window.outerWidth
 } else {
     picPos = window.innerHeight - 160;
+    bodyWidth = window.innerWidth
 }
 
-
+if (bodyWidth >= 960) {
 var windowChange = function( event ) {
     if (window.outerHeight != 0) {
         body.style.height = window.outerHeight + 'px';
@@ -35,7 +38,7 @@ var windowChange = function( event ) {
     }
 };
 EventUtil.addHandler(window,"resize",windowChange);
-
+}
 
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
