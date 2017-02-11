@@ -625,6 +625,7 @@ video{
     width: 40%;
     height: 40px;
     left: 38%;
+    top: -15px;
     }
     
     .culture .info .watchVideo, .sight .info .watchVideo{
@@ -632,7 +633,7 @@ video{
     width: 40%;
     height: 40px;
     left: -3.8%;
-    top: 50px;
+    top: 45px;
     position: relative;
     }
 
