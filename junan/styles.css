@@ -602,10 +602,11 @@ video{
     }
     .culture .info h1, .sight .info h1, .food .info h1 {
 	font-size: 2em;
-    width: 50%;
+    width: 60%;
     text-align: center;
-	left: 33%;
+	left: 28%;
 	letter-spacing: 15px;
+
     }
     .culture .info p, .sight .info p, .food .info p {
 	width: 90%;
