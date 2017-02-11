@@ -24,6 +24,7 @@ var windowChange = function( event ) {
 };
 EventUtil.addHandler(window,"resize",windowChange);
 
+/*
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
 	    event = EventUtil.getEvent(event);
@@ -44,7 +45,7 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 changeScroll(asideLeft);
 changeScroll(asideRight);
 
-/*
+
 var y;
 var n = 0;
 var pageStop = true;
