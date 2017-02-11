@@ -17,14 +17,14 @@ if (window.outerHeight) {
 } else {
     body.style.height = document.documentElement.clientHeight + 'px'
 }
-/*
+
 var windowChange = function( event ) {
     body.style.height = window.outerHeight + 'px';
     picPos = window.outerHeight - 160;
 };
 EventUtil.addHandler(window,"resize",windowChange);
 
-
+/*
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
 	    event = EventUtil.getEvent(event);
