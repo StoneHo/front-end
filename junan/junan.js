@@ -19,7 +19,8 @@ if (window.outerHeight) {
 }
 
 var windowChange = function( event ) {
-    body.style.height = window.outerHeight + 'px';
+    alert(window.outerHeight)
+    //body.style.height = window.outerHeight + 'px';
     picPos = window.outerHeight - 160;
 };
 EventUtil.addHandler(window,"resize",windowChange);
