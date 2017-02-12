@@ -293,9 +293,9 @@ var touchEnd = function(event) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1 + 10
-        var picPos_3 = picPos2 - remainder2 + picPos_2 + 10
-        var picPos_4 = picPos_3 + picPos2 - remainder2 + 10
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)

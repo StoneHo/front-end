@@ -554,7 +554,7 @@ video{
     }
     .culture .info, .sight .info, .food .info {
 	left: -5%;
-    top: 10%;
+    top: 5%;
     }
     .info h1 {
 	font-size: 2em;
