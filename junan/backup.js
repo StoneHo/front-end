@@ -156,6 +156,7 @@ if (zoom == undefined || zoom == true) {
 var mapButton = function( event ) {
     event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
+
     if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
@@ -190,9 +191,16 @@ EventUtil.addHandler(document,"click",mapButton);
 /* 网页版拖动 */
 
 var windowChange = function( event ) {
+    if (window.outerHeight) {
     body.style.height = window.outerHeight + 'px'
     map.style.width = window.outerWidth * 0.95 + 'px'
     map.style.height = window.outerHeight * 0.95 + 'px'
+} else {
+    body.style.height = document.documentElement.clientHeight + 'px'
+    map.style.width = document.documentElement.clientHeight * 0.95 + 'px'
+    map.style.height = document.documentElement.clientHeight * 0.95 + 'px'
+}
+
 };
 EventUtil.addHandler(window,"resize",windowChange);
 

@@ -431,11 +431,11 @@ video{
 	color: black;
 }
 .culture .info, .sight .info, .food .info {
-    top: 15%;
+    top: 10%;
 
 }
 .culture .info p, .sight .info p, .food .info p {
-	width: 23%;
+	width: 27.5%;
 	left: 15%;
     text-align: left;
     line-height: 30px;
@@ -554,13 +554,13 @@ video{
     }
     .culture .info, .sight .info, .food .info {
 	left: -5%;
-    top: 10%;
+    top: 0;
     }
     .info h1 {
 	font-size: 2em;
     }
     .culture .info p, .sight .info p, .food .info p {
-	width: 35%;
+	width: 30%;
 }
     .info hr {
 	width: 60px;
@@ -574,7 +574,7 @@ video{
 
     }
     .info button{
-    width: 35%;
+    width: 27%;
     left: 33%;
     }
 
@@ -640,7 +640,6 @@ video{
     }
 
 }
-
 
       #map {
       	display: none;
