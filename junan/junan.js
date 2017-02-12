@@ -62,43 +62,64 @@ changeScroll(asideRight);
 
 
 var y;
-var n = 0;
+var n = 0, i;
 var pageStop = true;
+
+var calculateScroll = function(i,stop) {
+	var x = (function(){
+        return function(){
+        	i = i + 4
+            window.scrollTo(0,i)
+            if (i == stop) {
+                clearInterval(flag)
+                pageStop = true
+            }
+
+        }
+    })
+    var flag = setInterval(x(), 0);
+}
+var calculateScrollReduce = function(i,stop) {
+	var x = (function(){
+        return function(){
+
+        	i = i - 4
+            window.scrollTo(0,i)
+
+            if (i == stop) {
+                clearInterval(flag)
+                pageStop = true
+            }
+
+        }
+    })
+    var flag = setInterval(x(), 0);
+}
+
 var nextPage = function(event) {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
     EventUtil.preventDefault(event);
-
-    if (n == 0) {
-    	var i = 0;
-    }
-    if (n >= 1) {
-    	var i = y
-    }
-    n = n + 1
     pageStop = false;
-    //alert(event.pageY)
-    //alert(window.outerHeight - 160)
-    
     var x = (function(){
     var remainder =  picPos % 4 
-    var picPos_1 = picPos - remainder * 1;
-    var picPos_2 = (picPos - remainder) * 2;
-    var picPos_3 = (picPos - remainder) * 3;
-    var picPos_4 = (picPos) * 4; 
+    var picPos_1 = picPos - remainder * 1 + 60;
+    var picPos_2 = (picPos - remainder) * 2 + 60;
+    var picPos_3 = (picPos - remainder) * 3 + 60;
+    var picPos_4 = (picPos) * 4 + 60;
+    var scrollTop = document.body.scrollTop
+    i = scrollTop
         return function(){
         	i = i + 4
             window.scrollTo(0,i)
             if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
-            	y = i
-                
+
                 clearInterval(flag)
                 pageStop = true
             }
             if (i > picPos_4) {
             	clearInterval(flag)
             	pageStop = true
-            	n = 0
             }
 
         }
@@ -109,28 +130,232 @@ var nextPage = function(event) {
 }
 EventUtil.addHandler(down,"click",nextPage);
 
-var prePosBox = [];
-var prePos;
-var bodyScroll = function( event ) {
-    //alert(document.documentElement.scrollHeight)
-    if (pageStop) {
-        prePosBox.push(window.pageYOffset)
+var nextPageWheel = function(event) {
+	event = EventUtil.getEvent(event);
+    var target = EventUtil.getTarget(event)
+    var remainder =  picPos % 4 
+    var picPos_1 = picPos - remainder * 1 + 60;
+    var picPos_2 = (picPos - remainder) * 2 + 60;
+    var picPos_3 = (picPos - remainder) * 3 + 60;
+    var picPos_4 = (picPos) * 4 + 56
+    if (event.wheelDelta == -120) {
+    	var scrollTop = document.body.scrollTop
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    		    calculateScroll(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScroll(i,picPos_2)
+    		    i = picPos_2
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScroll(i,picPos_3)
+    		    i = picPos_3
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScroll(i,picPos_4)
+    		    i = picPos_4
+    	}
+     	    	    	
+    }
+     if (event.wheelDelta == 120) {
+    	var scrollTop = document.body.scrollTop
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScrollReduce(i,0)
+    		    i = 0
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScrollReduce(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScrollReduce(i,picPos_2)
+    		    i = picPos_2
+    	}
+    	if (scrollTop == picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	} 
+    	if (scrollTop > picPos_4) {
+    		    alert(scrollTop)
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	}    	    	    	
+    }   
 
-        if (prePosBox.length == 2) {
-    	    prePos = prePosBox[1]
-    	    prePosBox = []
-    	    var i = prePos
-            //var start = window.setTimeOut(nextPage(),5000)
-     
-        }
+}
+EventUtil.addHandler(document,"mousewheel",nextPageWheel);
+
+var scrollMouseUp = function( event ) {
+	    event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event)
+        currentScrollTop = document.body.scrollTop
+        if (currentScrollTop - preScrollTop != 0 && pageStop) {
+        var remainder =  picPos % 4 
+        var picPos_1 = picPos - remainder * 1 + 60;
+        var picPos_2 = (picPos - remainder) * 2 + 60;
+        var picPos_3 = (picPos - remainder) * 3 + 60;
+        var picPos_4 = (picPos) * 4 + 60;
+    	var scrollTop = document.body.scrollTop
+        var point = parseInt(picPos/2)
+        var remainder =  scrollTop % 4
+
+    	if (scrollTop <= point) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScrollReduce(i,0)
+
+    	} 
+   	
+    	if (scrollTop > point && scrollTop < picPos_1) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScroll(i,picPos_1)
+    		i = picPos_1
+    	}
+    	if (scrollTop > picPos_1 && scrollTop <= picPos_1 + point) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScrollReduce(i,picPos_1)
+    	}
+    	if (scrollTop > picPos_1 + point && scrollTop < picPos_2) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScroll(i,picPos_2)
+    	}
+    	if (scrollTop > picPos_2 && scrollTop <= picPos_2 + point) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScrollReduce(i,picPos_2)
+    	}
+    	if (scrollTop > picPos_2 + point && scrollTop < picPos_3) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScroll(i,picPos_3)
+    	}
+    	if (scrollTop > picPos_3 && scrollTop < picPos_3 + point) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScrollReduce(i,picPos_3)
+    	}
+    	if (scrollTop > picPos_3 + point && scrollTop < picPos_4) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScroll(i,picPos_4)
+    	}
+    	if (scrollTop > picPos_4) {
+    		scrollTop = scrollTop - remainder
+            i = scrollTop
+    		calculateScrollReduce(i,picPos_4)
+    	}
     }
 };
-EventUtil.addHandler(window,"scroll",bodyScroll);
-/*
+EventUtil.addHandler(document,"mouseup",scrollMouseUp);
+
+var scrollMouseDown = function( event ) {
+	    event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event)
+        preScrollTop = document.body.scrollTop;
+
+        
+};
+EventUtil.addHandler(document,"mousedown",scrollMouseDown);
+
+//移动设备
+var touchst,touched
+var touchStart = function(event) {
+	event = EventUtil.getEvent(event);
+	touchst = event.touches[0].clientY;
+    EventUtil.preventDefault(event)
+}
+EventUtil.addHandler(document,"touchstart",touchStart);
+
+var touchEnd = function(event) {
+	event = EventUtil.getEvent(event);
+	EventUtil.preventDefault(event)
+	touched = event.changedTouches[0].clientY;
+    var picPos = window.innerHeight - 65;
+    alert(window.innerHeight)
+    if (touched - touchst < 0) {
+    	var scrollTop = document.body.scrollTop
+    	var remainder =  picPos % 4
+        var picPos_1 = picPos - remainder * 1
+        var picPos_2 = (picPos - remainder) * 2
+        var picPos_3 = (picPos - remainder) * 3
+        var picPos_4 = (picPos) * 4
+    	alert(scrollTop)
+    	//alert(event.changedTouches[0].pageY)
+
+    	alert(picPos_1)
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    		    calculateScroll(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScroll(i,picPos_2)
+    		    i = picPos_2
+    		    alert(picPos_2)
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScroll(i,picPos_3)
+    		    i = picPos_3
+    		    alert(picPos_3)
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScroll(i,picPos_4)
+    		    i = picPos_4
+    	}
+     	    	    	
+    }
+     if (touched - touchst > 0) {
+    	var scrollTop = document.body.scrollTop
+    	var remainder =  picPos % 4
+        var picPos_1 = picPos - remainder * 1
+        var picPos_2 = (picPos - remainder) * 2
+        var picPos_3 = (picPos - remainder) * 3
+        var picPos_4 = (picPos) * 4
+    	alert(scrollTop)
+    	alert(event.changedTouches[0].pageY)
+
+    	alert(picPos_1)
+    	var scrollTop = document.body.scrollTop
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScrollReduce(i,0)
+    		    i = 0
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScrollReduce(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScrollReduce(i,picPos_2)
+    		    i = picPos_2
+    	}
+    	if (scrollTop == picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	} 
+    	if (scrollTop > picPos_4) {
+    		    alert(scrollTop)
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	}    	    	    	
+    }   
+
+}
+EventUtil.addHandler(document,"touchend",touchEnd);
+
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
     exit = document.getElementById('exit');
 moveImg(mapBg,map,link);
-*/
