@@ -629,7 +629,12 @@ video{
     left: 36%;
     top: -15px;
     }
-    
+    .land-vedio .info button, .map .info button {
+    font-size: 0.9em;
+    width: 40%;
+    left: 30%;
+
+    }
     .culture .info .watchVideo, .sight .info .watchVideo{
     font-size: 0.9em;
     width: 40%;
