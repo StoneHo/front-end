@@ -146,7 +146,7 @@ var nextPageWheel = function(event) {
     var picPos_2 = (picPos - remainder) * 2 + 60;
     var picPos_3 = (picPos - remainder) * 3 + 60;
     var picPos_4 = (picPos) * 4 + 56
-    if (event.wheelDelta == -120) {
+    if (event.wheelDelta == -120 && body.style.overflowY == '') {
     	var scrollTop = document.body.scrollTop
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
@@ -167,7 +167,7 @@ var nextPageWheel = function(event) {
     	}
      	    	    	
     }
-     if (event.wheelDelta == 120) {
+     if (event.wheelDelta == 120 && body.style.overflowY == '') {
     	var scrollTop = document.body.scrollTop
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
