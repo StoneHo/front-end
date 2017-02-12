@@ -274,7 +274,6 @@ var scrollMouseDown = function( event ) {
 EventUtil.addHandler(document,"mousedown",scrollMouseDown);
 
 //移动设备
-alert('good')
 var touchst,touched
 var touchStart = function(event) {
 	event = EventUtil.getEvent(event);
@@ -284,21 +283,19 @@ var touchStart = function(event) {
 EventUtil.addHandler(document,"touchstart",touchStart);
 
 var touchEnd = function(event) {
-	alert('ff')
 	event = EventUtil.getEvent(event);
 	EventUtil.preventDefault(event)
 	touched = event.changedTouches[0].clientY;
     if (touched - touchst < 0) {
     	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
-    	alert('hh')
     	var scrollTop = document.body.scrollTop
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 - remainder2 + picPos_1 + 10
+        var picPos_3 = picPos2 - remainder2 + picPos_2 + 10
+        var picPos_4 = picPos_3 + picPos2 - remainder2 + 10
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
