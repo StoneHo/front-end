@@ -625,7 +625,7 @@ video{
     .culture .info button, .sight .info button, .food .info button {
     font-size: 0.9em;
     width: 40%;
-    height: 40px;
+    height: 35px;
     left: 36%;
     top: -15px;
     }
@@ -633,9 +633,9 @@ video{
     .culture .info .watchVideo, .sight .info .watchVideo{
     font-size: 0.9em;
     width: 40%;
-    height: 40px;
+    height: 35px;
     left: -6%;
-    top: 40px;
+    top: 30px;
     position: relative;
     }
 
