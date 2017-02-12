@@ -8,6 +8,8 @@ var footer = document.querySelectorAll('.footer')[0];
 var down = document.querySelectorAll('#down')[0];
 var main = document.querySelectorAll('.main')[0];
 var landVideo = document.querySelectorAll('.land-vedio')[0];
+var culture = document.querySelectorAll('.culture')[0];
+var sight = document.querySelectorAll('.sight')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
 var mobile = document.querySelectorAll('.mobile')[0];
 var picPos,
@@ -22,8 +24,12 @@ if (window.outerHeight) {
 if (window.outerHeight != 0) {
     picPos = window.outerHeight - 160;
     bodyWidth = window.outerWidth
-} else {
+} else{
     picPos = window.innerHeight - 160;
+    bodyWidth = window.innerWidth
+}
+if (bodyWidth < 960) {
+	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
 }
 
@@ -39,6 +45,8 @@ var windowChange = function( event ) {
 };
 EventUtil.addHandler(window,"resize",windowChange);
 }
+
+
 
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
@@ -278,23 +286,21 @@ var touchEnd = function(event) {
 	event = EventUtil.getEvent(event);
 	EventUtil.preventDefault(event)
 	touched = event.changedTouches[0].clientY;
-    var picPos = window.innerHeight - 65;
-    alert(window.innerHeight)
     if (touched - touchst < 0) {
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.body.scrollTop
-    	var remainder =  picPos % 4
-        var picPos_1 = picPos - remainder * 1
-        var picPos_2 = (picPos - remainder) * 2
-        var picPos_3 = (picPos - remainder) * 3
-        var picPos_4 = (picPos) * 4
-    	alert(scrollTop)
-    	//alert(event.changedTouches[0].pageY)
-
-    	alert(picPos_1)
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
+        var picPos_1 = picPos1 + (4 - remainder1)
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
     		    i = picPos_1
+    		    alert(picPos_1)
     	}
     	if (scrollTop == picPos_1) {
     		    calculateScroll(i,picPos_2)
@@ -309,21 +315,20 @@ var touchEnd = function(event) {
     	if (scrollTop == picPos_3) {
     		    calculateScroll(i,picPos_4)
     		    i = picPos_4
+    		    alert(picPos_4)
     	}
      	    	    	
     }
      if (touched - touchst > 0) {
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.body.scrollTop
-    	var remainder =  picPos % 4
-        var picPos_1 = picPos - remainder * 1
-        var picPos_2 = (picPos - remainder) * 2
-        var picPos_3 = (picPos - remainder) * 3
-        var picPos_4 = (picPos) * 4
-    	alert(scrollTop)
-    	alert(event.changedTouches[0].pageY)
-
-    	alert(picPos_1)
-    	var scrollTop = document.body.scrollTop
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
+        var picPos_1 = picPos1 + (4 - remainder1)
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     	}
