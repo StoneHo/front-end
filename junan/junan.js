@@ -283,7 +283,7 @@ var touchStart = function(event) {
 EventUtil.addHandler(document,"touchstart",touchStart);
 
 var touchEnd = function(event) {
-	alert('gg')
+
 	event = EventUtil.getEvent(event);
 	EventUtil.preventDefault(event)
 	touched = event.changedTouches[0].clientY;
@@ -354,7 +354,7 @@ var touchEnd = function(event) {
 
 }
 EventUtil.addHandler(document,"touchend",touchEnd);
-alert('good')
+
 /*
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
