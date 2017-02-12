@@ -274,6 +274,7 @@ var scrollMouseDown = function( event ) {
 EventUtil.addHandler(document,"mousedown",scrollMouseDown);
 
 //移动设备
+alert('good')
 var touchst,touched
 var touchStart = function(event) {
 	event = EventUtil.getEvent(event);
@@ -283,12 +284,14 @@ var touchStart = function(event) {
 EventUtil.addHandler(document,"touchstart",touchStart);
 
 var touchEnd = function(event) {
+	alert('ff')
 	event = EventUtil.getEvent(event);
 	EventUtil.preventDefault(event)
 	touched = event.changedTouches[0].clientY;
     if (touched - touchst < 0) {
     	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
+    	alert('hh')
     	var scrollTop = document.body.scrollTop
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
@@ -300,22 +303,18 @@ var touchEnd = function(event) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
     		    i = picPos_1
-    		    alert(picPos_1)
     	}
     	if (scrollTop == picPos_1) {
     		    calculateScroll(i,picPos_2)
     		    i = picPos_2
-    		    alert(picPos_2)
     	}    	
     	if (scrollTop == picPos_2) {
     		    calculateScroll(i,picPos_3)
     		    i = picPos_3
-    		    alert(picPos_3)
     	}
     	if (scrollTop == picPos_3) {
     		    calculateScroll(i,picPos_4)
     		    i = picPos_4
-    		    alert(picPos_4)
     	}
      	    	    	
     }
@@ -357,10 +356,11 @@ var touchEnd = function(event) {
 
 }
 EventUtil.addHandler(document,"touchend",touchEnd);
-
+/*
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
     exit = document.getElementById('exit');
 moveImg(mapBg,map,link);
+*/
