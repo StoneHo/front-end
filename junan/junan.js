@@ -15,7 +15,10 @@ var mobile = document.querySelectorAll('.mobile')[0];
 var enter = document.querySelectorAll('#enter')[0];
 
 var picPos,
-    bodyWidth;
+    bodyWidth,
+    picMove = true,
+    mapEnter = true,
+    zoomCount;
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
@@ -416,7 +419,7 @@ var touchEnd = function(event) {
     var target = EventUtil.getTarget(event)
     EventUtil.preventDefault(event)
     touched = event.changedTouches[0].clientY;
-    if (touched - touchst < 0) {
+    if (touched - touchst < 0 && picMove) {
         var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
         var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
         var scrollTop = document.body.scrollTop
@@ -445,7 +448,7 @@ var touchEnd = function(event) {
         }
                         
     }
-     if (touched - touchst > 0) {
+     if (touched - touchst > 0 && picMove) {
         var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
         var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
         var scrollTop = document.body.scrollTop
@@ -487,34 +490,28 @@ var touchEnd = function(event) {
         map.style.position = 'fixed'
         borderWidth = map.clientWidth
         borderHeight = map.clientHeight
-        main.style.display = 'none'
-        footer.style.display = 'none'
-        body.style.overflowY = 'hidden'
-        mobile.style.display = 'none'
         dd = imgWidth / borderWidth
-        
         ddd = imgHeight / borderHeight;
         changePicSize(link,dd,ddd)
-        zoomCount = true;
+        picMove = false
         if (zoomCount == false) {
             resetPicSize(link);
+            mapEnter = false
             }
         }
         if (target.id == 'exit') {
             map.style.display = 'none'
             map.style.position = 'absolute'
-            main.style.display = 'block'
-            footer.style.display = 'block'
-            mobile.style.display = 'block'
-            body.style.overflowY = ''
             resetPicSize(link);
-            if (zoomCount == false) {
-            resetPicSize(link);
-            }
+            zoomCount = false;
+            picMove = true;
+            mapEnter = true;
         }
-        if (target.id == 'enterPic') {
+        if (target.id == 'enterPic' && mapEnter) {
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
+            picMove = false;
+            mapEnter = false;
             borderWidth = map.clientWidth;
             borderHeight = map.clientHeight;
             resetPicSize(link);
