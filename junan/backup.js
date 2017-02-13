@@ -158,6 +158,7 @@ var mapButton = function( event ) {
     var target = EventUtil.getTarget(event)
 
     if (target.id == 'mapButton') {
+        alert('vv')
         map.style.display = 'block'
         map.style.position = 'fixed'
         borderWidth = border.clientWidth

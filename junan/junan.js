@@ -12,8 +12,14 @@ var culture = document.querySelectorAll('.culture')[0];
 var sight = document.querySelectorAll('.sight')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
 var mobile = document.querySelectorAll('.mobile')[0];
+
 var picPos,
     bodyWidth;
+var pic = document.querySelectorAll(".pic"),
+    link = document.querySelectorAll("#map a"),
+    map = document.getElementById('map'),
+    mapBg = document.getElementById('mapBg'),
+    exit = document.getElementById('exit');
 
 if (window.outerHeight) {
     body.style.height = window.outerHeight + 'px'
@@ -138,7 +144,9 @@ var nextPage = function(event) {
 }
 EventUtil.addHandler(down,"click",nextPage);
 
+
 var nextPageWheel = function(event) {
+	if (bodyWidth > 768) {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
     var remainder =  picPos % 4 
@@ -202,7 +210,7 @@ var nextPageWheel = function(event) {
 
     	}    	    	    	
     }   
-
+    }
 }
 EventUtil.addHandler(document,"mousewheel",nextPageWheel);
 
@@ -292,8 +300,8 @@ var touchStart = function(event) {
 EventUtil.addHandler(document,"touchstart",touchStart);
 
 var touchEnd = function(event) {
-
 	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event)
 	EventUtil.preventDefault(event)
 	touched = event.changedTouches[0].clientY;
     if (touched - touchst < 0) {
@@ -358,16 +366,44 @@ var touchEnd = function(event) {
     		    calculateScrollReduce(i,picPos_3)
     		    i = picPos_3
     	}    	    	    	
-    }   
+    } 
+    if (touched - touchst == 0) {
+    	moveImg(mapBg,map,link);
+        if (target.id == 'mapButton') {
+        alert('vv')
+        map.style.display = 'block'
+        map.style.position = 'fixed'
+        borderWidth = border.clientWidth
+        borderHeight = border.clientHeight
+        main.style.display = 'none'
+        footer.style.display = 'none'
+        body.style.overflowY = 'hidden'
+        mobile.style.display = 'none'
+        dd = imgWidth / borderWidth
+        ddd = imgHeight / borderHeight;
+        changePicSize(link,dd,ddd)
+        if (zoomCount == false) {
+            resetPicSize(link);
+            }
+        }
+        if (target.id == 'exit') {
+        map.style.display = 'none'
+        map.style.position = 'absolute'
+        main.style.display = 'block'
+        footer.style.display = 'block'
+        mobile.style.display = 'block'
+        body.style.overflowY = ''
+        resetPicSize(link);
+        if (zoomCount == false) {
+            resetPicSize(link);
+        }
+    }
+    }  
 
 }
 EventUtil.addHandler(document,"touchend",touchEnd);
 
 
-var pic = document.querySelectorAll(".pic"),
-    link = document.querySelectorAll("#map a"),
-    map = document.getElementById('map'),
-    mapBg = document.getElementById('mapBg'),
-    exit = document.getElementById('exit');
-moveImg(mapBg,map,link);
+
+
 
