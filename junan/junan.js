@@ -40,6 +40,7 @@ if (window.outerHeight != 0) {
 if (bodyWidth < 960) {
 	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
+    bodyHeight = window.innerHeight
 }
 
 if (bodyWidth >= 960) {
@@ -360,16 +361,15 @@ return obj.currentStyle ? obj.currentStyle[attr]:getComputedStyle(obj)[attr];
 
 }
 
-var changePicPositionPreLeft = function(aLink,ratio) {
-    for (var i = 0; i < aLink.length;i++) {
-        var preLeft = window.getComputedStyle(aLink[i], null).left
-        aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
-    }
-}
 
+var touchSwitch = false;
 var changePicPositionPreLeft = function(aLink,ratio) {
     for (var i = 0; i < aLink.length;i++) {
         var preLeft = window.getComputedStyle(aLink[i], null).left
+        if (touchSwitch) {
+        	var preLeft = window.getComputedStyle(aLink[i], null).left
+        	preLeft = preLeft * bodyWidth
+        }
         aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
     }
 }
@@ -377,6 +377,10 @@ var changePicPositionPreLeft = function(aLink,ratio) {
 var changePicPositionPreTop = function(aLink,ratio) {
     for (var i = 0; i < aLink.length;i++) {
         var preTop = window.getComputedStyle(aLink[i], null).top
+        if (touchSwitch) {
+        	var preTop = window.getComputedStyle(aLink[i], null).top
+        	preLeft = preLeft * bodyHeight
+        }
         aLink[i].style.top = parseInt(preTop) * ratio + 'px'
     }
 }
