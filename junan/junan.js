@@ -485,15 +485,16 @@ var touchEnd = function(event) {
         alert('gg')
         borderWidth = map.clientWidth
         borderHeight = map.clientHeight
-        alert('hh')
         main.style.display = 'none'
         footer.style.display = 'none'
         body.style.overflowY = 'hidden'
         mobile.style.display = 'none'
         dd = imgWidth / borderWidth
-        alert(dd)
+        
         ddd = imgHeight / borderHeight;
+        alert(dd)
         changePicSize(link,dd,ddd)
+        alert(window.getComputedStyle(link[0], null).left)
         zoomCount = true;
         if (zoomCount == false) {
             resetPicSize(link);
@@ -518,8 +519,11 @@ var touchEnd = function(event) {
             borderWidth = map.clientWidth;
             borderHeight = map.clientHeight;
             resetPicSize(link);
+            alert(dd)
+            alert(window.getComputedStyle(link[0], null).left)
             changePicPositionPreLeft(link,dd);
             changePicPositionPreTop(link,ddd);
+            alert(window.getComputedStyle(link[0], null).left)
             map.style.width = borderWidth + 'px';
             map.style.height = borderHeight + 'px';
             mapBg.style.width = imgWidth.toString() + 'px';
