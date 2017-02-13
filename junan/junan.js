@@ -372,8 +372,8 @@ var touchEnd = function(event) {
         if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
-        alert('gg')
-
+        alert(map.style.display)
+        alert(map.style.position)
 
         }
         if (target.id == 'exit') {
