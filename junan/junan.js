@@ -494,7 +494,7 @@ var touchEnd = function(event) {
         alert(dd)
         ddd = imgHeight / borderHeight;
         changePicSize(link,dd,ddd)
-        zoomCount = false;
+        zoomCount = true;
         if (zoomCount == false) {
             resetPicSize(link);
             }
