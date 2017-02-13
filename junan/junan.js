@@ -369,8 +369,10 @@ var changePicPositionPreLeft = function(aLink,ratio) {
         if (touchSwitch) {
         	var preLeft = window.getComputedStyle(aLink[i], null).left
         	preLeft = preLeft * bodyWidth
+            
         }
         aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
+        touchSwitch = false
     }
 }
 
@@ -379,9 +381,10 @@ var changePicPositionPreTop = function(aLink,ratio) {
         var preTop = window.getComputedStyle(aLink[i], null).top
         if (touchSwitch) {
         	var preTop = window.getComputedStyle(aLink[i], null).top
-        	preLeft = preLeft * bodyHeight
+        	preTop = preTop * bodyHeight
         }
         aLink[i].style.top = parseInt(preTop) * ratio + 'px'
+        touchSwitch = false
     }
 }
 
@@ -519,6 +522,7 @@ var touchEnd = function(event) {
         }
         if (target.id == 'enterPic') {
             alert('mm')
+            touchSwitch = true;
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
             borderWidth = map.clientWidth;
