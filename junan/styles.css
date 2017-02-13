@@ -663,7 +663,13 @@ video{
       	top: 50%;
       	z-index: 2;
       }
-
+      #enterPic {
+        position: absolute;
+        right: 0;
+        top: 70%;
+        z-index: 2;
+        border: 1px solid red;
+      }
       #mapBg {
       	width: 100%;
       	height: 100%;

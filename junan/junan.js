@@ -511,7 +511,7 @@ var touchEnd = function(event) {
             resetPicSize(link);
             }
         }
-        if (target.id == 'enter') {
+        if (target.id == 'enterPic') {
             alert('mm')
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
