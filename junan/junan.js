@@ -370,21 +370,17 @@ var touchEnd = function(event) {
     if (touched - touchst == 0) {
     	moveImg(mapBg,map,link);
         if (target.id == 'mapButton') {
-        alert('vv')
         map.style.display = 'block'
         map.style.position = 'fixed'
-        borderWidth = border.clientWidth
-        borderHeight = border.clientHeight
+        alert('gg')
+        borderWidth = map.clientWidth
+        borderHeight = map.clientHeight
+        alert('hh')
         main.style.display = 'none'
         footer.style.display = 'none'
         body.style.overflowY = 'hidden'
         mobile.style.display = 'none'
-        dd = imgWidth / borderWidth
-        ddd = imgHeight / borderHeight;
-        changePicSize(link,dd,ddd)
-        if (zoomCount == false) {
-            resetPicSize(link);
-            }
+
         }
         if (target.id == 'exit') {
         map.style.display = 'none'
@@ -393,10 +389,7 @@ var touchEnd = function(event) {
         footer.style.display = 'block'
         mobile.style.display = 'block'
         body.style.overflowY = ''
-        resetPicSize(link);
-        if (zoomCount == false) {
-            resetPicSize(link);
-        }
+
     }
     }  
 

@@ -170,7 +170,7 @@ var mapButton = function( event ) {
         dd = imgWidth / borderWidth
         ddd = imgHeight / borderHeight;
         changePicSize(link,dd,ddd)
-        alert('vv')
+        alert(borderWidth)
         if (zoomCount == false) {
             resetPicSize(link);
         }
