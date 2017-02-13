@@ -653,17 +653,10 @@ video{
       	height: 95%;
       	left: 2.5%;
       	top: 2.5%;
-      	opacity: 0;
-      	z-index: 2;
-      	border: 1px solid black;
-      	animation: myfirst .3s forwards;
       	overflow: hidden;
       	z-index: 20;
       }
-      @keyframes myfirst {
-      	0% {opacity: 0;}
-      	100%{opacity: 1;}
-      }
+
       #exit {
       	position: absolute;
       	right: 0;
