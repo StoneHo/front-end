@@ -12,6 +12,7 @@ var culture = document.querySelectorAll('.culture')[0];
 var sight = document.querySelectorAll('.sight')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
 var mobile = document.querySelectorAll('.mobile')[0];
+var enter = document.querySelectorAll('#enter')[0];
 
 var picPos,
     bodyWidth;
@@ -19,7 +20,9 @@ var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
-    exit = document.getElementById('exit');
+    exit = document.getElementById('exit'),
+    borderWidth = map.clientWidth,
+    borderHeight = map.clientHeight;
 
 if (window.outerHeight) {
     body.style.height = window.outerHeight + 'px'
@@ -290,6 +293,8 @@ var scrollMouseDown = function( event ) {
 };
 EventUtil.addHandler(window,"mousedown",scrollMouseDown);
 
+moveImg(mapBg,map,link);
+
 //移动设备
 var touchst,touched
 var touchStart = function(event) {
@@ -297,7 +302,111 @@ var touchStart = function(event) {
 	touchst = event.touches[0].clientY;
     EventUtil.preventDefault(event)
 }
-EventUtil.addHandler(document,"touchstart",touchStart);
+EventUtil.addHandler(wrapper,"touchstart",touchStart);
+
+var getNatural = function(element) {
+    var img = document.createElement('img');
+    var src = element.src
+    img.setAttribute('src',src);
+    var imageWidth = img.width;
+    var imageHeight = img.height;
+    img = null;
+    return {
+        width: imageWidth,
+        height: imageHeight
+    }
+
+}
+if (mapBg.nodeName == 'IMG') {
+    imgWidth = (getNatural(mapBg)).width;
+    imgHeight = (getNatural(mapBg)).height;
+}
+
+(function() {
+    if(mapBg.nodeName !== 'IMG') {
+        var re=/.*url\((.*)\)/g,
+            theCSSprop;
+        if (window.getComputedStyle) {
+            theCSSprop = window.getComputedStyle(mapBg, null).backgroundImage
+        } else {
+            theCSSprop = mapBg.currentStyle.backgroundImage;
+        }
+        theCSSprop = theCSSprop.replace(/"/g,'')
+        var src = (re.exec(theCSSprop))[1];
+        src = src.slice(src.lastIndexOf('/')+1);
+        var img = document.createElement('img');
+        img.setAttribute('src',src); 
+        imgWidth = img.width;
+        imgHeight = img.height;
+        img = null;
+
+    }
+})()
+
+var dd = imgWidth / borderWidth;
+var ddd = imgHeight / borderHeight;
+
+var resetPicSize = function(ele) {
+    for (var i = 0; i < ele.length;i++) {
+        ele[i].style.width = 'auto';
+        ele[i].style.height = 'auto';
+
+    }
+}
+
+function getStyle (obj,attr) {
+
+return obj.currentStyle ? obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+
+}
+
+var changePicPositionPreLeft = function(aLink,ratio) {
+    for (var i = 0; i < aLink.length;i++) {
+        var preLeft = window.getComputedStyle(aLink[i], null).left
+        aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
+    }
+}
+
+var changePicPositionPreLeft = function(aLink,ratio) {
+    for (var i = 0; i < aLink.length;i++) {
+        var preLeft = window.getComputedStyle(aLink[i], null).left
+        aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
+    }
+}
+
+var changePicPositionPreTop = function(aLink,ratio) {
+    for (var i = 0; i < aLink.length;i++) {
+        var preTop = window.getComputedStyle(aLink[i], null).top
+        aLink[i].style.top = parseInt(preTop) * ratio + 'px'
+    }
+}
+
+var changePicPositionLeft = function(aLink,positionChange) {
+    for (var i = 0; i < aLink.length;i++) {
+        aLink[i].style.position = 'absolute'
+        var preLeft = window.getComputedStyle(aLink[i], null).left
+        aLink[i].style.left = parseInt(preLeft) + positionChange + 'px'
+    }
+}
+
+var changePicPositionTop = function(aLink,positionChange) {
+    for (var i = 0; i < aLink.length;i++) {
+        aLink[i].style.position = 'absolute'
+        var preTop = window.getComputedStyle(aLink[i], null).top
+        aLink[i].style.top = parseInt(preTop) + positionChange + 'px'
+    }
+}
+
+var changePicSize = function(ele,widthRatio,heightRatio) {
+    for (var i = 0; i < ele.length;i++) {
+        //var currentWidth = window.getComputedStyle(ele[i], null).width
+        var currentWidth = getStyle(ele[i],'width')
+
+        ele[i].style.width = parseInt(currentWidth) / dd + 'px';
+
+    }
+}
+changePicSize(link,dd,ddd)
 
 var touchEnd = function(event) {
 	event = EventUtil.getEvent(event);
@@ -367,25 +476,66 @@ var touchEnd = function(event) {
     		    i = picPos_3
     	}    	    	    	
     } 
+
     if (touched - touchst == 0) {
-    	moveImg(mapBg,map,link);
+    	
         if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
-        alert(map.style.display)
-        alert(map.style.position)
-
+        alert('gg')
+        borderWidth = map.clientWidth
+        borderHeight = map.clientHeight
+        alert('hh')
+        main.style.display = 'none'
+        footer.style.display = 'none'
+        body.style.overflowY = 'hidden'
+        mobile.style.display = 'none'
+        dd = imgWidth / borderWidth
+        alert(dd)
+        ddd = imgHeight / borderHeight;
+        changePicSize(link,dd,ddd)
+        zoomCount = false;
+        if (zoomCount == false) {
+            resetPicSize(link);
+            }
         }
         if (target.id == 'exit') {
-        map.style.display = 'none'
-        map.style.position = 'absolute'
-
-
-    }
+            map.style.display = 'none'
+            map.style.position = 'absolute'
+            main.style.display = 'block'
+            footer.style.display = 'block'
+            mobile.style.display = 'block'
+            body.style.overflowY = ''
+            resetPicSize(link);
+            if (zoomCount == false) {
+            resetPicSize(link);
+            }
+        }
+        if (target.id == 'enter') {
+            alert('mm')
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event)
+            borderWidth = map.clientWidth;
+            borderHeight = map.clientHeight;
+            resetPicSize(link);
+            changePicPositionPreLeft(link,dd);
+            changePicPositionPreTop(link,ddd);
+            map.style.width = borderWidth + 'px';
+            map.style.height = borderHeight + 'px';
+            mapBg.style.width = imgWidth.toString() + 'px';
+            mapBg.style.height = imgHeight.toString() + 'px';
+            mapBg.style.backgroundSize = imgWidth.toString() + 'px' + ' ' + imgHeight.toString() + 'px';
+            tx = 0;
+            changePicPositionLeft(link,tx);
+            mapBg.style.left = (tx).toString() + 'px';
+            ty = 0
+            changePicPositionTop(link,ty);
+            mapBg.style.top = (ty).toString() + 'px';
+        }
     }  
 
 }
-EventUtil.addHandler(document,"touchend",touchEnd);
+EventUtil.addHandler(wrapper,"touchend",touchEnd);
 
 
 

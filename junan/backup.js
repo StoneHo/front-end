@@ -158,7 +158,7 @@ var mapButton = function( event ) {
     var target = EventUtil.getTarget(event)
 
     if (target.id == 'mapButton') {
-
+        alert('vv')
         map.style.display = 'block'
         map.style.position = 'fixed'
         borderWidth = border.clientWidth
@@ -170,12 +170,13 @@ var mapButton = function( event ) {
         dd = imgWidth / borderWidth
         ddd = imgHeight / borderHeight;
         changePicSize(link,dd,ddd)
-        alert(borderWidth)
+        
         if (zoomCount == false) {
             resetPicSize(link);
         }
     }
     if (target.id == 'exit') {
+        alert('nn')
         map.style.display = 'none'
         map.style.position = 'absolute'
         main.style.display = 'block'
@@ -304,8 +305,9 @@ var mouseWheel = function( event ) {
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
             EventUtil.preventDefault(event)
-            borderWidth = border.clientWidth,
+            borderWidth = border.clientWidth;
             borderHeight = border.clientHeight;
+            alert('bb')
             if (zoom) {
             if (event.wheelDelta === 120 && zoomCount) {
                 resetPicSize(link);
