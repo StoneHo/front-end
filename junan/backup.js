@@ -153,42 +153,7 @@ if (zoom == undefined || zoom == true) {
   zoom = false;
 }
 
-var mapButton = function( event ) {
-    event = EventUtil.getEvent(event);
-    var target = EventUtil.getTarget(event)
 
-    if (target.id == 'mapButton') {
-        
-        map.style.display = 'block'
-        map.style.position = 'fixed'
-        borderWidth = border.clientWidth
-        borderHeight = border.clientHeight
-        main.style.display = 'none'
-        footer.style.display = 'none'
-        body.style.overflowY = 'hidden'
-        mobile.style.display = 'none'
-        dd = imgWidth / borderWidth
-        ddd = imgHeight / borderHeight;
-        changePicSize(link,dd,ddd)
-        alert(borderWidth)
-        if (zoomCount == false) {
-            resetPicSize(link);
-        }
-    }
-    if (target.id == 'exit') {
-        map.style.display = 'none'
-        map.style.position = 'absolute'
-        main.style.display = 'block'
-        footer.style.display = 'block'
-        mobile.style.display = 'block'
-        body.style.overflowY = ''
-        resetPicSize(link);
-        if (zoomCount == false) {
-            resetPicSize(link);
-        }
-    }
-};
-EventUtil.addHandler(document,"click",mapButton);
 
 /* 网页版拖动 */
 

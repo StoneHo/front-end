@@ -373,22 +373,13 @@ var touchEnd = function(event) {
         map.style.display = 'block'
         map.style.position = 'fixed'
         alert('gg')
-        borderWidth = map.clientWidth
-        borderHeight = map.clientHeight
-        alert('hh')
-        main.style.display = 'none'
-        footer.style.display = 'none'
-        body.style.overflowY = 'hidden'
-        mobile.style.display = 'none'
+
 
         }
         if (target.id == 'exit') {
         map.style.display = 'none'
         map.style.position = 'absolute'
-        main.style.display = 'block'
-        footer.style.display = 'block'
-        mobile.style.display = 'block'
-        body.style.overflowY = ''
+
 
     }
     }  
