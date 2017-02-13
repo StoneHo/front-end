@@ -526,10 +526,10 @@ var touchEnd = function(event) {
             mapBg.style.height = imgHeight.toString() + 'px';
             mapBg.style.backgroundSize = imgWidth.toString() + 'px' + ' ' + imgHeight.toString() + 'px';
             tx = 0;
-            changePicPositionLeft(link,tx);
+            //changePicPositionLeft(link,tx);
             mapBg.style.left = (tx).toString() + 'px';
             ty = 0
-            changePicPositionTop(link,ty);
+            //changePicPositionTop(link,ty);
             mapBg.style.top = (ty).toString() + 'px';
         }
     }  
