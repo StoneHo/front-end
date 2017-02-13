@@ -175,7 +175,6 @@ var nextPageWheel = function(event) {
                 i = picPos_3
         }
         if (scrollTop == picPos_3) {
-                alert(picPos_4)
                 calculateScroll(i,picPos_4)
                 i = picPos_4
         }
@@ -203,7 +202,6 @@ var nextPageWheel = function(event) {
             scrollTop += 10
         }
         if (scrollTop == picPos_4) {
-            alert('ll')
                 calculateScrollReduce(i,picPos_3)
                 i = picPos_3
                 
@@ -368,7 +366,6 @@ var changePicPositionPreLeftTouch = function(aLink,ratio) {
         var preLeft = window.getComputedStyle(aLink[i], null).left
         if (preLeft.slice(-1) == 'x') {
             aLink[i].style.left = parseInt(preLeft) * ratio + 'px'
-            alert(aLink[i].style.left)
         } else {
             aLink[i].style.left = parseInt(preLeft) * bodyWidth * ratio  / 100 + 'px'
         }
@@ -488,7 +485,6 @@ var touchEnd = function(event) {
         if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
-        alert('gg')
         borderWidth = map.clientWidth
         borderHeight = map.clientHeight
         main.style.display = 'none'
@@ -498,10 +494,7 @@ var touchEnd = function(event) {
         dd = imgWidth / borderWidth
         
         ddd = imgHeight / borderHeight;
-        alert(dd)
         changePicSize(link,dd,ddd)
-        alert(parseInt(window.getComputedStyle(link[0], null).left))
-        alert(typeof(window.getComputedStyle(link[0], null).left))
         zoomCount = true;
         if (zoomCount == false) {
             resetPicSize(link);
@@ -520,13 +513,11 @@ var touchEnd = function(event) {
             }
         }
         if (target.id == 'enterPic') {
-            alert('mm')
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
             borderWidth = map.clientWidth;
             borderHeight = map.clientHeight;
             resetPicSize(link);
-            alert(dd)
             changePicPositionPreLeftTouch(link,dd);
             changePicPositionPreTopTouch(link,ddd);
             map.style.width = borderWidth + 'px';
