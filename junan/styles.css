@@ -679,17 +679,19 @@ video{
            position: absolute;  
            left: 10%;
            top: 25%;   
-
+           z-index: 3;
       }
       #draggable4 {
            position: absolute;     
            left:20%;
            top: 50%;
+           z-index: 3;
       }
       #draggable5 {
            position: absolute;     
            left:35%;
            top: 75%;
+           z-index: 3;
       }
       .pic {
         max-width: 100%;
