@@ -3,6 +3,7 @@ body {
 	padding: 70px 80px 80px;
 	height: 100%;
 	overflow-y: ;
+	min-width: 320px;
 }
 
 a {
@@ -540,7 +541,12 @@ video{
 	margin-bottom: 0;
     }
     .footer {
-      	display: none;
+      	background: rgba(0,0,0,0);
+      	width: 100%;
+    }
+    .footer button{
+      	color: white;
+      	margin-left: 48%;
     }
     .culture, .sight, .food, .map {
     height: calc(100% - 63px);
@@ -577,7 +583,14 @@ video{
     width: 27%;
     left: 33%;
     }
+    .land-vedio .info button{
+    margin-left: 3%;
+    }
+    .map .info button {
 
+    left: 36%;
+
+    }
 }
 @media (max-height: 570px){
     .culture, .sight, .food, .map {
@@ -598,7 +611,10 @@ video{
 @media (max-width: 538px) {
 
     .land-vedio .info, .culture .info, .sight .info, .food .info {
-    top: 5%;
+    top: 0%;
+    }
+    .land-vedio .info {
+    top: 10%;	
     }
     .culture .info h1, .sight .info h1, .food .info h1 {
 	font-size: 2em;
@@ -643,7 +659,9 @@ video{
     top: 30px;
     position: relative;
     }
-
+    .land-vedio .info button{
+    margin-left: 0%;
+    }
 }
 
       #map {
@@ -664,11 +682,11 @@ video{
       	z-index: 2;
       }
       #enterPic {
-        position: absolute;
-        right: 0;
-        top: 70%;
-        z-index: 2;
-        border: 1px solid red;
+      	position: absolute;
+      	right: 0;
+      	top: 70%;
+      	z-index: 2;
+
       }
       #mapBg {
       	width: 100%;
