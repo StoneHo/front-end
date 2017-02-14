@@ -16,7 +16,7 @@ var enter = document.querySelectorAll('#enter')[0];
 var firstenter = document.querySelectorAll('#firstEnter')[0];
 var videoplay = document.querySelectorAll('#videoPlay')[0];
 var firstword = document.querySelectorAll('.land-vedio .info')[0];
-
+var firstbg = document.querySelectorAll('.wrapper-background-video')[0];
 
 var picPos,
     bodyWidth,
@@ -547,13 +547,21 @@ var touchEnd = function(event) {
             mapBg.style.top = (ty).toString() + 'px';
         }
         if (target.id == 'firstEnter') {
-            firstword.style.display = 'none'
+            firstword.style.display = 'none' 
+            firstbg.style.display = 'none'
             if (videoplay.paused) {
             	videoplay.play()
             }else {
             	videoplay.pause();
             }
         }
+        if (target.id == 'videoplay') {
+            if (videoplay.paused) {
+            	videoplay.play()
+            }else {
+            	videoplay.pause();
+            }
+        }        
     }  
 
 }
