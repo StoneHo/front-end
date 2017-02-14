@@ -49,7 +49,6 @@ if (bodyWidth < 960) {
 	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
     bodyHeight = window.innerHeight
-
 }
 
 if (bodyWidth >= 960) {
@@ -123,6 +122,7 @@ var calculateScrollReduce = function(i,stop) {
     var flag = setInterval(x(), 0);
 }
 
+
 var nextPage = function(event) {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
@@ -134,7 +134,7 @@ var nextPage = function(event) {
     var picPos_2 = (picPos - remainder) * 2;
     var picPos_3 = (picPos - remainder) * 3;
     var picPos_4 = (picPos) * 4;
-    var scrollTop = document.body.scrollTop
+    var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     i = scrollTop
         return function(){
         	i = i + 4
@@ -169,7 +169,7 @@ var nextPageWheel = function(event) {
     var picPos_4 = (picPos) * 4
 
     if (event.wheelDelta == -120 && body.style.overflowY == '') {
-    	var scrollTop = document.body.scrollTop
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
@@ -190,7 +190,7 @@ var nextPageWheel = function(event) {
      	    	    	
     }
      if (event.wheelDelta == 120 && body.style.overflowY == '') {
-    	var scrollTop = document.body.scrollTop
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     	}
@@ -228,7 +228,7 @@ EventUtil.addHandler(document,"mousewheel",nextPageWheel);
 var scrollMouseUp = function( event ) {
 	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event)
-        currentScrollTop = document.body.scrollTop
+        currentScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
         if (currentScrollTop - preScrollTop != 0 && pageStop) {
         var remainder =  picPos % 4 
@@ -236,7 +236,7 @@ var scrollMouseUp = function( event ) {
         var picPos_2 = (picPos - remainder) * 2;
         var picPos_3 = (picPos - remainder) * 3;
         var picPos_4 = (picPos) * 4;
-    	var scrollTop = document.body.scrollTop
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
         var point = parseInt(picPos/2)
         var remainder =  scrollTop % 4
 
@@ -295,7 +295,7 @@ EventUtil.addHandler(window,"mouseup",scrollMouseUp);
 var scrollMouseDown = function( event ) {
 	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event)
-        preScrollTop = document.body.scrollTop;
+        preScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
         
 };
@@ -428,7 +428,7 @@ var touchEnd = function(event) {
     if (touched - touchst < 0 && picMove) {
     	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
-    	var scrollTop = document.body.scrollTop
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
@@ -457,7 +457,7 @@ var touchEnd = function(event) {
      if (touched - touchst > 0 && picMove) {
     	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
-    	var scrollTop = document.body.scrollTop
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
@@ -495,7 +495,6 @@ var touchEnd = function(event) {
         map.style.width = bodyWidth * 0.95 + 'px'
         map.style.display = 'block'
         map.style.position = 'fixed'
-        alert(window.getComputedStyle(map, null).width)
         borderWidth = map.clientWidth
         borderHeight = map.clientHeight
         dd = imgWidth / borderWidth
