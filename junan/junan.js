@@ -49,7 +49,7 @@ if (bodyWidth < 960) {
 	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
     bodyHeight = window.innerHeight
-    alert(bodyWidth)
+
 }
 
 if (bodyWidth >= 960) {
@@ -492,6 +492,7 @@ var touchEnd = function(event) {
     if (touched - touchst == 0) {
     	
         if (target.id == 'mapButton') {
+        map.style.width = bodyWidth * 0.95 + 'px'
         map.style.display = 'block'
         map.style.position = 'fixed'
         alert(window.getComputedStyle(map, null).width)
