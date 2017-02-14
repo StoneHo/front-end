@@ -493,6 +493,7 @@ var touchEnd = function(event) {
         if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
+        alert(window.getComputedStyle(map, null).width)
         borderWidth = map.clientWidth
         borderHeight = map.clientHeight
         dd = imgWidth / borderWidth
