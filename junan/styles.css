@@ -547,7 +547,7 @@ video{
     }
     video{
     width: 100%;
-
+    height: 100%;
     }
     .land-vedio {
     height: calc(100% - 65px);
