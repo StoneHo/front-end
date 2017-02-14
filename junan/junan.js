@@ -125,34 +125,35 @@ var calculateScrollReduce = function(i,stop) {
 
 var nextPage = function(event) {
 	event = EventUtil.getEvent(event);
-    var target = EventUtil.getTarget(event)
-    EventUtil.preventDefault(event);
-    pageStop = false;
-    var x = (function(){
-    var remainder =  picPos % 4 
-    var picPos_1 = picPos - remainder * 1;
-    var picPos_2 = (picPos - remainder) * 2;
-    var picPos_3 = (picPos - remainder) * 3;
-    var picPos_4 = (picPos) * 4;
-    var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-    i = scrollTop
-        return function(){
-        	i = i + 4
-            window.scrollTo(0,i)
-            if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
+	var target = EventUtil.getTarget(event)
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
+        var picPos_1 = picPos1 + (4 - remainder1)
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    		    calculateScroll(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScroll(i,picPos_2)
+    		    i = picPos_2
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScroll(i,picPos_3)
+    		    i = picPos_3
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScroll(i,picPos_4)
+    		    i = picPos_4
+    	}
+     	    	    	
 
-                clearInterval(flag)
-                pageStop = true
-            }
-            if (i > picPos_4) {
-            	clearInterval(flag)
-            	pageStop = true
-            }
-
-        }
-    })
-    var flag = setInterval(x(), 0);
-    
 
 }
 EventUtil.addHandler(down,"click",nextPage);
@@ -162,12 +163,15 @@ var nextPageWheel = function(event) {
 	if (bodyWidth > 768) {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
-    var remainder =  picPos % 4 
-    var picPos_1 = picPos - remainder * 1;
-    var picPos_2 = (picPos - remainder) * 2;
-    var picPos_3 = (picPos - remainder) * 3;
-    var picPos_4 = (picPos) * 4
-
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
+        var picPos_1 = picPos1 + (4 - remainder1)
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
     if (event.wheelDelta == -120 && body.style.overflowY == '') {
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	if (scrollTop < picPos_1) {
@@ -231,14 +235,18 @@ var scrollMouseUp = function( event ) {
         currentScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
         if (currentScrollTop - preScrollTop != 0 && pageStop) {
-        var remainder =  picPos % 4 
-        var picPos_1 = picPos - remainder * 1;
-        var picPos_2 = (picPos - remainder) * 2;
-        var picPos_3 = (picPos - remainder) * 3;
-        var picPos_4 = (picPos) * 4;
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
+        var picPos_1 = picPos1 + (4 - remainder1)
+        var picPos_2 = picPos2 - remainder2 + picPos_1
+        var picPos_3 = picPos2 - remainder2 + picPos_2
+        var picPos_4 = picPos_3 + picPos2 - remainder2
         var point = parseInt(picPos/2)
         var remainder =  scrollTop % 4
+
 
     	if (scrollTop <= point) {
     		scrollTop = scrollTop - remainder
