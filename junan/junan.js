@@ -551,8 +551,10 @@ var touchEnd = function(event) {
 
             if (videoplay.paused) {
             	videoplay.play()
+            	firstword.style.display = 'block'
             }else {
             	videoplay.pause();
+            	firstword.style.display = 'block'
             }
         }
         if (target.id == 'landvideo') {
