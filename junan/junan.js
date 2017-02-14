@@ -548,14 +548,14 @@ var touchEnd = function(event) {
         }
         if (target.id == 'firstEnter') {
             firstword.style.display = 'none' 
-            firstbg.style.display = 'none'
+
             if (videoplay.paused) {
             	videoplay.play()
             }else {
             	videoplay.pause();
             }
         }
-        if (target.id == 'videoplay') {
+        if (target.id == 'landvideo') {
             if (videoplay.paused) {
             	videoplay.play()
             }else {
