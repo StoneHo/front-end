@@ -13,6 +13,10 @@ var sight = document.querySelectorAll('.sight')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
 var mobile = document.querySelectorAll('.mobile')[0];
 var enter = document.querySelectorAll('#enter')[0];
+var firstenter = document.querySelectorAll('#firstEnter')[0];
+var videoplay = document.querySelectorAll('#videoPlay')[0];
+var firstword = document.querySelectorAll('.land-vedio .info')[0];
+
 
 var picPos,
     bodyWidth,
@@ -541,6 +545,14 @@ var touchEnd = function(event) {
             ty = 0
             //changePicPositionTop(link,ty);
             mapBg.style.top = (ty).toString() + 'px';
+        }
+        if (target.id == 'firstEnter') {
+            firstword.style.display = 'none'
+            if (videoplay.paused) {
+            	videoplay.play()
+            }else {
+            	videoplay.pause();
+            }
         }
     }  
 
