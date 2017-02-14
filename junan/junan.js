@@ -49,6 +49,7 @@ if (bodyWidth < 960) {
 	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
     bodyHeight = window.innerHeight
+    alert(bodyWidth)
 }
 
 if (bodyWidth >= 960) {
