@@ -18,6 +18,7 @@ var picPos,
     bodyWidth,
     picMove = true,
     mapEnter = true,
+    enterCount,
     zoomCount;
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
@@ -41,7 +42,7 @@ if (window.outerHeight != 0) {
     bodyWidth = window.innerWidth
 }
 if (bodyWidth < 960) {
-    picPos = window.innerHeight  - 60;
+	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
     bodyHeight = window.innerHeight
 }
@@ -63,15 +64,15 @@ EventUtil.addHandler(window,"resize",windowChange);
 
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
-        event = EventUtil.getEvent(event);
+	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event);
         body.style.overflowY = ''
     } 
     var mouseEnter = function(event) {
-        event = EventUtil.getEvent(event);
+	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event);
         if (window.getComputedStyle(asideRightContent, null).width != '0px' || 
-            window.getComputedStyle(asideLeftContent, null).width != '0px') {
+        	window.getComputedStyle(asideLeftContent, null).width != '0px') {
             body.style.overflowY = 'hidden'
         }
     } 
@@ -87,9 +88,9 @@ var n = 0, i;
 var pageStop = true;
 
 var calculateScroll = function(i,stop) {
-    var x = (function(){
+	var x = (function(){
         return function(){
-            i = i + 4
+        	i = i + 4
             window.scrollTo(0,i)
             if (i == stop) {
                 clearInterval(flag)
@@ -101,10 +102,10 @@ var calculateScroll = function(i,stop) {
     var flag = setInterval(x(), 0);
 }
 var calculateScrollReduce = function(i,stop) {
-    var x = (function(){
+	var x = (function(){
         return function(){
 
-            i = i - 4
+        	i = i - 4
             window.scrollTo(0,i)
 
             if (i == stop) {
@@ -118,7 +119,7 @@ var calculateScrollReduce = function(i,stop) {
 }
 
 var nextPage = function(event) {
-    event = EventUtil.getEvent(event);
+	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
     EventUtil.preventDefault(event);
     pageStop = false;
@@ -131,7 +132,7 @@ var nextPage = function(event) {
     var scrollTop = document.body.scrollTop
     i = scrollTop
         return function(){
-            i = i + 4
+        	i = i + 4
             window.scrollTo(0,i)
             if (i == picPos_1 || i == picPos_2 || i == picPos_3 || i == picPos_4) {
 
@@ -139,8 +140,8 @@ var nextPage = function(event) {
                 pageStop = true
             }
             if (i > picPos_4) {
-                clearInterval(flag)
-                pageStop = true
+            	clearInterval(flag)
+            	pageStop = true
             }
 
         }
@@ -153,8 +154,8 @@ EventUtil.addHandler(down,"click",nextPage);
 
 
 var nextPageWheel = function(event) {
-    if (bodyWidth > 768) {
-    event = EventUtil.getEvent(event);
+	if (bodyWidth > 768) {
+	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
     var remainder =  picPos % 4 
     var picPos_1 = picPos - remainder * 1;
@@ -163,64 +164,64 @@ var nextPageWheel = function(event) {
     var picPos_4 = (picPos) * 4
 
     if (event.wheelDelta == -120 && body.style.overflowY == '') {
-        var scrollTop = document.body.scrollTop
-        if (scrollTop < picPos_1) {
-                i = scrollTop
-                calculateScroll(i,picPos_1)
-                i = picPos_1
-        }
-        if (scrollTop == picPos_1) {
-                calculateScroll(i,picPos_2)
-                i = picPos_2
-        }       
-        if (scrollTop == picPos_2) {
-                calculateScroll(i,picPos_3)
-                i = picPos_3
-        }
-        if (scrollTop == picPos_3) {
-                calculateScroll(i,picPos_4)
-                i = picPos_4
-        }
-                        
+    	var scrollTop = document.body.scrollTop
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    		    calculateScroll(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScroll(i,picPos_2)
+    		    i = picPos_2
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScroll(i,picPos_3)
+    		    i = picPos_3
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScroll(i,picPos_4)
+    		    i = picPos_4
+    	}
+     	    	    	
     }
      if (event.wheelDelta == 120 && body.style.overflowY == '') {
-        var scrollTop = document.body.scrollTop
-        if (scrollTop < picPos_1) {
-                i = scrollTop
-        }
-        if (scrollTop == picPos_1) {
-                calculateScrollReduce(i,0)
-                i = 0
-        }       
-        if (scrollTop == picPos_2) {
-                calculateScrollReduce(i,picPos_1)
-                i = picPos_1
-        }
-        if (scrollTop == picPos_3) {
-                calculateScrollReduce(i,picPos_2)
-                i = picPos_2
+    	var scrollTop = document.body.scrollTop
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScrollReduce(i,0)
+    		    i = 0
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScrollReduce(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScrollReduce(i,picPos_2)
+    		    i = picPos_2
 
-        }
-        if (picPos_4 - scrollTop == 10) {
-            scrollTop += 10
-        }
-        if (scrollTop == picPos_4) {
-                calculateScrollReduce(i,picPos_3)
-                i = picPos_3
-                
-        } 
-        if (scrollTop > picPos_4) {
-                calculateScrollReduce(i,picPos_3)
-                i = picPos_3
+    	}
+    	if (picPos_4 - scrollTop == 10) {
+    		scrollTop += 10
+    	}
+    	if (scrollTop == picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    		    
+    	} 
+    	if (scrollTop > picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
 
-        }                       
+    	}    	    	    	
     }   
     }
 }
 EventUtil.addHandler(document,"mousewheel",nextPageWheel);
 
 var scrollMouseUp = function( event ) {
-        event = EventUtil.getEvent(event);
+	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event)
         currentScrollTop = document.body.scrollTop
 
@@ -230,64 +231,64 @@ var scrollMouseUp = function( event ) {
         var picPos_2 = (picPos - remainder) * 2;
         var picPos_3 = (picPos - remainder) * 3;
         var picPos_4 = (picPos) * 4;
-        var scrollTop = document.body.scrollTop
+    	var scrollTop = document.body.scrollTop
         var point = parseInt(picPos/2)
         var remainder =  scrollTop % 4
 
-        if (scrollTop <= point) {
-            scrollTop = scrollTop - remainder
+    	if (scrollTop <= point) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScrollReduce(i,0)
+    		calculateScrollReduce(i,0)
 
-        } 
-    
-        if (scrollTop > point && scrollTop < picPos_1) {
-            scrollTop = scrollTop - remainder
+    	} 
+   	
+    	if (scrollTop > point && scrollTop < picPos_1) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScroll(i,picPos_1)
-            i = picPos_1
-        }
-        if (scrollTop > picPos_1 && scrollTop <= picPos_1 + point) {
-            scrollTop = scrollTop - remainder
+    		calculateScroll(i,picPos_1)
+    		i = picPos_1
+    	}
+    	if (scrollTop > picPos_1 && scrollTop <= picPos_1 + point) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScrollReduce(i,picPos_1)
-        }
-        if (scrollTop > picPos_1 + point && scrollTop < picPos_2) {
-            scrollTop = scrollTop - remainder
+    		calculateScrollReduce(i,picPos_1)
+    	}
+    	if (scrollTop > picPos_1 + point && scrollTop < picPos_2) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScroll(i,picPos_2)
-        }
-        if (scrollTop > picPos_2 && scrollTop <= picPos_2 + point) {
-            scrollTop = scrollTop - remainder
+    		calculateScroll(i,picPos_2)
+    	}
+    	if (scrollTop > picPos_2 && scrollTop <= picPos_2 + point) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScrollReduce(i,picPos_2)
-        }
-        if (scrollTop > picPos_2 + point && scrollTop < picPos_3) {
-            scrollTop = scrollTop - remainder
+    		calculateScrollReduce(i,picPos_2)
+    	}
+    	if (scrollTop > picPos_2 + point && scrollTop < picPos_3) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScroll(i,picPos_3)
-        }
-        if (scrollTop > picPos_3 && scrollTop < picPos_3 + point) {
-            scrollTop = scrollTop - remainder
+    		calculateScroll(i,picPos_3)
+    	}
+    	if (scrollTop > picPos_3 && scrollTop < picPos_3 + point) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScrollReduce(i,picPos_3)
-        }
-        if (scrollTop > picPos_3 + point && scrollTop < picPos_4) {
-            scrollTop = scrollTop - remainder
+    		calculateScrollReduce(i,picPos_3)
+    	}
+    	if (scrollTop > picPos_3 + point && scrollTop < picPos_4) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScroll(i,picPos_4)
-        }
-        if (scrollTop > picPos_4) {
-            scrollTop = scrollTop - remainder
+    		calculateScroll(i,picPos_4)
+    	}
+    	if (scrollTop > picPos_4) {
+    		scrollTop = scrollTop - remainder
             i = scrollTop
-            calculateScrollReduce(i,picPos_4)
-        }
+    		calculateScrollReduce(i,picPos_4)
+    	}
     }
 };
 EventUtil.addHandler(window,"mouseup",scrollMouseUp);
 
 var scrollMouseDown = function( event ) {
-        event = EventUtil.getEvent(event);
+	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event)
         preScrollTop = document.body.scrollTop;
 
@@ -300,8 +301,8 @@ moveImg(mapBg,map,link);
 //移动设备
 var touchst,touched
 var touchStart = function(event) {
-    event = EventUtil.getEvent(event);
-    touchst = event.touches[0].clientY;
+	event = EventUtil.getEvent(event);
+	touchst = event.touches[0].clientY;
     EventUtil.preventDefault(event)
 }
 EventUtil.addHandler(wrapper,"touchstart",touchStart);
@@ -415,76 +416,76 @@ var changePicSize = function(ele,widthRatio,heightRatio) {
 changePicSize(link,dd,ddd)
 
 var touchEnd = function(event) {
-    event = EventUtil.getEvent(event);
-    var target = EventUtil.getTarget(event)
-    EventUtil.preventDefault(event)
-    touched = event.changedTouches[0].clientY;
+	event = EventUtil.getEvent(event);
+	var target = EventUtil.getTarget(event)
+	EventUtil.preventDefault(event)
+	touched = event.changedTouches[0].clientY;
     if (touched - touchst < 0 && picMove) {
-        var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
-        var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
-        var scrollTop = document.body.scrollTop
-        var remainder1 =  picPos1 % 4
-        var remainder2 =  picPos2 % 4
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
+    	var scrollTop = document.body.scrollTop
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
-        if (scrollTop < picPos_1) {
-                i = scrollTop
-                calculateScroll(i,picPos_1)
-                i = picPos_1
-        }
-        if (scrollTop == picPos_1) {
-                calculateScroll(i,picPos_2)
-                i = picPos_2
-        }       
-        if (scrollTop == picPos_2) {
-                calculateScroll(i,picPos_3)
-                i = picPos_3
-        }
-        if (scrollTop == picPos_3) {
-                calculateScroll(i,picPos_4)
-                i = picPos_4
-        }
-                        
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    		    calculateScroll(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScroll(i,picPos_2)
+    		    i = picPos_2
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScroll(i,picPos_3)
+    		    i = picPos_3
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScroll(i,picPos_4)
+    		    i = picPos_4
+    	}
+     	    	    	
     }
      if (touched - touchst > 0 && picMove) {
-        var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
-        var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
-        var scrollTop = document.body.scrollTop
-        var remainder1 =  picPos1 % 4
-        var remainder2 =  picPos2 % 4
+    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
+    	var scrollTop = document.body.scrollTop
+    	var remainder1 =  picPos1 % 4
+    	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
-        if (scrollTop < picPos_1) {
-                i = scrollTop
-        }
-        if (scrollTop == picPos_1) {
-                calculateScrollReduce(i,0)
-                i = 0
-        }       
-        if (scrollTop == picPos_2) {
-                calculateScrollReduce(i,picPos_1)
-                i = picPos_1
-        }
-        if (scrollTop == picPos_3) {
-                calculateScrollReduce(i,picPos_2)
-                i = picPos_2
-        }
-        if (scrollTop == picPos_4) {
-                calculateScrollReduce(i,picPos_3)
-                i = picPos_3
-        } 
-        if (scrollTop > picPos_4) {
-                calculateScrollReduce(i,picPos_3)
-                i = picPos_3
-        }                       
+    	if (scrollTop < picPos_1) {
+    		    i = scrollTop
+    	}
+    	if (scrollTop == picPos_1) {
+    		    calculateScrollReduce(i,0)
+    		    i = 0
+    	}    	
+    	if (scrollTop == picPos_2) {
+    		    calculateScrollReduce(i,picPos_1)
+    		    i = picPos_1
+    	}
+    	if (scrollTop == picPos_3) {
+    		    calculateScrollReduce(i,picPos_2)
+    		    i = picPos_2
+    	}
+    	if (scrollTop == picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	} 
+    	if (scrollTop > picPos_4) {
+    		    calculateScrollReduce(i,picPos_3)
+    		    i = picPos_3
+    	}    	    	    	
     } 
 
     if (touched - touchst == 0) {
-        
+    	
         if (target.id == 'mapButton') {
         map.style.display = 'block'
         map.style.position = 'fixed'
@@ -498,6 +499,10 @@ var touchEnd = function(event) {
             resetPicSize(link);
             mapEnter = false
             }
+        if (zoomCount == false && enterCount != true) {
+        	changePicSize(link,dd,ddd)
+        	mapEnter = true
+        }
         }
         if (target.id == 'exit') {
             map.style.display = 'none'
@@ -506,12 +511,20 @@ var touchEnd = function(event) {
             zoomCount = false;
             picMove = true;
             mapEnter = true;
+             
+            if (mapEnter == true) {
+            	changePicSize(link,dd,ddd)
+            }
+            if (zoomCount == false) {
+            resetPicSize(link);
+            }
         }
         if (target.id == 'enterPic' && mapEnter) {
             event = EventUtil.getEvent(event);
             var target = EventUtil.getTarget(event)
             picMove = false;
             mapEnter = false;
+            enterCount = true
             borderWidth = map.clientWidth;
             borderHeight = map.clientHeight;
             resetPicSize(link);
