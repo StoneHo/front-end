@@ -4,7 +4,7 @@ var asideLeft = document.querySelectorAll('#aside-left')[0];
 var asideRight = document.querySelectorAll('#aside-right')[0];
 var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
 var asideLeftContent = document.querySelectorAll('.aside-left-content')[0];
-var footer = document.querySelectorAll('.footer')[0];
+var footer = document.querySelectorAll('.footer button')[0];
 var down = document.querySelectorAll('#down')[0];
 var main = document.querySelectorAll('.main')[0];
 var landVideo = document.querySelectorAll('.land-vedio')[0];
@@ -135,22 +135,29 @@ var nextPage = function(event) {
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
+        if (i == undefined) {
+    		i = scrollTop
+    	}
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
     		    i = picPos_1
+    		    footer.style.display = ''
     	}
     	if (scrollTop == picPos_1) {
     		    calculateScroll(i,picPos_2)
     		    i = picPos_2
+    		    footer.style.display = ''
     	}    	
     	if (scrollTop == picPos_2) {
     		    calculateScroll(i,picPos_3)
     		    i = picPos_3
+    		    footer.style.display = ''
     	}
     	if (scrollTop == picPos_3) {
     		    calculateScroll(i,picPos_4)
     		    i = picPos_4
+    		    footer.style.display = 'none'
     	}
      	    	    	
 
@@ -172,26 +179,32 @@ var nextPageWheel = function(event) {
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
+        if (i == undefined) {
+    		i = scrollTop
+    	}
     if (event.wheelDelta == -120 && body.style.overflowY == '') {
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
     		    i = picPos_1
+    		    footer.style.display = ''
     	}
     	if (scrollTop == picPos_1) {
     		    calculateScroll(i,picPos_2)
     		    i = picPos_2
+    		    footer.style.display = ''
     	}    	
     	if (scrollTop == picPos_2) {
     		    calculateScroll(i,picPos_3)
     		    i = picPos_3
+    		    footer.style.display = ''
     	}
     	if (scrollTop == picPos_3) {
     		    calculateScroll(i,picPos_4)
     		    i = picPos_4
+    		    footer.style.display = 'none'
     	}
-     	    	    	
     }
      if (event.wheelDelta == 120 && body.style.overflowY == '') {
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
@@ -201,28 +214,33 @@ var nextPageWheel = function(event) {
     	if (scrollTop == picPos_1) {
     		    calculateScrollReduce(i,0)
     		    i = 0
+    		    footer.style.display = ''
     	}    	
     	if (scrollTop == picPos_2) {
     		    calculateScrollReduce(i,picPos_1)
     		    i = picPos_1
+    		    footer.style.display = ''
     	}
     	if (scrollTop == picPos_3) {
     		    calculateScrollReduce(i,picPos_2)
     		    i = picPos_2
+    		    footer.style.display = ''
 
     	}
+    	//uc bug
     	if (picPos_4 - scrollTop == 10) {
     		scrollTop += 10
     	}
     	if (scrollTop == picPos_4) {
     		    calculateScrollReduce(i,picPos_3)
     		    i = picPos_3
+    		    footer.style.display = ''
     		    
     	} 
     	if (scrollTop > picPos_4) {
     		    calculateScrollReduce(i,picPos_3)
     		    i = picPos_3
-
+                footer.style.display = ''
     	}    	    	    	
     }   
     }
@@ -246,7 +264,9 @@ var scrollMouseUp = function( event ) {
         var picPos_4 = picPos_3 + picPos2 - remainder2
         var point = parseInt(picPos/2)
         var remainder =  scrollTop % 4
-
+        if (i == undefined) {
+    		i = scrollTop
+    	}
 
     	if (scrollTop <= point) {
     		scrollTop = scrollTop - remainder
@@ -443,6 +463,9 @@ var touchEnd = function(event) {
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
+        if (i == undefined) {
+    		i = scrollTop
+    	}
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
@@ -459,6 +482,7 @@ var touchEnd = function(event) {
     	if (scrollTop == picPos_3) {
     		    calculateScroll(i,picPos_4)
     		    i = picPos_4
+    		    footer.style.display = 'none'
     	}
      	    	    	
     }
@@ -472,6 +496,9 @@ var touchEnd = function(event) {
         var picPos_2 = picPos2 - remainder2 + picPos_1
         var picPos_3 = picPos2 - remainder2 + picPos_2
         var picPos_4 = picPos_3 + picPos2 - remainder2
+        if (i == undefined) {
+    		i = scrollTop
+    	}
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     	}
@@ -490,10 +517,12 @@ var touchEnd = function(event) {
     	if (scrollTop == picPos_4) {
     		    calculateScrollReduce(i,picPos_3)
     		    i = picPos_3
+    		    footer.style.display = ''
     	} 
     	if (scrollTop > picPos_4) {
     		    calculateScrollReduce(i,picPos_3)
     		    i = picPos_3
+    		    footer.style.display = ''
     	}    	    	    	
     } 
 
