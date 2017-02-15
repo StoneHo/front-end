@@ -546,7 +546,8 @@ video{
     }
     .footer button{
       	color: white;
-      	margin-left: 48%;
+      	margin-left: 47%;
+      	position: absolute;
     }
     .culture, .sight, .food, .map {
     height: calc(100% - 63px);
