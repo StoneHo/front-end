@@ -501,7 +501,8 @@ video{
     z-index: 2;
     background: transparent;
     border: none;
-
+    font-size: 1em;
+    font-weight: 700;
 }
 .footer button:hover {
 	opacity: 0.6;
