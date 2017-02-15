@@ -158,13 +158,12 @@ var mapButton = function( event ) {
     var target = EventUtil.getTarget(event)
 
     if (target.id == 'mapButton') {
-        alert('vv')
         map.style.display = 'block'
         map.style.position = 'fixed'
         borderWidth = border.clientWidth
         borderHeight = border.clientHeight
         main.style.display = 'none'
-        footer.style.display = 'none'
+        footerbg.style.display = 'none'
         body.style.overflowY = 'hidden'
         mobile.style.display = 'none'
         dd = imgWidth / borderWidth
@@ -176,11 +175,10 @@ var mapButton = function( event ) {
         }
     }
     if (target.id == 'exit') {
-        alert('nn')
         map.style.display = 'none'
         map.style.position = 'absolute'
         main.style.display = 'block'
-        footer.style.display = 'block'
+        footerbg.style.display = 'block'
         mobile.style.display = 'block'
         body.style.overflowY = ''
         resetPicSize(link);
@@ -243,7 +241,7 @@ var mouseDown = function( event ) {
         target.style.cursor = '-webkit-grab'
     }
 };
-EventUtil.addHandler(window,"mousedown",mouseDown);
+EventUtil.addHandler(border,"mousedown",mouseDown);
 
 var mouseUp = function( event ) {
     if (onImg) {
@@ -307,7 +305,6 @@ var mouseWheel = function( event ) {
             EventUtil.preventDefault(event)
             borderWidth = border.clientWidth;
             borderHeight = border.clientHeight;
-            alert('bb')
             if (zoom) {
             if (event.wheelDelta === 120 && zoomCount) {
                 resetPicSize(link);

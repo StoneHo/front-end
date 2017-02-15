@@ -5,6 +5,7 @@ var asideRight = document.querySelectorAll('#aside-right')[0];
 var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
 var asideLeftContent = document.querySelectorAll('.aside-left-content')[0];
 var footer = document.querySelectorAll('.footer button')[0];
+var footerbg = document.querySelectorAll('.footer')[0];
 var down = document.querySelectorAll('#down')[0];
 var main = document.querySelectorAll('.main')[0];
 var landVideo = document.querySelectorAll('.land-vedio')[0];
