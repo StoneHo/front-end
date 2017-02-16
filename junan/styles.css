@@ -42,6 +42,7 @@ a {
     height: calc(100% - 65px);
     z-index: 10;
     display: none;
+    overflow: auto;
     /*animation: myfirst 1s;*/
     /*-moz-animation: myfirst 5s;*/ 
     /*-webkit-animation: myfirst 5s;*/
@@ -581,7 +582,7 @@ video{
         width: 100%;
         padding: 20px 0 24px;
         left: 0;
-        overflow: auto;
+        
     }
 
     body {
