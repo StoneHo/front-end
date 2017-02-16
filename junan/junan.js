@@ -609,12 +609,13 @@ var touchEnd = function(event) {
             }
         }
         if  (target.id == 'moreInfo') {
-        	picMove = false
+
         	if(moreInfoSwitch == true) {
             //mobilemenu.style.animation = 'open 1s forwards ease'
             //mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
             //mobilemenu.style.mozAnimation = 'open 1s forwards ease'
             //mobilemenu.style.oAnimation = 'open 1s forwards ease'
+            picMove = false
             moreinfo.innerHTML = '返回'
             mobilemenu.style.display = 'block'
             moreInfoSwitch = false
@@ -623,6 +624,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.mozAnimation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
+            picMove = true
             mobilemenu.style.display = 'none'
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
