@@ -35,7 +35,47 @@ a {
     float: right;
     margin-right: 45px;
 }
-
+#mobile-menu {
+	position: absolute;
+	background: white;
+    width: 100%;
+    height: calc(100% - 65px);
+    z-index: 10;
+    left: -500px;
+    /*animation: myfirst 1s;*/
+    /*-moz-animation: myfirst 5s;*/	
+    /*-webkit-animation: myfirst 5s;*/
+    /*-o-animation: myfirst 2s;	*/
+}
+@keyframes open {
+    from {left: -500px;}
+    to {left: 0;}
+}
+@keyframes close {
+    from {left: 0;}
+    to {left: -500px;}
+}
+.mobile-menu-item {
+	padding: 11% 0;
+	width: 100%;
+	line-height:14%;
+}
+.mobile-menu-item a{
+    margin-left: 46%;
+    height: 100%;
+    color: black;
+}
+.mobile-menu-item-aside {
+	height: 22%;
+	width: 100%;
+}
+.mobile-menu-item-aside a{
+	display: inline-block;
+	width: 48%;
+	padding: 20% 0 0;
+    text-align: center;
+    color: black;
+}
 /* nav-main */
 .main {
 	width: calc(100% - 160px);
@@ -501,8 +541,9 @@ video{
     z-index: 2;
     background: transparent;
     border: none;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 700;
+    outline: none;
 }
 .footer button:hover {
 	opacity: 0.6;
@@ -528,6 +569,7 @@ video{
 	    padding: 20px 0;
         left: 0;
     }
+
     body {
 	    padding: 65px 0 0;
 	    height: 667px;

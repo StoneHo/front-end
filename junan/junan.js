@@ -18,12 +18,15 @@ var firstenter = document.querySelectorAll('#firstEnter')[0];
 var videoplay = document.querySelectorAll('#videoPlay')[0];
 var firstword = document.querySelectorAll('.land-vedio .info')[0];
 var firstbg = document.querySelectorAll('.wrapper-background-video')[0];
+var mobilemenu = document.querySelectorAll('#mobile-menu')[0];
+var moreinfo = document.querySelectorAll('#moreInfo')[0];
 
 var picPos,
     bodyWidth,
     picMove = true,
     mapEnter = true,
     enterCount,
+    moreInfoSwitch = true,
     zoomCount;
 var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
@@ -340,6 +343,7 @@ var touchStart = function(event) {
     EventUtil.preventDefault(event)
 }
 EventUtil.addHandler(wrapper,"touchstart",touchStart);
+EventUtil.addHandler(mobile,"touchstart",touchStart);
 
 var getNatural = function(element) {
     var img = document.createElement('img');
@@ -603,11 +607,23 @@ var touchEnd = function(event) {
             }else {
             	videoplay.pause();
             }
-        }        
+        }
+        if  (target.id == 'moreInfo') {
+        	if(moreInfoSwitch == true) {
+            mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
+            moreinfo.innerHTML = '返回'
+            moreInfoSwitch = false
+            }else {
+            mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
+            moreinfo.innerHTML = '更多'
+            moreInfoSwitch = true
+            }
+        }
     }  
 
 }
 EventUtil.addHandler(wrapper,"touchend",touchEnd);
+EventUtil.addHandler(mobile,"touchend",touchEnd);
 
 
 
