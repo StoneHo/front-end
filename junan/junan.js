@@ -618,6 +618,7 @@ var touchEnd = function(event) {
             picMove = false
             moreinfo.innerHTML = '返回'
             mobilemenu.style.display = 'block'
+            mobilemenu.style.position = 'fixed'
             moreInfoSwitch = false
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
@@ -626,6 +627,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
             mobilemenu.style.display = 'none'
+            mobilemenu.style.position = 'absolute'
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
