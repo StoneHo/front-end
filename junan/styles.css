@@ -41,12 +41,14 @@ a {
     width: 100%;
     height: calc(100% - 65px);
     z-index: 10;
-    left: -500px;
+    display: none;
     /*animation: myfirst 1s;*/
     /*-moz-animation: myfirst 5s;*/	
     /*-webkit-animation: myfirst 5s;*/
     /*-o-animation: myfirst 2s;	*/
 }
+/*
+
 @keyframes open {
     from {left: -500px;}
     to {left: 0;}
@@ -55,6 +57,7 @@ a {
     from {left: 0;}
     to {left: -500px;}
 }
+*/
 .mobile-menu-item {
 	padding: 11% 0;
 	width: 100%;

@@ -610,17 +610,19 @@ var touchEnd = function(event) {
         }
         if  (target.id == 'moreInfo') {
         	if(moreInfoSwitch == true) {
-            mobilemenu.style.animation = 'open 1s forwards ease'
-            mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
-            mobilemenu.style.mozAnimation = 'open 1s forwards ease'
-            mobilemenu.style.oAnimation = 'open 1s forwards ease'
-            moreinfo.innerHTML = '返回'
+            //mobilemenu.style.animation = 'open 1s forwards ease'
+            //mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
+            //mobilemenu.style.mozAnimation = 'open 1s forwards ease'
+            //mobilemenu.style.oAnimation = 'open 1s forwards ease'
+            //moreinfo.innerHTML = '返回'
+            mobilemenu.style.display = 'block'
             moreInfoSwitch = false
             }else {
-            mobilemenu.style.animation = 'close 1s forwards ease-in-out'
-            mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
-            mobilemenu.style.mozAnimation = 'close 1s forwards ease-in-out'
-            mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
+            //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
+            //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
+            //mobilemenu.style.mozAnimation = 'close 1s forwards ease-in-out'
+            //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
+            mobilemenu.style.display = 'none'
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
