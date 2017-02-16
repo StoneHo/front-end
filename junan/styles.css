@@ -42,6 +42,7 @@ a {
     height: calc(100% - 65px);
     z-index: 10;
     display: none;
+    top: -5px;
     /*animation: myfirst 1s;*/
     /*-moz-animation: myfirst 5s;*/	
     /*-webkit-animation: myfirst 5s;*/
