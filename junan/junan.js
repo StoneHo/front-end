@@ -609,12 +609,13 @@ var touchEnd = function(event) {
             }
         }
         if  (target.id == 'moreInfo') {
+        	picMove = false
         	if(moreInfoSwitch == true) {
             //mobilemenu.style.animation = 'open 1s forwards ease'
             //mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
             //mobilemenu.style.mozAnimation = 'open 1s forwards ease'
             //mobilemenu.style.oAnimation = 'open 1s forwards ease'
-            //moreinfo.innerHTML = '返回'
+            moreinfo.innerHTML = '返回'
             mobilemenu.style.display = 'block'
             moreInfoSwitch = false
             }else {
