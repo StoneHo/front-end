@@ -136,9 +136,9 @@ var nextPage = function(event) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 + (4 - remainder2) + picPos_1
+        var picPos_3 = picPos2 + (4 - remainder2) + picPos_2
+        var picPos_4 = picPos_3 + picPos2 + (4 - remainder2)
         if (i == undefined) {
     		i = scrollTop
     	}
@@ -180,9 +180,9 @@ var nextPageWheel = function(event) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 + (4 - remainder2) + picPos_1
+        var picPos_3 = picPos2 + (4 - remainder2) + picPos_2
+        var picPos_4 = picPos_3 + picPos2 + (4 - remainder2)
         if (i == undefined) {
     		i = scrollTop
     	}
@@ -263,9 +263,9 @@ var scrollMouseUp = function( event ) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 + (4 - remainder2) + picPos_1
+        var picPos_3 = picPos2 + (4 - remainder2) + picPos_2
+        var picPos_4 = picPos_3 + picPos2 + (4 - remainder2)
         var point = parseInt(picPos/2)
         var remainder =  scrollTop % 4
         if (i == undefined) {
@@ -465,9 +465,9 @@ var touchEnd = function(event) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 + (4 - remainder2) + picPos_1
+        var picPos_3 = picPos2 + (4 - remainder2) + picPos_2
+        var picPos_4 = picPos_3 + picPos2 + (4 - remainder2)
         if (i == undefined) {
     		i = scrollTop
     	}
@@ -498,9 +498,9 @@ var touchEnd = function(event) {
     	var remainder1 =  picPos1 % 4
     	var remainder2 =  picPos2 % 4
         var picPos_1 = picPos1 + (4 - remainder1)
-        var picPos_2 = picPos2 - remainder2 + picPos_1
-        var picPos_3 = picPos2 - remainder2 + picPos_2
-        var picPos_4 = picPos_3 + picPos2 - remainder2
+        var picPos_2 = picPos2 + (4 - remainder2) + picPos_1
+        var picPos_3 = picPos2 + (4 - remainder2) + picPos_2
+        var picPos_4 = picPos_3 + picPos2 + (4 - remainder2)
         if (i == undefined) {
     		i = scrollTop
     	}
