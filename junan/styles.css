@@ -71,15 +71,18 @@ a {
 .mobile-menu-item-aside {
 	width: 100%;
 	height: 20%;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 .mobile-menu-item-aside a{
 	display: inline-block;
-	width: 48%;
+	width: 46%;
     height: 20%;
     text-align: center;
     color: black;
-
+    border: 1px solid red;
+}
+.mobile-menu-item-aside a:first-child{
+	margin-left: 2%;
 }
 /* nav-main */
 .main {
