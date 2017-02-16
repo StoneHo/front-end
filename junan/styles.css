@@ -17,7 +17,7 @@ a {
 	width: calc(100% - 160px);
 	position: fixed;
     overflow: hidden;
-    padding: 26px 0;
+    padding: 26px 0 30px;
     top: 0;
     background: white;
     z-index: 1;
