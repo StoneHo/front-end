@@ -75,14 +75,13 @@ a {
 }
 .mobile-menu-item-aside a{
 	display: inline-block;
-	padding: 9% 0;
-	width: 46%;
+	padding: 8% 0;
+	width: 50%;
     background: rgb(238,208,181);
     text-align: center;
     color: black;
 }
 .mobile-menu-item-aside a:first-child{
-	margin-left: 4%;
 	background: #b6e0d8;
 }
 .mobile-menu-item-aside a:last-child{
