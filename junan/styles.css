@@ -1,21 +1,21 @@
 body {
-    margin: 0;
-    padding: 70px 80px 80px;
-    height: 100%;
-    overflow-y: ;
-    min-width: 320px;
+	margin: 0;
+	padding: 70px 80px 80px;
+	height: 100%;
+	overflow-y: ;
+	font-family: '宋体';
 }
 
 a {
-    text-decoration: none;
-    font-weight: 600;
-    font-family: '宋体';
+	text-decoration: none;
+	font-weight: 600;
+	font-family: '宋体';
 }
 
 /* nav-mobile */
 .mobile {
-    width: calc(100% - 160px);
-    position: fixed;
+	width: calc(100% - 160px);
+	position: fixed;
     overflow: hidden;
     padding: 26px 0;
     top: 0;
@@ -36,17 +36,17 @@ a {
     margin-right: 45px;
 }
 #mobile-menu {
-    position: absolute;
-    background: white;
+	position: absolute;
+	background: white;
     width: 100%;
     height: calc(100% - 65px);
     z-index: 10;
     display: none;
     overflow: auto;
     /*animation: myfirst 1s;*/
-    /*-moz-animation: myfirst 5s;*/ 
+    /*-moz-animation: myfirst 5s;*/	
     /*-webkit-animation: myfirst 5s;*/
-    /*-o-animation: myfirst 2s; */
+    /*-o-animation: myfirst 2s;	*/
 }
 /*
 
@@ -60,9 +60,9 @@ a {
 }
 */
 .mobile-menu-item {
-    padding: 10% 0;
-    width: 100%;
-    line-height:14%;
+	padding: 10% 0;
+	width: 100%;
+	line-height:14%;
 }
 .mobile-menu-item a{
     margin-left: 44%;
@@ -70,30 +70,30 @@ a {
     color: black;
 }
 .mobile-menu-item-aside {
-    width: 100%;
-    height: 20%;
-    margin-top: 0%;
+	width: 100%;
+	height: 20%;
+	margin-top: 0%;
 }
 .mobile-menu-item-aside a{
-    display: inline-block;
-    padding: 8% 0;
-    width: 50%;
+	display: inline-block;
+	padding: 8% 0;
+	width: 49%;
     background: rgb(238,208,181);
     text-align: center;
     color: black;
 }
 .mobile-menu-item-aside a:first-child{
 
-    background: #b6e0d8;
+	background: #b6e0d8;
 }
 .mobile-menu-item-aside a:last-child{
-    margin-left: -4px;
+	margin-left: -4px;
 
 }
 /* nav-main */
 .main {
-    width: calc(100% - 160px);
-    position: fixed;
+	width: calc(100% - 160px);
+	position: fixed;
     padding: 24px 0 0px;
     top: 0;
     background: white;
@@ -110,10 +110,9 @@ a {
     width: 50%;
     overflow: hidden;
     margin-left: -8px;
-
 }
 .logo a {
-    display: inline-block;
+	display: inline-block;
     font-size: 1.5rem;
     margin-left: 46%;
     color: black;
@@ -121,7 +120,6 @@ a {
     border-bottom: 25px solid transparent;
     position: relative;
     z-index: 2;
-
 }
 .logo a:hover {
     opacity: 0.6;
@@ -134,135 +132,135 @@ a {
     
 }
 .nav-sub-left {
-    float: left;
-    color: black;
+	float: left;
+	color: black;
     border-bottom: 25px solid transparent;
     position: relative;
     z-index: 2;
 }
 .nav-sub-left:hover {
-    color: #127c85;
+	color: #127c85;
 }
 .nav-sub-right {
-    float: right;
-    color: black;
-    border-bottom: 25px solid transparent;
-    position: relative;
+	float: right;
+	color: black;
+	border-bottom: 25px solid transparent;
+	position: relative;
     z-index: 2;
 }
 .nav-sub-right:hover {
-    color: #127c85;
+	color: #127c85;
 }
 /* aside-left */
-#aside-left {
-    position: fixed;
-    top: 45%;
-    width: 16px;
-    margin-left: -50px;
+.aside-left {
+	position: fixed;
+	top: 45%;
+	width: 16px;
+	margin-left: -50px;
 }
 .aside-left-content{
-    width: 0%;
-    height: 100%;
-    background: #b6e0d8;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    transition:width 0.5s;
+	width: 0%;
+	height: 100%;
+	background: #b6e0d8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	transition:width 0.5s;
 
 }
 .aside-left-content div{
-    width: 80%;
-    height: 85%;
-    overflow: auto;
-    position: absolute;
-    left: -600px;
-    top: 100px;
-    transition:left 0.5s;
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	left: -600px;
+	top: 100px;
+	transition:left 0.5s;
 }
-#aside-left a:hover + div div{
-    left: 15%;
+.aside-left a:hover + div div{
+	left: 15%;
 }
-#aside-left div:hover div{
-    left: 15%;
-    width: 80%;
+.aside-left div:hover div{
+	left: 15%;
+	width: 80%;
 }
-#aside-left div:hover div div{
-    width: 80%;
-}
-
-#aside-left a:hover + div, #aside-right a:hover + div{
-    width: 50%;
-
+.aside-left div:hover div div{
+	width: 80%;
 }
 
-#aside-left a, #aside-right a{
-    color: black;
-    z-index: 2;
-    position: relative;
-    
+.aside-left a:hover + div, .aside-right a:hover + div{
+	width: 50%;
+
 }
-#aside-left a:hover, #aside-right a:hover{
-    color: #127c85;
+
+.aside-left a, .aside-right a{
+	color: black;
+	z-index: 2;
+	position: relative;
+	
 }
-#aside-left div:hover, #aside-right div:hover{
-    width: 50%;
+.aside-left a:hover, .aside-right a:hover{
+	color: #127c85;
+}
+.aside-left div:hover, .aside-right div:hover{
+	width: 50%;
 }
 #login, #message-submit, #more {
-    border: 1px solid #127c85;
-    width: 80%;
-    height: 50px;
-    color: #127c85;
-    background: #b6e0d8;
-    cursor: pointer;
-    font-size: 1em;
+	border: 1px solid #127c85;
+	width: 80%;
+	height: 50px;
+	color: #127c85;
+	background: #b6e0d8;
+	cursor: pointer;
+	font-size: 1em;
     margin-bottom: 20px;
-    font-weight: 700;
-    position: relative;
-    left: 10%;
+	font-weight: 700;
+	position: relative;
+	left: 10%;
 }
 #login{
-    top: 50px;
+	top: 50px;
 }
 #more{
-    top: 50px;
-    width: 70%;
-    left: 15%;
+	top: 50px;
+	width: 70%;
+	left: 15%;
 }
 
 #login:hover, #message-submit:hover, #more:hover {
-    color: #b6e0d8;
-    background: #127c85;
+	color: #b6e0d8;
+	background: #127c85;
 }
 textarea {
-    position: relative;
-    border: 1px solid #127c85;
-    background: #b6e0d8;
-    width: 90%;
-    height: 300px;
-    resize: none;
-    color: #127c85;
-    left: 5%;
-    margin-bottom: 10px;
-    top: 30px;
+	position: relative;
+	border: 1px solid #127c85;
+	background: #b6e0d8;
+	width: 90%;
+	height: 300px;
+	resize: none;
+	color: #127c85;
+	left: 5%;
+	margin-bottom: 10px;
+	top: 30px;
 }
  textarea::-webkit-input-placeholder { 
 color: #127c85; 
 } 
-#aside-left h3 {
-    left: 5%;
-    position: relative;
-    width: 200px;
-    top: 30px;
-    color: #127c85; 
+.aside-left h3 {
+	left: 5%;
+	position: relative;
+	width: 200px;
+	top: 30px;
+	color: #127c85;	
 }
 .aside-left-content a{
-    position: relative;
-    left: 35%;
+	position: relative;
+	left: 35%;
     top: 30px;
 }
 .aside-left-content a img{
-    width: 30%;
+	width: 30%;
 }
 #message-submit {
     width: 20%;
@@ -272,77 +270,77 @@ color: #127c85;
 }
 
 /* aside-right */
-#aside-right {
-    position: fixed;
-    top: 45%;
-    right: 0;
-    width: 16px;
-    margin-right: 30px;
+.aside-right {
+	position: fixed;
+	top: 45%;
+	right: 0;
+	width: 16px;
+	margin-right: 30px;
     
 }
 
-#aside-right:hover, #aside-left:hover {
-    color: #127c85;
+.aside-right:hover, .aside-left:hover {
+	color: #127c85;
 }
 .aside-right-content{
-    width: 0%;
-    height: 100%;
-    background: #b6e0d8;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    z-index: 1;
-    transition:width 0.5s;
+	width: 0%;
+	height: 100%;
+	background: #b6e0d8;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+	transition:width 0.5s;
 
 }
 .aside-right-content div{
-    width: 80%;
-    height: 85%;
-    overflow: auto;
-    position: absolute;
-    right: -600px;
-    top: 100px;
-    transition:right 0.5s;
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	right: -600px;
+	top: 100px;
+	transition:right 0.5s;
 
 }
-#aside-right a:hover + div div{
-    right: 15%;
+.aside-right a:hover + div div{
+	right: 15%;
 }
-#aside-right div:hover div{
-    right: 15%;
-    width: 80%;
+.aside-right div:hover div{
+	right: 15%;
+	width: 80%;
 }
-#aside-right div:hover div div{
-    width: 80%;
+.aside-right div:hover div div{
+	width: 80%;
 }
-#aside-right h3 {
-    left: 10%;
-    position: relative;
-    width: 200px;
-    top: 20px;
-    color: #127c85; 
+.aside-right h3 {
+	left: 10%;
+	position: relative;
+	width: 200px;
+	top: 20px;
+	color: #127c85;	
 }
 .aside-right-content table {
-    border-collapse: collapse;
-    width: 80%;
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
-    border-bottom: 1px solid #127c85;
-    color: #127c85;
-    position: relative;
-    left: 10%;
+	border-collapse: collapse;
+	width: 80%;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	border-bottom: 1px solid #127c85;
+	color: #127c85;
+	position: relative;
+	left: 10%;
 }
 .aside-right-content table tr td{
-    height: 50px;
-    text-align: left;
+	height: 50px;
+	text-align: left;
     color: black;
     font-weight: 700;
     font-size: 0.8rem;
 }
 .aside-right-content table tr td a{
-    height: 50px;
-    text-align: left;
+	height: 50px;
+	text-align: left;
     color: black;
     font-weight: 700;
     font-size: 1rem;
@@ -368,12 +366,12 @@ color: #127c85;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    width: 100%;
-    height: 0px;
-    background: #b6e0d8;
-    position: absolute;
-    z-index: 2;
-    top: 76px;
+	width: 100%;
+	height: 0px;
+	background: #b6e0d8;
+	position: absolute;
+	z-index: 2;
+	top: 76px;
     left: 0;
     transition:height 0.2s;
     transition-delay: 0.1s;
@@ -402,7 +400,7 @@ color: #127c85;
     font-size: 1rem;
 }
 video{
-    margin: auto;
+	margin: auto;
     width: calc(100%);
     margin-bottom: -3px;
     height: calc(100%);
@@ -413,38 +411,38 @@ video{
     
 }
 .land-vedio {
-    margin: auto;
+	margin: auto;
     width: 100%;
     height: calc(100% - 160px);
     position: relative;
 
 }
 .info {
-    position: absolute;
-    width: 100%;
-    height: 50%;
+	position: absolute;
+	width: 100%;
+	height: 50%;
     top: 20%;
 }
 .info h1 {
-    width: 100%;
-    color: white;
-    font-weight: 700;
-    font-size: 3em;
-    position: relative;
-    text-align: center;
+	width: 100%;
+	color: white;
+	font-weight: 700;
+	font-size: 3em;
+	position: relative;
+	text-align: center;
 }
 .info hr {
-    border: 1px solid white;
-    width: 100px;
+	border: 1px solid white;
+	width: 100px;
     left: 0;
-    position: relative;
-    top: 0px;
+	position: relative;
+	top: 0px;
 
 }
 .info p {
-    width: 100%;
-    text-align: center;
-    color: white;
+	width: 100%;
+	text-align: center;
+	color: white;
     font-weight: 700;
     position: relative;
     margin-top: 50px;
@@ -452,9 +450,9 @@ video{
     letter-spacing: 5px;
 }
 .info button {
-    width: 20%;
-    height: 60px;
-    background: transparent;
+	width: 20%;
+	height: 60px;
+	background: transparent;
     border: 1px solid white;
     color: white;
     font-weight: 700;
@@ -465,9 +463,9 @@ video{
     cursor: pointer;
 }
 .culture .info .watchVideo, .sight .info .watchVideo{
-    width: 120px;
-    height: 120px;
-    background: transparent;
+	width: 120px;
+	height: 120px;
+	background: transparent;
     border: 1px solid white;
     color: white;
     font-weight: 700;
@@ -478,29 +476,29 @@ video{
     cursor: pointer;
 }
 .info button:hover {
-    background: white;
-    color: black;
+	background: white;
+	color: black;
 }
 .info .watchVideo:hover {
-    background: white;
-    color: black;
+	background: white;
+	color: black;
 }
 .culture .info, .sight .info, .food .info {
     top: 10%;
 
 }
 .culture .info p, .sight .info p, .food .info p {
-    width: 27.5%;
-    left: 15%;
+	width: 27.5%;
+	left: 15%;
     text-align: left;
     line-height: 30px;
     margin-top: 50px;
 }
 .culture .info h1, .sight .info h1, .food .info h1 {
     width: 25%;
-    left: 15%;
-    margin-bottom: 35px;
-    text-align: left;
+	left: 15%;
+	margin-bottom: 35px;
+	text-align: left;
 
 }
 
@@ -515,7 +513,7 @@ video{
 
 }
 .culture, .sight, .food, .map {
-    margin: auto;
+	margin: auto;
     width: 100%;
     max-width: 1280px;
     height: calc(100% - 160px);
@@ -526,32 +524,151 @@ video{
     position: relative;
     z-index: -2;
 }
+.culturePic1 {
+	height: calc(100% - 140px);
+	margin-left: 0;
+	background-color:  #b6e0d8;
+	background-image: url('222.jpg');
+	background-size: 50% 100%;
+    overflow: hidden;
+}
+
+.culturePic1 .info{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+    top: 25%;
+    left: 60%;
+}
+
+.culturePic1 .info h1 {
+	width: 100%;
+	color: black;
+	left: 0;
+	font-weight: 500;
+	font-size: 3em;
+	position: relative;
+	text-align: left;
+}
+.culturePic1 .info hr {
+	border: 1px solid black;
+	width: 100px;
+    /*left: 12%;*/
+	position: absolute;
+	top: 100px;
+    left: 0;
+}
+.culturePic1 .info p {
+	width: 30%;
+	text-align: center;
+	color: black;
+    font-weight: 700;
+    position: relative;
+    margin-top: 50px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    text-align: left;
+    left: 0;
+    /*left: 57%;*/
+}
+
 .wrapper-background {
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
     
 }
 
 
 .last-wrapper {
-    margin-bottom: 80px;
+	margin-bottom: 80px;
+}
+.none {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: calc(100% - 140px);
+}
+.word {
+	margin: auto;
+    width: 50%;
+    max-width: 1280px;
+    height: calc(100% - 140px);
+    margin-bottom: 0px;	
+    position: absolute;
+    overflow: hidden;
+}
+.word2 {
+	left: 50%;
+}
+
+.word div{
+	margin: auto;
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    top: 25%;
+    left: 10%;
+}
+.word h1 {
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	top: 20%;
+	font-weight: 700;
+	font-size: 3em;
+}
+.word hr {
+	position: absolute;
+	border: 1px solid black;
+	width: 100px;
+	top: 70px;
+	left: 0;
+}
+.word p {
+	width: 80%;
+	text-align: center;
+	color: black;
+    font-weight: 700;
+    position: relative;
+    margin-top: 50px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    text-align: left;
+    left: 0;
+    line-height: 30px;
+}
+.images {
+	margin: auto;
+    width: 50%;
+    max-width: 1280px;
+    height: calc(100% - 140px);
+    margin-bottom: 0px;
+    position: absolute;
+    left: 50%;	
+}
+.image2 {
+    left: 0;
+}
+.images img{
+    width: 100%;
+    height: 100%;
 }
 /* footer */
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 160px);
-    padding: 33px 0;
+	position: fixed;
+	bottom: 0;
+	width: calc(100% - 160px);
+	padding: 33px 0;
     background: white;
 
 }
 .footer button {
-    color: black;
-    margin-left: 48.8%;
-    position: relative;
+	color: black;
+	margin-left: 48.8%;
+	position: relative;
     z-index: 2;
     background: transparent;
     border: none;
@@ -560,52 +677,51 @@ video{
     outline: none;
 }
 .footer button:hover {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 @media (min-width: 960px) {
-    .mobile {
-        display: none;
+	.mobile {
+	    display: none;
     }
     body {
-    height: 800px;
+	height: 800px;
     }
     .footer {
-        display: block;
+      	display: block;
     }
 }
 @media (max-width: 959px) {
-    .main {
-        display: none;
+	.main {
+	    display: none;
     }
     .mobile {
-        width: 100%;
-        padding: 20px 0 24px;
+	    width: 100%;
+	    padding: 20px 0 24px;
         left: 0;
-        
     }
 
     body {
-        padding: 65px 0 0;
-        height: 667px;
+	    padding: 65px 0 0;
+	    height: 667px;
     }
     .aside-left {
-        display: none;
+	    display: none;
     }
     .aside-right {
-        display: none;
+	    display: none;
     }
     .last-wrapper {
-    margin-bottom: 0;
+	margin-bottom: 0;
     }
     .footer {
-        background: rgba(0,0,0,0);
-        width: 100%;
+      	background: rgba(0,0,0,0);
+      	width: 100%;
     }
     .footer button{
-        color: white;
-        margin-left: 45%;
-        position: absolute;
+      	color: white;
+      	margin-left: 45%;
+      	position: absolute;
     }
     .culture, .sight, .food, .map {
     height: calc(100% - 63px);
@@ -618,18 +734,18 @@ video{
     height: calc(100% - 65px);
     }
     .culture .info, .sight .info, .food .info {
-    left: -5%;
+	left: -5%;
     top: 0;
     }
     .info h1 {
-    font-size: 2em;
+	font-size: 2em;
     }
     .culture .info p, .sight .info p, .food .info p {
-    width: 30%;
+	width: 30%;
 }
     .info hr {
-    width: 60px;
-    top: 10px;
+	width: 60px;
+	top: 10px;
     }
     .culture .info hr, .sight .info hr, .food .info hr {
     top: 75px;
@@ -650,45 +766,85 @@ video{
     left: 36%;
 
     }
+
+.culturePic1 .info {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+    top: 25%;
+    left: 60%;
+}
+
+.culturePic1 .info h1 {
+	width: 100%;
+	color: black;
+	left: 0;
+	font-weight: 500;
+	font-size: 3em;
+	position: relative;
+	text-align: left;
+}
+.culturePic1 .info hr {
+	border: 1px solid black;
+	width: 100px;
+    /*left: 12%;*/
+	position: absolute;
+	top: 100px;
+    left: 0;
+}
+.culturePic1 .info p {
+	width: 30%;
+	text-align: center;
+	color: black;
+    font-weight: 700;
+    position: relative;
+    margin-top: 50px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    text-align: left;
+    left: 0;
+    /*left: 57%;*/
+}
+
 }
 @media (max-height: 570px){
     .culture, .sight, .food, .map {
     height: calc(100%);
     }
-    .land-vedio .info,.culture .info, .sight .info, .food .info {
+	.land-vedio .info,.culture .info, .sight .info, .food .info {
     top: 0%;
     }
     .culture .info p, .sight .info p, .food .info p {
-    width: 40%;
-    line-height: 20px;
+	width: 40%;
+	line-height: 20px;
    }
     .info button{
     height: 40px;
 
     }
 }
-@media (max-width: 538px) {
+@media (max-width: 768px) {
 
     .land-vedio .info, .culture .info, .sight .info, .food .info {
     top: 0%;
     }
     .land-vedio .info {
-    top: 10%;   
+    top: 10%;	
     }
     .culture .info h1, .sight .info h1, .food .info h1 {
-    font-size: 2em;
+	font-size: 2em;
     width: 60%;
     text-align: center;
-    left: 28%;
-    letter-spacing: 15px;
+	left: 28%;
+	letter-spacing: 15px;
 
     }
     .culture .info p, .sight .info p, .food .info p {
-    width: 90%;
-    text-align: center;
-    left: 10.5%;
-    line-height: 20px;
-    top: -5%;
+	width: 90%;
+	text-align: center;
+	left: 10.5%;
+	line-height: 20px;
+	top: -5%;
 }
 
     .culture .info hr, .sight .info hr, .food .info hr {
@@ -721,36 +877,115 @@ video{
     .land-vedio .info button{
     margin-left: 0%;
     }
+.culturePic1 {
+	margin-left: 0;
+	background-color:  #b6e0d8;
+	background-image: url('222.jpg');
+	background-size: cover;
+
 }
 
+.culturePic1 .info{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+    top: 30%;
+    left: 0;
+}
+
+
+.culturePic1 .info h1 {
+	width: 100%;
+	color: white;
+	margin: 0 auto;
+	font-weight: 500;
+	font-size: 2em;
+	position: relative;
+	text-align: center;
+	left: 1%;
+
+}
+
+.culturePic1 .info hr {
+	border: 1px solid white;
+	width: 80px;
+	position: relative;
+	top: 25px;
+    left: 0;
+    margin: 0 auto;
+}
+
+.culturePic1 .info p {
+	width: 80%;
+	text-align: center;
+	color: white;
+    font-weight: 700;
+    position: relative;
+    margin-top: 70px;
+    font-size: 0.9em;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 70px auto 0;
+    left: 0;
+
+    /*left: 57%;*/
+}
+ .word {
+    width: 100%;	
+    position: relative;
+}
+.word2 {
+	left: 0;
+}
+.images {
+    width: 100%;	
+    position: relative;
+    left: 0;
+} 
+.none {
+	display: none;
+}
+
+}
+/*@media (max-width: 480px) {
+  .culturePic1 .info h1 {
+	 left: 32.5%;
+	 font-size: 1.6em;
+
+}
+  .culturePic1 .info hr {
+     top: 60px;
+
+}	
+}*/
       #map {
-        display: none;
-        position: absolute;
-        width: 95%;
-        height: 95%;
-        left: 2.5%;
-        top: 2.5%;
-        overflow: hidden;
-        z-index: 20;
+      	display: none;
+      	position: absolute;
+      	width: 95%;
+      	height: 95%;
+      	left: 2.5%;
+      	top: 2.5%;
+      	overflow: hidden;
+      	z-index: 20;
       }
 
       #exit {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        z-index: 2;
+      	position: absolute;
+      	right: 0;
+      	top: 50%;
+      	z-index: 2;
       }
       #enterPic {
-        position: absolute;
-        right: 0;
-        top: 70%;
-        z-index: 2;
+      	position: absolute;
+      	right: 0;
+      	top: 70%;
+      	z-index: 2;
 
       }
       #mapBg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
+      	width: 100%;
+      	height: 100%;
+      	position: absolute;
 
       }
       #draggable3 {

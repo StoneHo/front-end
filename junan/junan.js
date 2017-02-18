@@ -1,14 +1,14 @@
 var body = document.getElementsByTagName('body')[0];
 var culturMenu = document.getElementById('culture-menu');
-var asideLeft = document.querySelectorAll('#aside-left')[0];
-var asideRight = document.querySelectorAll('#aside-right')[0];
+var asideLeft = document.querySelectorAll('.aside-left')[0];
+var asideRight = document.querySelectorAll('.aside-right')[0];
 var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
 var asideLeftContent = document.querySelectorAll('.aside-left-content')[0];
 var footer = document.querySelectorAll('.footer button')[0];
 var footerbg = document.querySelectorAll('.footer')[0];
 var down = document.querySelectorAll('#down')[0];
 var main = document.querySelectorAll('.main')[0];
-var landVideo = document.querySelectorAll('.land-vedio')[0];
+var firstPart = document.querySelectorAll('.land-vedio')[0];
 var culture = document.querySelectorAll('.culture')[0];
 var sight = document.querySelectorAll('.sight')[0];
 var wrapper = document.querySelectorAll('.middle-wrapper')[0];
@@ -21,6 +21,8 @@ var firstbg = document.querySelectorAll('.wrapper-background-video')[0];
 var mobilemenu = document.querySelectorAll('#mobile-menu')[0];
 var moreinfo = document.querySelectorAll('#moreInfo')[0];
 
+
+
 var picPos,
     bodyWidth,
     picMove = true,
@@ -32,9 +34,11 @@ var pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
     map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
-    exit = document.getElementById('exit'),
-    borderWidth = map.clientWidth,
-    borderHeight = map.clientHeight;
+    exit = document.getElementById('exit');
+
+if (!firstPart) {
+	firstPart = document.querySelectorAll('.culture')[0];
+}
 
 if (window.outerHeight) {
     body.style.height = window.outerHeight + 'px'
@@ -53,6 +57,9 @@ if (bodyWidth < 960) {
 	picPos = window.innerHeight  - 60;
     bodyWidth = window.innerWidth
     bodyHeight = window.innerHeight
+    if (firstPart.className != 'land-vedio') {
+    	footerbg.style.display = 'none'
+    }
 }
 
 if (bodyWidth >= 960) {
@@ -74,6 +81,7 @@ var changeScroll = function(ele) {
     var mouseOut = function(event) {
 	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event);
+
         body.style.overflowY = ''
     } 
     var mouseEnter = function(event) {
@@ -130,7 +138,7 @@ var calculateScrollReduce = function(i,stop) {
 var nextPage = function(event) {
 	event = EventUtil.getEvent(event);
 	var target = EventUtil.getTarget(event)
-    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
@@ -142,11 +150,15 @@ var nextPage = function(event) {
         if (i == undefined) {
     		i = scrollTop
     	}
+
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
     		    i = picPos_1
     		    footer.style.display = ''
+    		    if (firstPart.className != 'land-vedio') {
+    		    	footerbg.style.display = 'none'
+    		    }
     	}
     	if (scrollTop == picPos_1) {
     		    calculateScroll(i,picPos_2)
@@ -171,10 +183,10 @@ EventUtil.addHandler(down,"click",nextPage);
 
 
 var nextPageWheel = function(event) {
-	if (bodyWidth > 768) {
+	if (bodyWidth > 768 && firstPart.className == 'land-vedio') {
 	event = EventUtil.getEvent(event);
     var target = EventUtil.getTarget(event)
-    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
@@ -248,6 +260,18 @@ var nextPageWheel = function(event) {
     	}    	    	    	
     }   
     }
+    if (bodyWidth > 768 && firstPart.className != 'land-vedio') {
+    	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        if (i == undefined) {
+    		i = scrollTop
+    	}
+    	if (scrollTop == 0) {
+    		footerbg.style.display = 'block'
+    	}
+    	if (scrollTop > 0 ) {
+    		footerbg.style.display = 'none'
+    	}
+    }
 }
 EventUtil.addHandler(document,"mousewheel",nextPageWheel);
 
@@ -256,8 +280,8 @@ var scrollMouseUp = function( event ) {
         var target = EventUtil.getTarget(event)
         currentScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
-        if (currentScrollTop - preScrollTop != 0 && pageStop) {
-    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+        if (currentScrollTop - preScrollTop != 0 && pageStop  && firstPart.className == 'land-vedio') {
+    	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
@@ -333,18 +357,10 @@ var scrollMouseDown = function( event ) {
 };
 EventUtil.addHandler(window,"mousedown",scrollMouseDown);
 
-moveImg(mapBg,map,link);
 
-//移动设备
-var touchst,touched
-var touchStart = function(event) {
-	event = EventUtil.getEvent(event);
-	touchst = event.touches[0].clientY;
-    EventUtil.preventDefault(event)
-}
-EventUtil.addHandler(wrapper,"touchstart",touchStart);
-EventUtil.addHandler(mobile,"touchstart",touchStart);
-
+if (map) {
+	borderWidth = map.clientWidth,
+    borderHeight = map.clientHeight;
 var getNatural = function(element) {
     var img = document.createElement('img');
     var src = element.src
@@ -451,15 +467,37 @@ var changePicSize = function(ele,widthRatio,heightRatio) {
 
     }
 }
+
+
 changePicSize(link,dd,ddd)
+
+moveImg(mapBg,map,link);
+}
+
+
+
+
+//移动设备
+var touchst,touched
+var touchStart = function(event) {
+	event = EventUtil.getEvent(event);
+	touchst = event.touches[0].clientY;
+	if (firstPart.className == 'land-vedio') {
+		EventUtil.preventDefault(event)
+	}
+}
+EventUtil.addHandler(wrapper,"touchstart",touchStart);
+EventUtil.addHandler(mobile,"touchstart",touchStart);
 
 var touchEnd = function(event) {
 	event = EventUtil.getEvent(event);
 	var target = EventUtil.getTarget(event)
-	EventUtil.preventDefault(event)
+	if (firstPart.className == 'land-vedio') {
+		EventUtil.preventDefault(event)
+	}
 	touched = event.changedTouches[0].clientY;
-    if (touched - touchst < 0 && picMove) {
-    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+    if (touched - touchst < 0 && picMove  && firstPart.className == 'land-vedio') {
+    	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
@@ -491,8 +529,8 @@ var touchEnd = function(event) {
     	}
      	    	    	
     }
-     if (touched - touchst > 0 && picMove) {
-    	var picPos1 = parseInt(window.getComputedStyle(landVideo, null).height)
+     if (touched - touchst > 0 && picMove  && firstPart.className == 'land-vedio') {
+    	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
     	var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     	var remainder1 =  picPos1 % 4
@@ -632,11 +670,16 @@ var touchEnd = function(event) {
             moreInfoSwitch = true
             }
         }
+
+        if (target.id == 'mobile-culture') {
+        	window.location.assign("./culture.html")
+        }
     }  
 
 }
 EventUtil.addHandler(wrapper,"touchend",touchEnd);
 EventUtil.addHandler(mobile,"touchend",touchEnd);
+
 
 
 
