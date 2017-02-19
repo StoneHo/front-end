@@ -655,8 +655,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'open 1s forwards ease'
             picMove = false
             moreinfo.innerHTML = '返回'
-            mobilemenu.style.display = 'block'
-            mobilemenu.style.position = 'fixed'
+            main.style.display = 'block'
             moreInfoSwitch = false
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
@@ -664,8 +663,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.mozAnimation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
-            mobilemenu.style.display = 'none'
-            mobilemenu.style.position = 'absolute'
+            main.style.display = 'none'
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }

@@ -90,6 +90,42 @@ a {
 	margin-left: -4px;
 
 }
+.mobile-menu-nav {
+	position: absolute;
+	background: white;
+    width: 100%;
+    height: calc(100% - 65px);
+    z-index: 10;
+    display: none;
+    overflow: auto;
+    border-top: 1px solid black;
+}
+.mobile-menu-nav ul{
+	width: 50%;
+    height: auto;
+    margin: 50px auto;
+    list-style: none;
+    border: 1px solid yellow;
+}
+.mobile-menu-nav li{
+	width: 50%;
+
+    height: 50px;
+    text-align: center;
+    border: 1px solid red;
+}
+.mobile-menu-nav li:first-child{
+    border-bottom: 1px solid black;
+    height: 30px;
+    width: 20%;
+    left: 40%;
+    font-size: 1.3rem;
+}
+.mobile-menu-nav li a{
+    color: black;
+
+
+}
 /* nav-main */
 .main {
 	width: calc(100% - 160px);
@@ -694,23 +730,76 @@ video{
 @media (max-width: 959px) {
 	.main {
 	    display: none;
+	    width: 100%;
+	    top: 65px;
+	    height: calc(100% - 65px);
     }
     .mobile {
 	    width: 100%;
 	    padding: 20px 0 24px;
         left: 0;
     }
+    .logo {
+    	display: none;
+    }
+    .nav-left {
+    display: block;
+    width: 100%;
 
+}
+    .nav-right {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+   
+}
+.nav-sub-left {
+	float: none;
+	color: black;
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+    display: block;
+    text-align: center;
+    line-height: 600%;
+}
+.nav-sub-right {
+	float: none;
+	color: black;
+	border-bottom: none;
+	position: relative;
+    z-index: 2;
+    display: block;
+    text-align: center;
+    line-height: 600%;
+}
     body {
 	    padding: 65px 0 0;
 	    height: 667px;
     }
     .aside-left {
-	    display: none;
+    	position: fixed;
+	    top: 85%;
+	    width: 50%;
+	    margin-left: 0px;
+	    left: 0;
+        text-align: center;
+	    padding: 25px 0;
+	    text-align: center;
+	    background: #b6e0d8;
     }
     .aside-right {
-	    display: none;
+    	position: fixed;
+	    top: 85%;
+	    width: 50%;
+	    left: 50%;	    
+	    margin-left: 0px;
+        background: rgb(238,208,181);
+	    padding: 25px 0;
+	    text-align: center;
     }
+
+
     .last-wrapper {
 	margin-bottom: 0;
     }
@@ -805,7 +894,9 @@ video{
     left: 0;
     /*left: 57%;*/
 }
-
+.mobile-menu-nav {
+	display: block;
+}
 }
 @media (max-height: 570px){
     .culture, .sight, .food, .map {
