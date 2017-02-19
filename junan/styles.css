@@ -234,7 +234,9 @@ a {
 	color: black;
 	z-index: 2;
 	position: relative;
-	
+	display: inline-block;
+	height: 40px;
+	width: 100%;
 }
 .aside-left a:hover, .aside-right a:hover{
 	color: #127c85;
@@ -780,7 +782,7 @@ video{
 }
 .aside-left-content{
 	width: 0%;
-	height: calc(100% - 160px);
+	height: calc(100% - 150px);
 	background: #b6e0d8;
 	position: fixed;
 	top: 65px;
@@ -795,9 +797,8 @@ video{
 	overflow: auto;
 	position: absolute;
 	left: -600px;
-	top: 0;
+	top: 65px;
 	transition:left 0.5s;
-
 }
 .aside-left:hover + div + div,.aside-left:hover + div + div + div + div{
 	display: none;
@@ -805,6 +806,7 @@ video{
 .aside-left a:hover + div div{
 	left: 0%;
 	width: 100%;
+
 }
 .aside-left div:hover div{
     top: 65px;
@@ -844,7 +846,9 @@ video{
 	top: 50px;
 	width: 70%;
 }
+#moreInfo {
 
+}
 #login:hover, #message-submit:hover, #more:hover {
 	color: #b6e0d8;
 	background: #127c85;
@@ -887,10 +891,11 @@ textarea {
 	    margin-left: 0px;
 	    left: 0;
         text-align: center;
-	    padding: 25px 0;
+	    padding: 25px 0 0;
 	    text-align: center;
 	    background: #b6e0d8;
 	    z-index: 21;
+
     }
     .aside-right {
     	position: fixed;
@@ -899,7 +904,7 @@ textarea {
 	    left: 50%;	    
 	    margin-left: 0px;
         background: rgb(238,208,181);
-	    padding: 25px 0;
+	    padding: 25px 0 0;
 	    text-align: center;
 	    z-index: 21;
     }
