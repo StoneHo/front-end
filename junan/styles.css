@@ -924,7 +924,7 @@ textarea {
     overflow: hidden;
 }
 .aside-right-content div{
-	width: 80%;
+	width: 100%;
 	height: 85%;
 	overflow: auto;
 	position: absolute;
@@ -934,7 +934,7 @@ textarea {
 
 }
 .aside-right a:hover + div div{
-	right: 10%;
+	right: 0%;
 }
 .aside-right div:hover div{
 	right: 10%;
@@ -944,7 +944,7 @@ textarea {
 	width: 100%;
 }
 .aside-right-content div:hover{
-    width: 80%;
+    width: 100%;
 }
 .aside-right div:hover {
     top: 65px;
@@ -952,13 +952,14 @@ textarea {
 	width: 100%;
 }
 .aside-right-content table:hover {
-    width: 80%;
+    width: 100%;
 }
 .aside-right h3 {
 	left: 10%;
 	position: relative;
 	width: 200px;
 	top: 20px;
+	text-align: left;
 	color: #127c85;	
 }
 .aside-right-content table {
