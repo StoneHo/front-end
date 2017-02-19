@@ -946,6 +946,11 @@ textarea {
 .aside-right-content div:hover{
     width: 80%;
 }
+.aside-right div:hover {
+    top: 65px;
+    left: 0;
+	width: 100%;
+}
 .aside-right-content table:hover {
     width: 80%;
 }
