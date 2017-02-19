@@ -728,6 +728,10 @@ video{
     }
 }
 @media (max-width: 959px) {
+    body {
+	    padding: 65px 0 0;
+	    height: 667px;
+    }
 	.main {
 	    display: none;
 	    width: 100%;
@@ -774,10 +778,103 @@ video{
     text-align: center;
     line-height: 500%;
 }
-    body {
-	    padding: 65px 0 0;
-	    height: 667px;
-    }
+.aside-left-content{
+	width: 0%;
+	height: calc(100% - 160px);
+	background: #b6e0d8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	transition:width 0.5s;
+    overflow: hidden;
+}
+.aside-left-content div{
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	left: -600px;
+	top: 50px;
+	transition:left 0.5s;
+
+}
+.aside-left:hover + div + div,.aside-left:hover + div + div + div + div{
+	display: none;
+}
+.aside-left a:hover + div div{
+	left: 0%;
+	width: 100%;
+}
+.aside-left div:hover div{
+
+	left: 0%;
+	width: 80%;
+}
+.aside-left div:hover div div{
+	width: 80%;
+}
+
+.aside-left a:hover + div, .aside-right a:hover + div{
+	width: 100%;
+	top: 65px;
+}
+#login, #message-submit, #more {
+	border: 1px solid #127c85;
+	width: 80%;
+	height: 50px;
+	color: #127c85;
+	background: #b6e0d8;
+	cursor: pointer;
+	font-size: 1em;
+    margin-bottom: 20px;
+	font-weight: 700;
+	position: relative;
+	left: 0;
+}
+#login{
+	top: 50px;
+}
+#more{
+	top: 50px;
+	width: 70%;
+}
+
+#login:hover, #message-submit:hover, #more:hover {
+	color: #b6e0d8;
+	background: #127c85;
+}
+.aside-left h3 {
+	left: 0;
+	position: relative;
+	width: 50px;
+	top: 30px;
+	color: #127c85;	
+
+}
+.aside-left-content a{
+	position: relative;
+	left: 0;
+    top: 30px;
+}
+textarea {
+	position: relative;
+	border: 1px solid #127c85;
+	background: #b6e0d8;
+	width: 80%;
+	height: 300px;
+	resize: none;
+	color: #127c85;
+	margin-bottom: 10px;
+	top: 30px;
+	margin-left: 0;
+	left: 0;
+}
+#message-submit {
+    width: 30%;
+    left: 0;
+
+}
     .aside-left {
     	position: fixed;
 	    top: 85%;
@@ -788,6 +885,7 @@ video{
 	    padding: 25px 0;
 	    text-align: center;
 	    background: #b6e0d8;
+	    z-index: 21;
     }
     .aside-right {
     	position: fixed;
@@ -798,6 +896,7 @@ video{
         background: rgb(238,208,181);
 	    padding: 25px 0;
 	    text-align: center;
+	    z-index: 21;
     }
 
 
