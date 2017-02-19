@@ -783,7 +783,7 @@ video{
 }
 .aside-left-content{
 	width: 0%;
-	height: calc(100% - 150px);
+	height: calc(100% - 140px);
 	background: #b6e0d8;
 	position: fixed;
 	top: 65px;
@@ -914,7 +914,7 @@ textarea {
     }
 .aside-right-content{
 	width: 0%;
-	height: calc(100% - 165px);
+	height: calc(100% - 140px);
 	background: #b6e0d8;
 	position: fixed;
 	top: 65px;
