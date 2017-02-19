@@ -1,5 +1,5 @@
 var body = document.getElementsByTagName('body')[0];
-var culturMenu = document.getElementById('culture-menu');
+var culturMenu = document.querySelectorAll('.culture-menu')[0];
 var asideLeft = document.querySelectorAll('.aside-left')[0];
 var asideRight = document.querySelectorAll('.aside-right')[0];
 var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
@@ -489,6 +489,7 @@ var touchStart = function(event) {
 EventUtil.addHandler(wrapper,"touchstart",touchStart);
 EventUtil.addHandler(mobile,"touchstart",touchStart);
 
+
 var touchEnd = function(event) {
 	event = EventUtil.getEvent(event);
 	var target = EventUtil.getTarget(event)
@@ -657,6 +658,8 @@ var touchEnd = function(event) {
             moreinfo.innerHTML = '返回'
             main.style.display = 'block'
             moreInfoSwitch = false
+            //alert(window.getComputedStyle(culturMenu, null).display)
+            body.style.overflowY = 'hidden'
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
@@ -664,11 +667,15 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
             main.style.display = 'none'
+            body.style.overflowY = ''
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
         }
-
+        if (target.innerHTML == '联系我们') {
+        	
+        	
+        }
         if (target.id == 'mobile-culture') {
         	window.location.assign("./culture.html")
         }
@@ -677,6 +684,7 @@ var touchEnd = function(event) {
 }
 EventUtil.addHandler(wrapper,"touchend",touchEnd);
 EventUtil.addHandler(mobile,"touchend",touchEnd);
+
 
 
 
