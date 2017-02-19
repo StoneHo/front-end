@@ -382,6 +382,7 @@ color: #127c85;
     color: black;
     font-weight: 700;
     font-size: 1rem;
+    display: inline;
 }
 .aside-right-content div:hover{
     width: 80%;
@@ -871,7 +872,7 @@ textarea {
 	border: 1px solid #127c85;
 	background: #b6e0d8;
 	width: 80%;
-	height: 250px;
+	height: 200px;
 	resize: none;
 	color: #127c85;
 	margin-bottom: 10px;
@@ -883,6 +884,9 @@ textarea {
     width: 30%;
     left: 0;
 
+}
+.culture-menu::after, .sight-menu::after, .food-menu::after {
+    content:"+";
 }
     .aside-left {
     	position: fixed;
@@ -908,6 +912,76 @@ textarea {
 	    text-align: center;
 	    z-index: 21;
     }
+.aside-right-content{
+	width: 0%;
+	height: calc(100% - 165px);
+	background: #b6e0d8;
+	position: fixed;
+	top: 65px;
+	right: 0px;
+	z-index: 1;
+	transition:width 0.5s;
+    overflow: hidden;
+}
+.aside-right-content div{
+	width: 80%;
+	height: 85%;
+	overflow: auto;
+	position: absolute;
+	right: -600px;
+	top: 65px;
+	transition:right 0.5s;
+
+}
+.aside-right a:hover + div div{
+	right: 10%;
+}
+.aside-right div:hover div{
+	right: 10%;
+	width: 100%;
+}
+.aside-right div:hover div div{
+	width: 100%;
+}
+.aside-right-content div:hover{
+    width: 80%;
+}
+.aside-right-content table:hover {
+    width: 80%;
+}
+.aside-right h3 {
+	left: 10%;
+	position: relative;
+	width: 200px;
+	top: 20px;
+	color: #127c85;	
+}
+.aside-right-content table {
+	border-collapse: collapse;
+	width: 80%;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	border-bottom: 1px solid #127c85;
+	color: #127c85;
+	position: relative;
+	left: 10%;
+}
+.aside-right-content table tr td{
+	height: 50px;
+	text-align: left;
+    color: black;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.aside-right-content table tr td a{
+	height: 50px;
+	text-align: left;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline;
+}
 
 
     .last-wrapper {
