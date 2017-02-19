@@ -761,7 +761,8 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    line-height: 600%;
+    line-height: 500%;
+    top: 0;
 }
 .nav-sub-right {
 	float: none;
@@ -771,7 +772,7 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    line-height: 600%;
+    line-height: 500%;
 }
     body {
 	    padding: 65px 0 0;
