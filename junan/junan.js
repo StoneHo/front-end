@@ -659,7 +659,8 @@ var touchEnd = function(event) {
             main.style.display = 'block'
             moreInfoSwitch = false
             //alert(window.getComputedStyle(culturMenu, null).display)
-            wrapper.style.display = 'none'
+            //wrapper.style.left = '1000px'
+            body.style.overflowY = 'hidden'
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
@@ -667,7 +668,8 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
             main.style.display = 'none'
-            wrapper.style.display = 'block'
+            //wrapper.style.left = ''
+            body.style.overflowY = ''
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
