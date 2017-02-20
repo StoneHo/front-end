@@ -25,6 +25,7 @@ var moreinfo = document.querySelectorAll('#moreInfo')[0];
 
 var picPos,
     bodyWidth,
+    currentScrollTop,
     picMove = true,
     mapEnter = true,
     enterCount,
@@ -654,13 +655,15 @@ var touchEnd = function(event) {
             //mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
             //mobilemenu.style.mozAnimation = 'open 1s forwards ease'
             //mobilemenu.style.oAnimation = 'open 1s forwards ease'
+             currentScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
             picMove = false
             moreinfo.innerHTML = '返回'
             main.style.display = 'block'
             moreInfoSwitch = false
             //alert(window.getComputedStyle(culturMenu, null).display)
-            //wrapper.style.left = '1000px'
-            body.style.overflowY = 'hidden'
+            wrapper.style.display = 'none'
+            //wrapper.style.top = '1000px'
+            //body.style.overflowY = 'hidden'
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
@@ -668,8 +671,10 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
             main.style.display = 'none'
-            //wrapper.style.left = ''
-            body.style.overflowY = ''
+            wrapper.style.display = 'block'
+            window.scrollTo(0,currentScrollTop)
+            //wrapper.style.top = ''
+            //body.style.overflowY = ''
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
