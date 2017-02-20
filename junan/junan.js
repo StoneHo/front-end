@@ -497,6 +497,7 @@ var touchEnd = function(event) {
 		EventUtil.preventDefault(event)
 	}
 	touched = event.changedTouches[0].clientY;
+	alert('hh')
     if (touched - touchst < 0 && picMove  && firstPart.className == 'land-vedio') {
     	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
@@ -510,6 +511,7 @@ var touchEnd = function(event) {
         if (i == undefined) {
     		i = scrollTop
     	}
+    	alert('gg')
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
