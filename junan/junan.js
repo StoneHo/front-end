@@ -497,7 +497,6 @@ var touchEnd = function(event) {
 		EventUtil.preventDefault(event)
 	}
 	touched = event.changedTouches[0].clientY;
-	alert('hh')
     if (touched - touchst < 0 && picMove  && firstPart.className == 'land-vedio') {
     	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
@@ -511,7 +510,6 @@ var touchEnd = function(event) {
         if (i == undefined) {
     		i = scrollTop
     	}
-    	alert('gg')
     	if (scrollTop < picPos_1) {
     		    i = scrollTop
     		    calculateScroll(i,picPos_1)
@@ -661,7 +659,7 @@ var touchEnd = function(event) {
             main.style.display = 'block'
             moreInfoSwitch = false
             //alert(window.getComputedStyle(culturMenu, null).display)
-            body.style.overflowY = 'hidden'
+            wrapper.style.display = 'none'
             }else {
             //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
             //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
@@ -669,7 +667,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
             picMove = true
             main.style.display = 'none'
-            body.style.overflowY = ''
+            wrapper.style.display = 'block'
             moreinfo.innerHTML = '更多'
             moreInfoSwitch = true
             }
