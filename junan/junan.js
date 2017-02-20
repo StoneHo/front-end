@@ -672,13 +672,7 @@ var touchEnd = function(event) {
             moreInfoSwitch = true
             }
         }
-        if (target.innerHTML == '联系我们') {
-        	
-        	
-        }
-        if (target.id == 'mobile-culture') {
-        	window.location.assign("./culture.html")
-        }
+
     }  
 
 }
