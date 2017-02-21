@@ -1014,11 +1014,23 @@ textarea {
     display: inline;
 }
 .nav-culture-sub, .nav-sight-sub, .nav-food-sub{
+	display: -webkit-box; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
     align-content: flex-start;
+    box-align: center;
     align-items: center;
 	width: 100%;
 	height: 0px;
@@ -1029,8 +1041,13 @@ textarea {
     left: 0;
     transition:font-size 0s;
     transition-delay: 0.2s;
-}
 
+}
+.nav-culture-sub a, .nav-sight-sub a, .nav-food-sub a{
+
+    font-size: 0rem;
+    display: none;
+}
 
 .nav-culture-sub:hover, .nav-sight-sub:hover, .nav-food-sub:hover{
     height: calc(100% - 120px);
@@ -1043,17 +1060,14 @@ textarea {
     z-index: 3;
 }
 
-.nav-culture-sub a, .nav-sight-sub a, .nav-food-sub a{
-    font-size: 0rem;
-    display: none;
-}
+
 .culture-menu:hover + div a, .sight-menu:hover + div a, .food-menu:hover + div a{
     font-size: 1rem;
     display: block;
 }
 .nav-culture-sub:hover a, .nav-sight-sub:hover a, .nav-food-sub:hover a{
     display: block;
-
+    border: 1px solid red;
 }
 
 
