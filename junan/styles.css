@@ -924,7 +924,7 @@ textarea {
 	display: block;
 	position: absolute;
 	top: 40%;
-    right: 5%;
+    right: 1%;
     z-index: 99;
     border: 1px solid black;
     padding: 20px;
@@ -936,7 +936,7 @@ textarea {
 
 .close:hover {
 	top: 40%;
-    right: 5%;
+    right: 1%;
     opacity: 0.3;
 
 }
@@ -1054,7 +1054,7 @@ textarea {
     width: 100%;
     position: relative;
     padding: 10% 0;
-
+    border: 1px solid red;
 }
 .nav-culture-sub:hover a, .nav-sight-sub:hover a, .nav-food-sub:hover a{
     display: block;
