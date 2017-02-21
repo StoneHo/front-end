@@ -1168,6 +1168,7 @@ textarea {
 }
 .word hr {
 	top: 50px;
+	width: 60px;
 }
 .mobile-menu-nav {
     display: block;
