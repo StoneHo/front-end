@@ -771,8 +771,10 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    line-height: 500%;
+    width: 50%;
+    left: 25%;
     top: 0;
+    padding: 10% 0;
 }
 .nav-sub-right {
     float: none;
@@ -785,7 +787,7 @@ video{
     padding: 10% 0;
     width: 50%;
     left: 25%;
-
+    
 }
 .aside-left-content{
     width: 0%;
@@ -1054,14 +1056,14 @@ textarea {
     width: 100%;
     position: relative;
     padding: 10% 0;
-    border: 1px solid red;
+
 }
 .nav-culture-sub:hover a, .nav-sight-sub:hover a, .nav-food-sub:hover a{
     display: block;
     width: 100%;
     position: relative;
     padding: 10% 0;
-    border: 1px solid red;
+
 }
 
 
