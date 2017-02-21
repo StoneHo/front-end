@@ -782,7 +782,10 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    line-height: 500%;
+    padding: 10% 0;
+    width: 50%;
+    left: 25%;
+
 }
 .aside-left-content{
 	width: 0%;
@@ -924,8 +927,8 @@ textarea {
     right: 5%;
     z-index: 99;
     border: 1px solid black;
-    padding: 15px;
-    border-radius: 100px; 
+    padding: 20px;
+    border-radius: 20px; 
     text-align: center;
     background: transparent;
     opacity: 1;
@@ -1015,13 +1018,13 @@ textarea {
 }
 .nav-culture-sub, .nav-sight-sub, .nav-food-sub{
 
-	width: 100%;
+	width: 50%;
 	height: 0px;
 	background: white;
 	position: absolute;
 	z-index: 2;
 	top: 0px;
-    left: 0;
+    left: 25%;
     transition:font-size 0s;
     transition-delay: 0.2s;
     text-align: center;
