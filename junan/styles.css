@@ -856,7 +856,8 @@ video{
     width: 70%;
 }
 #moreInfo {
-
+    font-size: 1rem;
+    font-weight: 700;
 }
 #login:hover, #message-submit:hover, #more:hover {
     color: #b6e0d8;

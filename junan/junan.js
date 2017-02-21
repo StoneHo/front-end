@@ -657,7 +657,7 @@ var touchEnd = function(event) {
             //mobilemenu.style.oAnimation = 'open 1s forwards ease'
              currentScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
             picMove = false
-            moreinfo.innerHTML = '返回'
+            moreinfo.innerHTML = '&#8855;'
             main.style.display = 'block'
             moreInfoSwitch = false
             //alert(window.getComputedStyle(culturMenu, null).display)
@@ -675,7 +675,7 @@ var touchEnd = function(event) {
             window.scrollTo(0,currentScrollTop)
             //wrapper.style.top = ''
             //body.style.overflowY = ''
-            moreinfo.innerHTML = '更多'
+            moreinfo.innerHTML = '&#8801;'
             moreInfoSwitch = true
             }
         }
