@@ -1160,8 +1160,13 @@ textarea {
     left: 0;
     /*left: 57%;*/
 }
+.word {
+    width: 100%;    
+    position: relative;
+	height: calc(100% - 65px);
+}
 .word div {
-	top: 10%;
+	top: 15%;
 }
 .word h1 {
 	font-size: 2em;
@@ -1172,6 +1177,19 @@ textarea {
 }
 .mobile-menu-nav {
     display: block;
+}
+
+.word2 {
+    left: 0;
+}
+.images {
+	height: calc(100% - 65px);
+    width: 100%;    
+    position: relative;
+    left: 0;
+} 
+.none {
+    display: none;
 }
 }
 @media (max-height: 570px){
@@ -1297,21 +1315,7 @@ textarea {
 
     /*left: 57%;*/
 }
- .word {
-    width: 100%;    
-    position: relative;
-}
-.word2 {
-    left: 0;
-}
-.images {
-    width: 100%;    
-    position: relative;
-    left: 0;
-} 
-.none {
-    display: none;
-}
+
 
 }
 /*@media (max-width: 480px) {
