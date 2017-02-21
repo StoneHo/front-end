@@ -726,7 +726,7 @@ video{
     .footer {
         display: block;
     }
-    .close {
+    #close {
         display: none;
     }
 }
@@ -919,10 +919,10 @@ textarea {
         text-align: center;
         z-index: 21;
     }
-.close {
+#close {
     display: block;
     position: absolute;
-    top: 40%;
+    top: 60%;
     right: 1%;
     z-index: 99;
     border: 1px solid black;
@@ -933,8 +933,8 @@ textarea {
     opacity: 1;
 }
 
-.close:hover {
-    top: 40%;
+#close:hover {
+    top: 60%;
     right: 1%;
     opacity: 0.3;
 
