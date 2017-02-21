@@ -1061,7 +1061,7 @@ textarea {
     width: 100%;
     position: relative;
     padding: 10% 0;
-
+    border: 1px solid red;
 }
 
 
