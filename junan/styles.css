@@ -1018,7 +1018,7 @@ textarea {
 }
 .nav-culture-sub, .nav-sight-sub, .nav-food-sub{
 
-	width: 50%;
+	width: 100%;
 	height: 0px;
 	background: white;
 	position: absolute;
