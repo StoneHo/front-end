@@ -1039,13 +1039,13 @@ textarea {
 }
 
 .nav-culture-sub:hover, .nav-sight-sub:hover, .nav-food-sub:hover{
-    height: calc(100% - 60px);
+    height: calc(100% - 100px);
     top: 0;
     z-index: 3;
-    border: 1px solid red;
+
 }
 .culture-menu:hover + div, .sight-menu:hover + div, .food-menu:hover + div{
-    height: calc(100% - 60px);
+    height: calc(100% - 100px);
     top: 0;
     z-index: 3;
 }
