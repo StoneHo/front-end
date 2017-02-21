@@ -105,14 +105,14 @@ a {
     height: auto;
     margin: 50px auto;
     list-style: none;
-    border: 1px solid yellow;
+
 }
 .mobile-menu-nav li{
     width: 50%;
 
     height: 50px;
     text-align: center;
-    border: 1px solid red;
+
 }
 .mobile-menu-nav li:first-child{
     border-bottom: 1px solid black;
@@ -774,7 +774,7 @@ video{
     width: 50%;
     left: 25%;
     top: 0;
-    padding: 0 0 20%;
+    padding: 10% 0;
 }
 .nav-sub-right {
     float: none;
@@ -784,7 +784,7 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    padding: 0 0 20%;
+    padding: 10% 0;
     width: 50%;
     left: 25%;
     
@@ -1028,7 +1028,7 @@ textarea {
     top: 0;
     left: 0;
     transition:font-size 0s;
-    transition-delay: 0s;
+    transition-delay: 0.2s;
     text-align: center;
     overflow: auto;
 }
