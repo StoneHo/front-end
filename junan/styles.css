@@ -715,7 +715,9 @@ video{
 .footer button:hover {
     opacity: 0.6;
 }
-
+.nav-map {
+	display: none;
+}
 @media (min-width: 960px) {
     .mobile {
         display: none;
@@ -754,6 +756,9 @@ video{
     width: 100%;
 
 }
+.nav-map {
+	display: block;
+}
     .nav-right {
     display: block;
     width: 100%;
@@ -771,7 +776,7 @@ video{
     width: 50%;
     left: 25%;
     top: 0;
-    padding: 0 0 20%;
+    padding: 0 0 15%;
 }
 .nav-sub-right {
     float: none;
@@ -781,7 +786,7 @@ video{
     z-index: 2;
     display: block;
     text-align: center;
-    padding: 0 0 20%;
+    padding: 0 0 15%;
     width: 50%;
     left: 25%;
     
