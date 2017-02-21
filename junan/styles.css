@@ -1027,8 +1027,6 @@ textarea {
     z-index: 2;
     top: 0;
     left: 0;
-    transition:font-size 0s;
-    transition-delay: 0.2s;
     text-align: center;
     overflow: auto;
 }
