@@ -296,6 +296,7 @@ color: #127c85;
 }
 .aside-left-content a img{
     width: 30%;
+
 }
 #message-submit {
     width: 20%;
@@ -792,7 +793,7 @@ video{
     
 }
 .aside-left-content{
-    width: 0%;
+    width: 0;
     height: calc(100% - 135px);
     background: #b6e0d8;
     position: fixed;
@@ -809,7 +810,7 @@ video{
     overflow: auto;
     position: absolute;
     left: -600px;
-    top: 35px;
+    top: 15px;
     transition:left 0.5s;
 }
 /*
@@ -823,7 +824,7 @@ video{
 
 }
 .aside-left div:hover div{
-    top: 65px;
+    top: 15px;
     left: 0%;
     width: 100%;
 }
@@ -946,7 +947,7 @@ textarea {
 
 }
 .aside-right-content{
-    width: 0%;
+    width: 0;
     height: calc(100% - 135px);
     background: #b6e0d8;
     position: fixed;
@@ -956,45 +957,19 @@ textarea {
     transition:width 0.5s;
     overflow: hidden;
 }
+
+
 .aside-right-content div{
     width: 100%;
     height: 85%;
     overflow: auto;
     position: absolute;
     right: -600px;
-    top: 35px;
-    transition:right 0.5s;
+    top: 15px;
+    transition: none;
+}
 
-}
-.aside-right a:hover + div div{
-    right: 0%;
-}
-.aside-right div:hover div{
-    right: 10%;
-    width: 100%;
-}
-.aside-right div:hover div div{
-    width: 100%;
-}
-.aside-right-content div:hover{
-    width: 100%;
-}
-.aside-right div:hover {
-    top: 65px;
-    left: 0;
-    width: 100%;
-}
-.aside-right-content table:hover {
-    width: 80%;
-}
-.aside-right h3 {
-    left: 10%;
-    position: relative;
-    width: 200px;
-    top: 20px;
-    text-align: left;
-    color: #127c85; 
-}
+
 .aside-right-content table {
     border-collapse: collapse;
     width: 80%;
@@ -1005,7 +980,9 @@ textarea {
     color: #127c85;
     position: relative;
     left: 10%;
+
 }
+
 .aside-right-content table tr td{
     height: 50px;
     text-align: left;
@@ -1020,6 +997,36 @@ textarea {
     font-weight: 700;
     font-size: 1rem;
     display: inline;
+}
+
+
+
+.aside-right div:hover {
+    top: 65px;
+    left: 0;
+    width: 100%;
+}
+
+.aside-right h3 {
+    left: 10%;
+    position: relative;
+    width: 200px;
+    top: 20px;
+    text-align: left;
+    color: #127c85; 
+}
+.aside-right a:hover + div div{
+    right: 0%;
+
+}
+.aside-right div:hover div{
+    right: 0%;
+    width: 100%;
+    top: 15px;
+    left: 0;
+}
+.aside-right div:hover div div{
+    width: 100%;
 }
 .nav-culture-sub, .nav-sight-sub, .nav-food-sub{
 

@@ -1,5 +1,7 @@
 var body = document.getElementsByTagName('body')[0];
-var culturMenu = document.querySelectorAll('.culture-menu')[0];
+var culturMenu = document.querySelectorAll('.nav-culture-sub')[0];
+var sightMenu = document.querySelectorAll('.nav-sight-sub')[0];
+var foodMenu = document.querySelectorAll('.nav-food-sub')[0];
 var asideLeft = document.querySelectorAll('.aside-left')[0];
 var asideRight = document.querySelectorAll('.aside-right')[0];
 var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
@@ -649,7 +651,6 @@ var touchEnd = function(event) {
             }
         }
         if  (target.id == 'moreInfo') {
-
         	if(moreInfoSwitch == true) {
             //mobilemenu.style.animation = 'open 1s forwards ease'
             //mobilemenu.style.webkitAnimation = 'open 1s forwards ease'
@@ -660,23 +661,30 @@ var touchEnd = function(event) {
             moreinfo.innerHTML = '&#8855;'
             main.style.display = 'block'
             moreInfoSwitch = false
-            //alert(window.getComputedStyle(culturMenu, null).display)
+            
             wrapper.style.display = 'none'
             //wrapper.style.top = '1000px'
             //body.style.overflowY = 'hidden'
             }else {
-            //mobilemenu.style.animation = 'close 1s forwards ease-in-out'
-            //mobilemenu.style.webkitAnimation = 'close 1s forwards ease-in-out'
-            //mobilemenu.style.mozAnimation = 'close 1s forwards ease-in-out'
-            //mobilemenu.style.oAnimation = 'close 1s forwards ease-in-out'
-            picMove = true
-            main.style.display = 'none'
-            wrapper.style.display = 'block'
-            window.scrollTo(0,currentScrollTop)
-            //wrapper.style.top = ''
-            //body.style.overflowY = ''
-            moreinfo.innerHTML = '&#8801;'
-            moreInfoSwitch = true
+            	var culturMenuHeight = window.getComputedStyle(culturMenu, null).height;
+            	var sightMenuHeight = window.getComputedStyle(sightMenu, null).height;
+            	var foodMenuHeight = window.getComputedStyle(foodMenu, null).height;
+            	var asideLeftContentWidth = window.getComputedStyle(asideLeftContent, null).width;
+            	var asideRightContentWidth = window.getComputedStyle(asideRightContent, null).width;
+            	var culturMenuHeight = window.getComputedStyle(culturMenu, null).height;
+            	var sightMenuHeight = window.getComputedStyle(sightMenu, null).height;
+            	var foodMenuHeight = window.getComputedStyle(foodMenu, null).height;
+            	var asideLeftContentWidth = window.getComputedStyle(asideLeftContent, null).width;
+            	var asideRightContentWidth = window.getComputedStyle(asideRightContent, null).width;
+                if (culturMenuHeight == '0px' && sightMenuHeight == '0px' && foodMenuHeight == '0px'
+                	 && asideLeftContentWidth == '0px' && asideRightContentWidth == '0px') {
+                	picMove = true
+                    main.style.display = 'none'
+                    wrapper.style.display = 'block'
+                    window.scrollTo(0,currentScrollTop)
+                    moreinfo.innerHTML = '&#8801;'
+                    moreInfoSwitch = true
+                }
             }
         }
 
