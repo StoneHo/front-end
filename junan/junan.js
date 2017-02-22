@@ -678,7 +678,6 @@ var touchEnd = function(event) {
             	var asideRightContentWidth = window.getComputedStyle(asideRightContent, null).width;
                 if (culturMenuHeight == '0px' && sightMenuHeight == '0px' && foodMenuHeight == '0px'
                 	 && asideLeftContentWidth == '0px' && asideRightContentWidth == '0px') {
-                	alert('ff')
                     picMove = true
                     main.style.display = 'none'
                     wrapper.style.display = 'block'
