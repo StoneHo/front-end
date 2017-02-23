@@ -860,7 +860,7 @@ video{
     top: 50px;
 }
 #more{
-    top: 20px;
+    top: 15px;
     width: 70%;
 }
 #moreInfo {
@@ -901,7 +901,8 @@ textarea {
     width: 30%;
     left: 0;
     height: 40px;
-
+    top: 30px;
+    margin-bottom: 10px;
 }
 .culture-menu::after, .sight-menu::after, .food-menu::after {
     content:"+";
