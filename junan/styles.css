@@ -898,6 +898,7 @@ textarea {
 #message-submit {
     width: 30%;
     left: 0;
+    height: 40px;
 
 }
 .culture-menu::after, .sight-menu::after, .food-menu::after {
