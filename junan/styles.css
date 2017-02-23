@@ -296,7 +296,7 @@ color: #127c85;
 }
 .aside-left-content a img{
     width: 30%;
-
+    border-bottom: 30px;
 }
 #message-submit {
     width: 20%;
