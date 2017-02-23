@@ -808,10 +808,11 @@ video{
     width: 80%;
     height: 95%;
     overflow: auto;
-    position: absolute;
+    position: relative;
     left: -600px;
     top: 0px;
     transition:left 0.5s;
+    margin-bottom: 10px;
 }
 /*
 .aside-left:hover + div + div,.aside-left:hover + div + div + div + div{
@@ -965,11 +966,11 @@ textarea {
     width: 100%;
     height: 95%;
     overflow: auto;
-    position: absolute;
+    position: relative;
     right: -600px;
     top: 0px;
     transition: none;
-    border: 1px solid red;
+    margin-bottom: 10px;
 }
 
 
