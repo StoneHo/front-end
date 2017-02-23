@@ -810,7 +810,7 @@ video{
     overflow: auto;
     position: absolute;
     left: -600px;
-    top: 10px;
+    top: 0px;
     transition:left 0.5s;
 }
 /*
@@ -824,7 +824,7 @@ video{
 
 }
 .aside-left div:hover div{
-    top: 15px;
+    top: 0px;
     left: 0%;
     width: 100%;
 }
@@ -966,7 +966,7 @@ textarea {
     overflow: auto;
     position: absolute;
     right: -600px;
-    top: 10px;
+    top: 0px;
     transition: none;
 }
 
@@ -1023,7 +1023,7 @@ textarea {
 .aside-right div:hover div{
     right: 0%;
     width: 100%;
-    top: 15px;
+    top: 0px;
     left: 0;
 }
 .aside-right div:hover div div{
