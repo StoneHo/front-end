@@ -853,6 +853,7 @@ video{
     font-weight: 700;
     position: relative;
     left: 0;
+    bottom: 10px;
 }
 #login{
     top: 50px;
