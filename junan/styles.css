@@ -813,6 +813,8 @@ video{
     top: 0px;
     transition:left 0.5s;
     margin-bottom: 10px;
+    bottom: 10px;
+    padding-bottom: 10px;
 }
 /*
 .aside-left:hover + div + div,.aside-left:hover + div + div + div + div{
