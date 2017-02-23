@@ -806,7 +806,7 @@ video{
 }
 .aside-left-content div{
     width: 80%;
-    height: 88%;
+    height: 95%;
     overflow: auto;
     position: absolute;
     left: -600px;
@@ -962,12 +962,13 @@ textarea {
 
 .aside-right-content div{
     width: 100%;
-    height: 88%;
+    height: 95%;
     overflow: auto;
     position: absolute;
     right: -600px;
     top: 0px;
     transition: none;
+    border: 1px solid red;
 }
 
 
