@@ -278,6 +278,15 @@ var nextPageWheel = function(event) {
 }
 EventUtil.addHandler(document,"mousewheel",nextPageWheel);
 
+var scrollMouseDown = function( event ) {
+	    event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event)
+        preScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+
+        
+};
+EventUtil.addHandler(window,"mousedown",scrollMouseDown);
+
 var scrollMouseUp = function( event ) {
 	    event = EventUtil.getEvent(event);
         var target = EventUtil.getTarget(event)
@@ -351,14 +360,7 @@ var scrollMouseUp = function( event ) {
 };
 EventUtil.addHandler(window,"mouseup",scrollMouseUp);
 
-var scrollMouseDown = function( event ) {
-	    event = EventUtil.getEvent(event);
-        var target = EventUtil.getTarget(event)
-        preScrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
-        
-};
-EventUtil.addHandler(window,"mousedown",scrollMouseDown);
 
 
 if (map) {
@@ -678,7 +680,8 @@ var touchEnd = function(event) {
             	var asideRightContentWidth = window.getComputedStyle(asideRightContent, null).width;
                 if (culturMenuHeight == '0px' && sightMenuHeight == '0px' && foodMenuHeight == '0px'
                 	 && asideLeftContentWidth == '0px' && asideRightContentWidth == '0px') {
-                    picMove = true
+                	picMove = true
+
                     main.style.display = 'none'
                     wrapper.style.display = 'block'
                     window.scrollTo(0,currentScrollTop)

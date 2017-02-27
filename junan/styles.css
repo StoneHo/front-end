@@ -561,6 +561,15 @@ video{
     position: relative;
     z-index: -2;
 }
+.culture {
+	background-image: url('guandi.jpg');
+}
+.sight {
+	background-image: url('xiaolong.jpg');
+}
+.food {
+	background-image: url('zhengzhu.jpg');
+}
 .culturePic1 {
     height: calc(100% - 140px);
     margin-left: 0;
@@ -617,7 +626,9 @@ video{
     top: 0;
     
 }
-
+.wrapper-background-video {
+	background: rgba(255,255,255,0.1);
+}
 
 .last-wrapper {
     margin-bottom: 80px;
@@ -1230,7 +1241,7 @@ textarea {
     top: 0%;
     }
     .land-vedio .info {
-    top: 10%;   
+    top: 20%;   
     }
     .culture .info h1, .sight .info h1, .food .info h1 {
     font-size: 2em;
