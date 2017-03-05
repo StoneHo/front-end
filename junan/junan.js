@@ -1,43 +1,44 @@
-var body = document.getElementsByTagName('body')[0];
-var culturMenu = document.querySelectorAll('.nav-culture-sub')[0];
-var sightMenu = document.querySelectorAll('.nav-sight-sub')[0];
-var foodMenu = document.querySelectorAll('.nav-food-sub')[0];
-var asideLeft = document.querySelectorAll('.aside-left')[0];
-var asideRight = document.querySelectorAll('.aside-right')[0];
-var asideRightContent = document.querySelectorAll('.aside-right-content')[0];
-var asideLeftContent = document.querySelectorAll('.aside-left-content')[0];
-var footer = document.querySelectorAll('.footer button')[0];
-var footerbg = document.querySelectorAll('.footer')[0];
-var down = document.querySelectorAll('#down')[0];
-var main = document.querySelectorAll('.main')[0];
-var firstPart = document.querySelectorAll('.land-vedio')[0];
-var culture = document.querySelectorAll('.culture')[0];
-var sight = document.querySelectorAll('.sight')[0];
-var wrapper = document.querySelectorAll('.middle-wrapper')[0];
-var mobile = document.querySelectorAll('.mobile')[0];
-var enter = document.querySelectorAll('#enter')[0];
-var firstenter = document.querySelectorAll('#firstEnter')[0];
-var videoplay = document.querySelectorAll('#videoPlay')[0];
-var firstword = document.querySelectorAll('.land-vedio .info')[0];
-var firstbg = document.querySelectorAll('.wrapper-background-video')[0];
-var mobilemenu = document.querySelectorAll('#mobile-menu')[0];
-var moreinfo = document.querySelectorAll('#moreInfo')[0];
-
-
-
-var picPos,
+var body = document.getElementsByTagName('body')[0],
+    culturMenu = document.querySelectorAll('.nav-culture-sub')[0],
+    sightMenu = document.querySelectorAll('.nav-sight-sub')[0],
+    foodMenu = document.querySelectorAll('.nav-food-sub')[0],
+    asideLeft = document.querySelectorAll('.aside-left')[0],
+    asideRight = document.querySelectorAll('.aside-right')[0],
+    asideRightContent = document.querySelectorAll('.aside-right-content')[0],
+    asideLeftContent = document.querySelectorAll('.aside-left-content')[0],
+    footer = document.querySelectorAll('.footer button')[0],
+    footerbg = document.querySelectorAll('.footer')[0],
+    down = document.querySelectorAll('#down')[0],
+    main = document.querySelectorAll('.main')[0],
+    firstPart = document.querySelectorAll('.land-vedio')[0],
+    culture = document.querySelectorAll('.culture')[0],
+    sight = document.querySelectorAll('.sight')[0],
+    wrapper = document.querySelectorAll('.middle-wrapper')[0],
+    mobile = document.querySelectorAll('.mobile')[0],
+    enter = document.querySelectorAll('#enter')[0],
+    firstenter = document.querySelectorAll('#firstEnter')[0],
+    videoplay = document.querySelectorAll('#videoPlay')[0],
+    firstword = document.querySelectorAll('.land-vedio .info')[0],
+    firstbg = document.querySelectorAll('.wrapper-background-video')[0],
+    mobilemenu = document.querySelectorAll('#mobile-menu')[0],
+    moreinfo = document.querySelectorAll('#moreInfo')[0],
+    map = document.querySelectorAll('#map')[0],
+    picPos,
     bodyWidth,
     currentScrollTop,
     picMove = true,
     mapEnter = true,
     enterCount,
     moreInfoSwitch = true,
-    zoomCount;
-var pic = document.querySelectorAll(".pic"),
+    zoomCount,
+    pic = document.querySelectorAll(".pic"),
     link = document.querySelectorAll("#map a"),
-    map = document.getElementById('map'),
     mapBg = document.getElementById('mapBg'),
-    exit = document.getElementById('exit');
+    exit = document.getElementById('exit'),
+    y,
+    n = 0,
+    i,
+    pageStop = true;
 
 if (!firstPart) {
 	firstPart = document.querySelectorAll('.culture')[0];
@@ -78,8 +79,6 @@ var windowChange = function( event ) {
 EventUtil.addHandler(window,"resize",windowChange);
 }
 
-
-
 var changeScroll = function(ele) {
     var mouseOut = function(event) {
 	    event = EventUtil.getEvent(event);
@@ -100,11 +99,6 @@ EventUtil.addHandler(ele,"mouseout",mouseOut);
 }
 changeScroll(asideLeft);
 changeScroll(asideRight);
-
-
-var y;
-var n = 0, i;
-var pageStop = true;
 
 var calculateScroll = function(i,stop) {
 	var x = (function(){
@@ -501,7 +495,10 @@ var touchEnd = function(event) {
 	if (firstPart.className == 'land-vedio') {
 		EventUtil.preventDefault(event)
 	}
-	touched = event.changedTouches[0].clientY;
+	if (event.changedTouches) {
+		touched = event.changedTouches[0].clientY;
+	}
+	
     if (touched - touchst < 0 && picMove  && firstPart.className == 'land-vedio') {
     	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
@@ -535,6 +532,7 @@ var touchEnd = function(event) {
     	}
      	    	    	
     }
+    
      if (touched - touchst > 0 && picMove  && firstPart.className == 'land-vedio') {
     	var picPos1 = parseInt(window.getComputedStyle(firstPart, null).height)
     	var picPos2 = parseInt(window.getComputedStyle(culture, null).height)
@@ -574,9 +572,7 @@ var touchEnd = function(event) {
     		    footer.style.display = ''
     	}    	    	    	
     } 
-
-    if (touched - touchst == 0) {
-    	
+    if (touched - touchst == 0 || bodyWidth < 980) {
         if (target.id == 'mapButton') {
         map.style.width = bodyWidth * 0.95 + 'px'
         map.style.display = 'block'
@@ -692,13 +688,38 @@ var touchEnd = function(event) {
         }
 
     }  
-
+    if (touched - touchst == 0 || bodyWidth >= 980) {
+        if (target.id == 'enterPic' && mapEnter) {
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event)
+            picMove = false;
+            mapEnter = false;
+            enterCount = true
+            borderWidth = map.clientWidth;
+            borderHeight = map.clientHeight;
+            resetPicSize(link);
+            changePicPositionPreLeftTouch(link,dd);
+            changePicPositionPreTopTouch(link,ddd);
+            map.style.width = borderWidth + 'px';
+            map.style.height = borderHeight + 'px';
+            mapBg.style.width = imgWidth.toString() + 'px';
+            mapBg.style.height = imgHeight.toString() + 'px';
+            mapBg.style.backgroundSize = imgWidth.toString() + 'px' + ' ' + imgHeight.toString() + 'px';
+            tx = 0;
+            //changePicPositionLeft(link,tx);
+            mapBg.style.left = (tx).toString() + 'px';
+            ty = 0
+            //changePicPositionTop(link,ty);
+            mapBg.style.top = (ty).toString() + 'px';
+        }
+    }
 }
 EventUtil.addHandler(wrapper,"touchend",touchEnd);
 EventUtil.addHandler(mobile,"touchend",touchEnd);
-
-
-
+EventUtil.addHandler(mobile,"click",touchEnd);
+if (map) {
+	EventUtil.addHandler(map,"click",touchEnd);
+}
 
 
 

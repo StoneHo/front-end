@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+}
+nav ul {
+	list-style: none;
+	position: fixed;
+	right: 10px;
+	top: 30%;
+}
+nav ul li {
+	width: 100px;
+	padding: 10px 0;
+	margin-top: 10px;
+	text-align: center;
+	background: white;
+}
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid red;
+}
+article {
+	width: 100%;
+}
+#page1 {
+	background: rgb(27,188,155);
+}
+#page2 {
+	background: rgb(24,137,197);
+}
+#page3 {
+	background: rgb(123,170,190);
+}
+#page4 {
+	background: rgb(145,180,147);
+}

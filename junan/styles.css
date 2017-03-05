@@ -206,6 +206,7 @@ a {
     width: 80%;
     height: 85%;
     overflow: auto;
+    overflow-x: hidden;
     position: absolute;
     left: -600px;
     top: 100px;
@@ -557,9 +558,12 @@ video{
     margin-bottom: 0px;
     background-image: url('333.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative;
     z-index: -2;
+}
+.map {
+	background-image: url('map.jpg');
 }
 .culture {
 	background-image: url('guandi.jpg');
@@ -578,7 +582,66 @@ video{
     background-size: 50% 100%;
     overflow: hidden;
 }
-
+.aboutPic1 {
+	background-image: url('about1.jpg');
+}
+.nanshaPic1 {
+	background-image: url('nansha1.jpg');
+}
+.guandiPic1 {
+	background-image: url('guandi1.jpg');
+}
+.yuejuPic1 {
+	background-image: url('yueju1.jpg');
+}
+.guifugushiPic1 {
+	background-image: url('guifugushi1.jpg');
+}
+.cuihugongyuanPic1 {
+	background-image: url('cuihugongyuan1.jpg');
+}
+.donghailvdaoPic1 {
+	background-image: url('donghailvdao1.jpg');
+}
+.binyutangPic1 {
+	background-image: url('binyutang1.jpg');
+}
+.gujuPic1 {
+	background-image: url('guju1.jpg');
+}
+.leyuanPic1 {
+	background-image: url('leyuan1.jpg');
+}
+.yubinPic1 {
+	background-image: url('yubin1.jpg');
+}
+.caiyugenPic1 {
+	background-image: url('caiyugen1.jpg');
+}
+.zhengzhuPic1 {
+	background-image: url('zhengzhu1.jpg');
+}
+.zhuzazouPic1 {
+	background-image: url('zhuzazou1.jpg');
+}
+.mikouxianPic1 {
+	background-image: url('mikouxian1.jpg');
+}
+.datoucaiPic1 {
+	background-image: url('datoucai1.jpg');
+}
+.yuganPic1 {
+	background-image: url('yugan1.jpg');
+}
+.shaozhuPic1 {
+	background-image: url('shaozhu1.jpg');
+}
+.lajiaobinPic1 {
+	background-image: url('lajiaobin1.jpg');
+}
+.majiecaiPic1 {
+	background-image: url('majiecai1.jpg');
+}
 .culturePic1 .info{
     position: absolute;
     width: 100%;
@@ -617,9 +680,16 @@ video{
     left: 0;
     /*left: 57%;*/
 }
-
-.wrapper-background {
+.wrapper-background-home {
     width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    
+}
+.wrapper-background {
+    width: 50%;
     height: 100%;
     background: rgba(0,0,0,0.5);
     position: absolute;
@@ -658,7 +728,7 @@ video{
     position: absolute;
     text-align: left;
     top: 25%;
-    left: 10%;
+    left: 15%;
 }
 .word h1 {
     margin: 0 auto;
@@ -730,6 +800,36 @@ video{
 .nav-map {
 	display: none;
 }
+      #map {
+        display: none;
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        left: 2.5%;
+        top: 2.5%;
+        overflow: hidden;
+        z-index: 20;
+      }
+
+      #exit {
+        position: absolute;
+        right: 0;
+        top: 75%;
+        z-index: 2;
+      }
+      #enterPic {
+        position: absolute;
+        right: 0;
+        top: 85%;
+        z-index: 2;
+
+      }
+      #mapBg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+      }
 @media (min-width: 960px) {
     .mobile {
         display: none;
@@ -767,6 +867,9 @@ video{
     display: block;
     width: 100%;
 
+}
+.wrapper-background {
+    width: 100%;
 }
 .nav-map {
 	display: block;
@@ -1151,37 +1254,115 @@ textarea {
     left: 36%;
 
     }
+.culturePic1 {
+    margin-left: 0;
+    background-color:  #b6e0d8;
+    background-image: url('222.jpg');
+    background-size: cover;
 
-
+}
+.aboutPic1 {
+	background-image: url('about1.jpg');
+}
+.nanshaPic1 {
+	background-image: url('nansha1.jpg');
+}
+.guandiPic1 {
+	background-image: url('guandi1.jpg');
+}
+.yuejuPic1 {
+	background-image: url('yueju1.jpg');
+}
+.guifugushiPic1 {
+	background-image: url('guifugushi1.jpg');
+}
+.cuihugongyuanPic1 {
+	background-image: url('cuihugongyuan1.jpg');
+}
+.donghailvdaoPic1 {
+	background-image: url('donghailvdao1.jpg');
+}
+.binyutangPic1 {
+	background-image: url('binyutang1.jpg');
+}
+.gujuPic1 {
+	background-image: url('guju1.jpg');
+}
+.leyuanPic1 {
+	background-image: url('leyuan1.jpg');
+}
+.yubinPic1 {
+	background-image: url('yubin1.jpg');
+}
+.caiyugenPic1 {
+	background-image: url('caiyugen1.jpg');
+}
+.zhengzhuPic1 {
+	background-image: url('zhengzhu1.jpg');
+}
+.zhuzazouPic1 {
+	background-image: url('zhuzazou1.jpg');
+}
+.mikouxianPic1 {
+	background-image: url('mikouxian1.jpg');
+}
+.datoucaiPic1 {
+	background-image: url('datoucai1.jpg');
+}
+.yuganPic1 {
+	background-image: url('yugan1.jpg');
+}
+.shaozhuPic1 {
+	background-image: url('shaozhu1.jpg');
+}
+.lajiaobinPic1 {
+	background-image: url('lajiaobin1.jpg');
+}
+.majiecaiPic1 {
+	background-image: url('majiecai1.jpg');
+}
+.culturePic1 .info{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 20%;
+    left: 0;
+}
 
 .culturePic1 .info h1 {
     width: 100%;
-    color: black;
-    left: 0;
+    color: white;
+    margin: 0 auto;
     font-weight: 500;
     font-size: 2em;
     position: relative;
-    text-align: left;
-}
-.culturePic1 .info hr {
-    border: 1px solid black;
-    width: 100px;
-    /*left: 12%;*/
-    position: absolute;
-    top: 100px;
-    left: 0;
-}
-.culturePic1 .info p {
-    width: 30%;
     text-align: center;
-    color: black;
+    left: 1%;
+
+}
+
+.culturePic1 .info hr {
+    border: 1px solid white;
+    width: 80px;
+    position: relative;
+    top: 25px;
+    left: 0;
+    margin: 0 auto;
+}
+
+.culturePic1 .info p {
+    width: 80%;
+    text-align: center;
+    color: white;
     font-weight: 700;
     position: relative;
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: 0.9em;
     letter-spacing: 5px;
-    text-align: left;
+    text-align: center;
+    margin: 70px auto 0;
     left: 0;
+
     /*left: 57%;*/
 }
 .word {
@@ -1296,7 +1477,66 @@ textarea {
     background-size: cover;
 
 }
-
+.aboutPic1 {
+	background-image: url('about1.jpg');
+}
+.nanshaPic1 {
+	background-image: url('nansha1.jpg');
+}
+.guandiPic1 {
+	background-image: url('guandi1.jpg');
+}
+.yuejuPic1 {
+	background-image: url('yueju1.jpg');
+}
+.guifugushiPic1 {
+	background-image: url('guifugushi1.jpg');
+}
+.cuihugongyuanPic1 {
+	background-image: url('cuihugongyuan1.jpg');
+}
+.donghailvdaoPic1 {
+	background-image: url('donghailvdao1.jpg');
+}
+.binyutangPic1 {
+	background-image: url('binyutang1.jpg');
+}
+.gujuPic1 {
+	background-image: url('guju1.jpg');
+}
+.leyuanPic1 {
+	background-image: url('leyuan1.jpg');
+}
+.yubinPic1 {
+	background-image: url('yubin1.jpg');
+}
+.caiyugenPic1 {
+	background-image: url('caiyugen1.jpg');
+}
+.zhengzhuPic1 {
+	background-image: url('zhengzhu1.jpg');
+}
+.zhuzazouPic1 {
+	background-image: url('zhuzazou1.jpg');
+}
+.mikouxianPic1 {
+	background-image: url('mikouxian1.jpg');
+}
+.datoucaiPic1 {
+	background-image: url('datoucai1.jpg');
+}
+.yuganPic1 {
+	background-image: url('yugan1.jpg');
+}
+.shaozhuPic1 {
+	background-image: url('shaozhu1.jpg');
+}
+.lajiaobinPic1 {
+	background-image: url('lajiaobin1.jpg');
+}
+.majiecaiPic1 {
+	background-image: url('majiecai1.jpg');
+}
 .culturePic1 .info{
     position: absolute;
     width: 100%;
@@ -1356,53 +1596,3 @@ textarea {
 
 }   
 }*/
-      #map {
-        display: none;
-        position: absolute;
-        width: 95%;
-        height: 95%;
-        left: 2.5%;
-        top: 2.5%;
-        overflow: hidden;
-        z-index: 20;
-      }
-
-      #exit {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        z-index: 2;
-      }
-      #enterPic {
-        position: absolute;
-        right: 0;
-        top: 70%;
-        z-index: 2;
-
-      }
-      #mapBg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-
-      }
-      #draggable3 {
-           position: absolute;  
-           left: 10%;
-           top: 25%;   
-
-      }
-      #draggable4 {
-           position: absolute;     
-           left:20%;
-           top: 50%;
-      }
-      #draggable5 {
-           position: absolute;     
-           left:35%;
-           top: 75%;
-      }
-      .pic {
-        max-width: 100%;
-
-      }
